@@ -344,7 +344,7 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
   <div class="hero-content">
     <div class="hero-tag">Сочи · Волжская 37/к3 (Мамайка) · Ежедневно 10:00–22:00</div>
     <h1 class="hero-h1">Хачапури<br><em>& Мангал</em></h1>
-    <p class="hero-sub">Живой огонь, настоящее мясо и рыба с Чёрного моря.<br>Доставка по Сочи или самовывоз — на ваш выбор.</p>
+    <p class="hero-sub">Попробуй один раз — вернёшься много раз!<br>Доставка по Сочи или самовывоз — на ваш выбор.</p>
     <div class="hero-btns">
       <a href="#order" class="btn-primary">Заказать доставку</a>
       <a href="#menu" class="btn-outline">Смотреть меню</a>
@@ -364,7 +364,7 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
       <div class="hero-stat-l">Открываемся</div>
     </div>
     <div class="hero-stat">
-      <div class="hero-stat-n">+7 (938) 450-18-18</div>
+      <div class="hero-stat-n">+7 (928) 66-777-33</div>
       <div class="hero-stat-l">WhatsApp / Звонок</div>
     </div>
   </div>
@@ -380,13 +380,14 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
     <div class="menu-tabs">
       <button class="tab-btn active" onclick="showCat('meat',this)">🥩 Мясо</button>
       <button class="tab-btn" onclick="showCat('fish',this)">🐟 Рыба</button>
-      <button class="tab-btn" onclick="showCat('chicken',this)">🍗 Птица</button>
-      <button class="tab-btn" onclick="showCat('garnir',this)">🥦 Гарниры</button>
       <button class="tab-btn" onclick="showCat('salad',this)">🥗 Салаты</button>
-      <button class="tab-btn" onclick="showCat('hacha',this)">🫓 Хачапури</button>
+      <button class="tab-btn" onclick="showCat('vegs',this)">🥦 Овощи</button>
+      <button class="tab-btn" onclick="showCat('dough',this)">🫓 Блюда из теста</button>
       <button class="tab-btn" onclick="showCat('soup',this)">🫕 Супы</button>
-      <button class="tab-btn" onclick="showCat('sauce',this)">🫙 Соусы</button>
-      <button class="tab-btn" onclick="showCat('street',this)">🌯 Стрит</button>
+      <button class="tab-btn" onclick="showCat('hot',this)">🔥 Горячие блюда</button>
+      <button class="tab-btn" onclick="showCat('hotstart',this)">🫕 Горячие закуски</button>
+      <button class="tab-btn" onclick="showCat('coldstart',this)">🥗 Холодные закуски</button>
+      <button class="tab-btn" onclick="showCat('street',this)">🌯 Стрит-фуд</button>
       <button class="tab-btn" onclick="showCat('friture',this)">🍟 Фритюр</button>
     </div>
 
@@ -394,114 +395,106 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 
       <!-- МЯСО -->
       <div class="menu-cat-hidden active" data-cat="meat">
-        <div class="menu-card" onclick="addToCart('Свинина шея', 210, '100 г')">
+        <div class="menu-card" onclick="addToCart('Свинина шея', 310, '100 г')">
           <div class="menu-card-left"><div class="menu-card-name">Свинина шея</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">210 ₽</div>
+          <div class="menu-card-price">310 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Свинина ребро', 210, '100 г')">
+        <div class="menu-card" onclick="addToCart('Свинина ребро', 230, '100 г')">
           <div class="menu-card-left"><div class="menu-card-name">Свинина ребро</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">210 ₽</div>
+          <div class="menu-card-price">230 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Баранина корейка', 490, '100 г')">
+        <div class="menu-card" onclick="addToCart('Баранина корейка', 510, '100 г')">
           <div class="menu-card-left"><div class="menu-card-name">Баранина корейка</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">490 ₽</div>
+          <div class="menu-card-price">510 ₽</div>
         </div>
         <div class="menu-card" onclick="addToCart('Баранина мякоть', 440, '100 г')">
           <div class="menu-card-left"><div class="menu-card-name">Баранина мякоть</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
           <div class="menu-card-price">440 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Вырезка говяжья', 490, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Вырезка говяжья</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">490 ₽</div>
+        <div class="menu-card" onclick="addToCart('Говядина вырезка', 510, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Говядина вырезка</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">510 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Язык говяжий', 440, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Язык говяжий</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">440 ₽</div>
+        <div class="menu-card" onclick="addToCart('Курица бедро без кости', 200, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Курица бедро без кости</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">200 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Люля классика', 210, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Люля классика</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+        <div class="menu-card" onclick="addToCart('Курица филе', 210, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Курица филе</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
           <div class="menu-card-price">210 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Баран кебаб', 400, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Баран кебаб</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">400 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Колбаски ассорти', 185, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Колбаски ассорти</div><div class="menu-card-unit">100 г · + в корзину</div></div>
-          <div class="menu-card-price">185 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Купаты из индейки', 185, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Купаты из индейки</div><div class="menu-card-unit">100 г · + в корзину</div></div>
-          <div class="menu-card-price">185 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Купаты говяжьи с сыром', 185, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Купаты говяжьи с сыром</div><div class="menu-card-unit">100 г · + в корзину</div></div>
-          <div class="menu-card-price">185 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Улитки куриные', 185, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Улитки куриные</div><div class="menu-card-unit">100 г · + в корзину</div></div>
-          <div class="menu-card-price">185 ₽</div>
-        </div>
-      </div>
-
-      <!-- РЫБА -->
-      <div class="menu-cat-hidden" data-cat="fish">
-        <div class="menu-card" onclick="addToCart('Сёмга', 550, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Сёмга</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">550 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Форель радужная', 240, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Форель радужная</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">240 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Барабуля черноморская', 190, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Барабуля черноморская</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">190 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Сарган черноморский', 280, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Сарган черноморский</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">280 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Камбала черноморская', 550, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Камбала черноморская</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">550 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Креветка тигровая', 360, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Креветка тигровая</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">360 ₽</div>
-        </div>
-      </div>
-
-      <!-- ПТИЦА -->
-      <div class="menu-cat-hidden" data-cat="chicken">
-        <div class="menu-card" onclick="addToCart('Курица бедро без кости', 180, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Курица бедро без кости</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">180 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Курица филе', 180, '100 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Курица филе</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">180 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Курица крыло', 160, '100 г')">
+        <div class="menu-card" onclick="addToCart('Курица крыло', 170, '100 г')">
           <div class="menu-card-left"><div class="menu-card-name">Курица крыло</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">160 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Цыплёнок тапака', 380, '1 шт')">
-          <div class="menu-card-left"><div class="menu-card-name">Цыплёнок тапака</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
-          <div class="menu-card-price">380 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Перепёлка', 380, '1 шт')">
-          <div class="menu-card-left"><div class="menu-card-name">Перепёлка</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
-          <div class="menu-card-price">380 ₽</div>
+          <div class="menu-card-price">170 ₽</div>
         </div>
         <div class="menu-card" onclick="addToCart('Люля курица', 190, '100 г')">
           <div class="menu-card-left"><div class="menu-card-name">Люля курица</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
           <div class="menu-card-price">190 ₽</div>
         </div>
+        <div class="menu-card" onclick="addToCart('Люля классика', 210, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Люля классика</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">210 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Баран кебаб', 430, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Баран кебаб</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">430 ₽</div>
+        </div>
       </div>
 
-      <!-- ГАРНИРЫ -->
-      <div class="menu-cat-hidden" data-cat="garnir">
+      <!-- РЫБА -->
+      <div class="menu-cat-hidden" data-cat="fish">
+        <div class="menu-card" onclick="addToCart('Сёмга', 570, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Сёмга</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">570 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Форель радужная', 260, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Форель радужная</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">260 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Креветка тигровая', 380, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Креветка тигровая</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">380 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Барабуля черноморская', 230, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Барабуля черноморская</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">230 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Камбала черноморская', 620, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Камбала черноморская</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">620 ₽</div>
+        </div>
+      </div>
+
+      <!-- САЛАТЫ -->
+      <div class="menu-cat-hidden" data-cat="salad">
+        <div class="menu-card" onclick="addToCart('Овощной', 310, '250 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Овощной</div><div class="menu-card-unit">250 г · + в корзину</div></div>
+          <div class="menu-card-price">310 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Цезарь с курицей', 390, '250 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Цезарь с курицей</div><div class="menu-card-unit">250 г · + в корзину</div></div>
+          <div class="menu-card-price">390 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Цезарь с креветкой', 510, '250 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Цезарь с креветкой</div><div class="menu-card-unit">250 г · + в корзину</div></div>
+          <div class="menu-card-price">510 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Цезарь с сёмгой', 510, '250 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Цезарь с сёмгой</div><div class="menu-card-unit">250 г · + в корзину</div></div>
+          <div class="menu-card-price">510 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Тайский с говядиной', 510, '250 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Тайский с говядиной</div><div class="menu-card-unit">250 г · + в корзину</div></div>
+          <div class="menu-card-price">510 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Тёплый салат с баклажаном', 390, '250 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Тёплый салат с баклажаном</div><div class="menu-card-unit">250 г · + в корзину</div></div>
+          <div class="menu-card-price">390 ₽</div>
+        </div>
+      </div>
+
+      <!-- ОВОЩИ -->
+      <div class="menu-cat-hidden" data-cat="vegs">
         <div class="menu-card" onclick="addToCart('Помидор гриль', 130, '100 г')">
           <div class="menu-card-left"><div class="menu-card-name">Помидор гриль</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
           <div class="menu-card-price">130 ₽</div>
@@ -528,152 +521,143 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
         </div>
       </div>
 
-      <!-- САЛАТЫ -->
-      <div class="menu-cat-hidden" data-cat="salad">
-        <div class="menu-card" onclick="addToCart('Салат овощной', 290, '250 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Овощной</div><div class="menu-card-unit">250 г · + в корзину</div></div>
-          <div class="menu-card-price">290 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Цезарь с курицей', 370, '250 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Цезарь с курицей</div><div class="menu-card-unit">250 г · + в корзину</div></div>
-          <div class="menu-card-price">370 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Цезарь с креветкой', 480, '250 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Цезарь с креветкой</div><div class="menu-card-unit">250 г · + в корзину</div></div>
-          <div class="menu-card-price">480 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Тайский салат', 480, '250 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Тайский</div><div class="menu-card-unit">250 г · + в корзину</div></div>
-          <div class="menu-card-price">480 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Тёплый салат с баклажаном', 370, '250 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Тёплый салат с баклажаном</div><div class="menu-card-unit">250 г · + в корзину</div></div>
-          <div class="menu-card-price">370 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Тёплый салат с языком', 480, '250 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Тёплый салат с языком</div><div class="menu-card-unit">250 г · + в корзину</div></div>
-          <div class="menu-card-price">480 ₽</div>
-        </div>
-      </div>
-
-      <!-- ХАЧАПУРИ -->
-      <div class="menu-cat-hidden" data-cat="hacha">
-        <div class="menu-card" onclick="addToCart('Хачапури на мангале', 390, '1 шт')">
+      <!-- БЛЮДА ИЗ ТЕСТА -->
+      <div class="menu-cat-hidden" data-cat="dough">
+        <div class="menu-card" onclick="addToCart('Хачапури на мангале', 410, '1 шт')">
           <div class="menu-card-left"><div class="menu-card-name">Хачапури на мангале</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
-          <div class="menu-card-price">390 ₽</div>
+          <div class="menu-card-price">410 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Хачапури по-аджарски', 390, '1 шт')">
-          <div class="menu-card-left"><div class="menu-card-name">По-аджарски</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
-          <div class="menu-card-price">390 ₽</div>
+        <div class="menu-card" onclick="addToCart('Хачапури аджарский', 430, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Хачапури аджарский</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">430 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Хачапури имеретинский', 470, '1 шт')">
-          <div class="menu-card-left"><div class="menu-card-name">Имеретинский</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
-          <div class="menu-card-price">470 ₽</div>
+        <div class="menu-card" onclick="addToCart('Хачапури имеретинский', 490, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Хачапури имеретинский</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">490 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Сыр на мангале', 180, '100 г')">
+        <div class="menu-card" onclick="addToCart('Сыр на мангале', 190, '100 г')">
           <div class="menu-card-left"><div class="menu-card-name">Сыр на мангале</div><div class="menu-card-unit">100 г · + в корзину</div></div>
-          <div class="menu-card-price">180 ₽</div>
+          <div class="menu-card-price">190 ₽</div>
         </div>
       </div>
 
       <!-- СУПЫ -->
       <div class="menu-cat-hidden" data-cat="soup">
-        <div class="menu-card" onclick="addToCart('Харчо', 350, '1 порция')">
-          <div class="menu-card-left"><div class="menu-card-name">Харчо</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
+        <div class="menu-card" onclick="addToCart('Окрошка на майонезе', 350, '1 порция')">
+          <div class="menu-card-left"><div class="menu-card-name">Окрошка на майонезе</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
           <div class="menu-card-price">350 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Солянка по-грузински', 490, '1 порция')">
+        <div class="menu-card" onclick="addToCart('Харчо с рисом', 370, '1 порция')">
+          <div class="menu-card-left"><div class="menu-card-name">Харчо с рисом</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
+          <div class="menu-card-price">370 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Щавелевый', 310, '1 порция')">
+          <div class="menu-card-left"><div class="menu-card-name">Щавелевый</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
+          <div class="menu-card-price">310 ₽</div>
+        </div>
+      </div>
+
+      <!-- ГОРЯЧИЕ БЛЮДА -->
+      <div class="menu-cat-hidden" data-cat="hot">
+        <div class="menu-card" onclick="addToCart('Солянка по-грузински', 520, '1 порция')">
           <div class="menu-card-left"><div class="menu-card-name">Солянка по-грузински</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
+          <div class="menu-card-price">520 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Цыплёнок тапака', 640, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Цыплёнок тапака</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">640 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Цыплёнок чкмерули', 520, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Цыплёнок чкмерули</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">520 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Жаркое из свинины', 490, '1 порция')">
+          <div class="menu-card-left"><div class="menu-card-name">Жаркое из свинины</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
           <div class="menu-card-price">490 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Гороховый суп', 280, '1 порция')">
-          <div class="menu-card-left"><div class="menu-card-name">Гороховый</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
-          <div class="menu-card-price">280 ₽</div>
+      </div>
+
+      <!-- ГОРЯЧИЕ ЗАКУСКИ -->
+      <div class="menu-cat-hidden" data-cat="hotstart">
+        <div class="menu-card" onclick="addToCart('Сулугуни жареный', 340, '1 порция')">
+          <div class="menu-card-left"><div class="menu-card-name">Сулугуни жареный</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
+          <div class="menu-card-price">340 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Лобио', 230, '1 порция')">
+        <div class="menu-card" onclick="addToCart('Лобио', 260, '1 порция')">
           <div class="menu-card-left"><div class="menu-card-name">Лобио</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
-          <div class="menu-card-price">230 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Супчик дня', 350, '1 порция')">
-          <div class="menu-card-left"><div class="menu-card-name">Супчик дня</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
-          <div class="menu-card-price">350 ₽</div>
-        </div>
-      </div>
-
-      <!-- СОУСЫ -->
-      <div class="menu-cat-hidden" data-cat="sauce">
-        <div class="menu-card" onclick="addToCart('Соус Наршараб', 100, '')">
-          <div class="menu-card-left"><div class="menu-card-name">Наршараб</div><div class="menu-card-unit">+ в корзину</div></div>
-          <div class="menu-card-price">100 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Соус Аджика', 100, '')">
-          <div class="menu-card-left"><div class="menu-card-name">Аджика</div><div class="menu-card-unit">+ в корзину</div></div>
-          <div class="menu-card-price">100 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Соус Сырный', 100, '')">
-          <div class="menu-card-left"><div class="menu-card-name">Сырный</div><div class="menu-card-unit">+ в корзину</div></div>
-          <div class="menu-card-price">100 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Соус Ткемали', 100, '')">
-          <div class="menu-card-left"><div class="menu-card-name">Ткемали</div><div class="menu-card-unit">+ в корзину</div></div>
-          <div class="menu-card-price">100 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Соус Грузинский', 100, '')">
-          <div class="menu-card-left"><div class="menu-card-name">Грузинский</div><div class="menu-card-unit">+ в корзину</div></div>
-          <div class="menu-card-price">100 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Кетчуп', 100, '')">
-          <div class="menu-card-left"><div class="menu-card-name">Кетчуп</div><div class="menu-card-unit">+ в корзину</div></div>
-          <div class="menu-card-price">100 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Соус Чесночный', 100, '')">
-          <div class="menu-card-left"><div class="menu-card-name">Чесночный</div><div class="menu-card-unit">+ в корзину</div></div>
-          <div class="menu-card-price">100 ₽</div>
-        </div>
-      </div>
-
-      <!-- СТРИТ -->
-      <div class="menu-cat-hidden" data-cat="street">
-        <div class="menu-card" onclick="addToCart('Бургер', 450, '1 шт')">
-          <div class="menu-card-left"><div class="menu-card-name">Бургер</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
-          <div class="menu-card-price">450 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Шаурма с курицей', 300, '1 шт')">
-          <div class="menu-card-left"><div class="menu-card-name">Шаурма с курицей</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
-          <div class="menu-card-price">300 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Шаурма со свининой', 330, '1 шт')">
-          <div class="menu-card-left"><div class="menu-card-name">Шаурма со свининой</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
-          <div class="menu-card-price">330 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Хот-дог', 260, '1 шт')">
-          <div class="menu-card-left"><div class="menu-card-name">Хот-дог</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
           <div class="menu-card-price">260 ₽</div>
         </div>
       </div>
 
+      <!-- ХОЛОДНЫЕ ЗАКУСКИ -->
+      <div class="menu-cat-hidden" data-cat="coldstart">
+        <div class="menu-card" onclick="addToCart('Овощное ассорти', 370, '1 порция')">
+          <div class="menu-card-left"><div class="menu-card-name">Овощное ассорти</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
+          <div class="menu-card-price">370 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Соленья', 350, '1 порция')">
+          <div class="menu-card-left"><div class="menu-card-name">Соленья</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
+          <div class="menu-card-price">350 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Сырное ассорти', 440, '1 порция')">
+          <div class="menu-card-left"><div class="menu-card-name">Сырное ассорти</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
+          <div class="menu-card-price">440 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Селедка с картофелем', 450, '1 порция')">
+          <div class="menu-card-left"><div class="menu-card-name">Селедка с картофелем</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
+          <div class="menu-card-price">450 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Сёмга м/с', 550, '1 порция')">
+          <div class="menu-card-left"><div class="menu-card-name">Сёмга м/с</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
+          <div class="menu-card-price">550 ₽</div>
+        </div>
+      </div>
+
+      <!-- СТРИТ-ФУД -->
+      <div class="menu-cat-hidden" data-cat="street">
+        <div class="menu-card" onclick="addToCart('Бургер классика', 490, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Бургер классика</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">490 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Бургер с говядиной', 540, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Бургер с говядиной</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">540 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Шаурма с курицей', 320, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Шаурма с курицей</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">320 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Шаурма свинина', 350, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Шаурма свинина</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">350 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Люля в лаваше курица', 480, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Люля в лаваше курица</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">480 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Люля в лаваше классика', 500, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Люля в лаваше классика</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">500 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Хотдог', 300, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Хотдог</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">300 ₽</div>
+        </div>
+      </div>
 
       <!-- ФРИТЮР -->
       <div class="menu-cat-hidden" data-cat="friture">
-        <div class="menu-card" onclick="addToCart('Картофель по-деревенски', 170, '250 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Картофель по-деревенски</div><div class="menu-card-unit">250 г · + в корзину</div></div>
-          <div class="menu-card-price">170 ₽</div>
-        </div>
         <div class="menu-card" onclick="addToCart('Картофель фри', 170, '250 г')">
           <div class="menu-card-left"><div class="menu-card-name">Картофель фри</div><div class="menu-card-unit">250 г · + в корзину</div></div>
           <div class="menu-card-price">170 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Наггетсы', 210, '1 порция')">
+        <div class="menu-card" onclick="addToCart('Картофель по-деревенски', 170, '250 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Картофель по-деревенски</div><div class="menu-card-unit">250 г · + в корзину</div></div>
+          <div class="menu-card-price">170 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Наггетсы', 220, '1 порция')">
           <div class="menu-card-left"><div class="menu-card-name">Наггетсы</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
-          <div class="menu-card-price">210 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Креветка темпура', 420, '200 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Креветка темпура</div><div class="menu-card-unit">200 г · + в корзину</div></div>
-          <div class="menu-card-price">420 ₽</div>
-        </div>
-        <div class="menu-card" onclick="addToCart('Сырные палочки', 330, '200 г')">
-          <div class="menu-card-left"><div class="menu-card-name">Сырные палочки</div><div class="menu-card-unit">200 г · + в корзину</div></div>
-          <div class="menu-card-price">330 ₽</div>
+          <div class="menu-card-price">220 ₽</div>
         </div>
       </div>
     </div><!-- /menu-grid -->
@@ -790,7 +774,7 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
             <div class="cart-total-label">Итого</div>
             <div class="cart-total-sum" id="cartSum">0 ₽</div>
           </div>
-          <div class="delivery-note" id="deliveryNote">🚗 Стоимость доставки уточняйте по телефону +7 (938) 450-18-18</div>
+          <div class="delivery-note" id="deliveryNote">🚗 Стоимость доставки уточняйте по телефону +7 (928) 66-777-33</div>
         </div>
       </div>
     </div>
@@ -812,7 +796,7 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
         <div class="promo-desc">Барабуля и сарган черноморские — свежий улов на мангале. Попробуйте то, что большинство кафе не предлагает вовсе.</div>
       </div>
     </div>
-    <p style="font-size:12px;color:var(--mist);margin-top:32px;text-align:center;font-weight:300;">Следите за новыми акциями в нашем WhatsApp: <a href="tel:+79384501818" style="color:var(--gold);">+7 (938) 450-18-18</a></p>
+    <p style="font-size:12px;color:var(--mist);margin-top:32px;text-align:center;font-weight:300;">Следите за новыми акциями в нашем WhatsApp: <a href="tel:+79286677733" style="color:var(--gold);">+7 (928) 66-777-33</a></p>
   </div>
 </section>
 
@@ -1019,11 +1003,11 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
         <h3 style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,56px);color:#EDD98A;line-height:1.1;margin-bottom:16px;">Готовы обсудить<br><em style="font-style:italic;">детали?</em></h3>
         <p style="font-size:15px;color:rgba(237,217,138,0.7);font-weight:300;max-width:480px;margin:0 auto 40px;line-height:1.8;">Свяжитесь с основателем напрямую — расскажем о цифрах, покажем точку, ответим на все вопросы. Первый разговор ни к чему не обязывает.</p>
         <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-          <a href="tel:+79384501818" style="padding:18px 44px;background:#C9A84C;color:#0C0C0C;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-decoration:none;display:inline-block;transition:background .2s;" onmouseover="this.style.background='#EDD98A'" onmouseout="this.style.background='#C9A84C'">📞 Позвонить основателю</a>
-          <a href="https://wa.me/79384501818?text=Здравствуйте!%20Я%20заинтересован%20в%20партнёрстве%20с%20Хачапури%20%26%20Мангал.%20Хотел%20бы%20узнать%20подробнее." target="_blank" style="padding:17px 44px;background:transparent;color:#EDD98A;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;text-decoration:none;display:inline-block;border:1px solid rgba(237,217,138,0.5);transition:all .2s;" onmouseover="this.style.borderColor='#EDD98A'" onmouseout="this.style.borderColor='rgba(237,217,138,0.5)'">💬 Написать в WhatsApp</a>
+          <a href="tel:+79286677733" style="padding:18px 44px;background:#C9A84C;color:#0C0C0C;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-decoration:none;display:inline-block;transition:background .2s;" onmouseover="this.style.background='#EDD98A'" onmouseout="this.style.background='#C9A84C'">📞 Позвонить основателю</a>
+          <a href="https://wa.me/79286677733?text=Здравствуйте!%20Я%20заинтересован%20в%20партнёрстве%20с%20Хачапури%20%26%20Мангал.%20Хотел%20бы%20узнать%20подробнее." target="_blank" style="padding:17px 44px;background:transparent;color:#EDD98A;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;text-decoration:none;display:inline-block;border:1px solid rgba(237,217,138,0.5);transition:all .2s;" onmouseover="this.style.borderColor='#EDD98A'" onmouseout="this.style.borderColor='rgba(237,217,138,0.5)'">💬 Написать в WhatsApp</a>
           <a href="https://t.me/zharovnyaMyasoDaRyba" target="_blank" style="padding:17px 44px;background:transparent;color:#EDD98A;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;text-decoration:none;display:inline-block;border:1px solid rgba(237,217,138,0.5);transition:all .2s;" onmouseover="this.style.borderColor='#EDD98A'" onmouseout="this.style.borderColor='rgba(237,217,138,0.5)'">✈️ Написать в Telegram</a>
         </div>
-        <div style="margin-top:32px;font-size:13px;color:rgba(237,217,138,0.4);letter-spacing:2px;">+7 (938) 450-18-18 · Сочи</div>
+        <div style="margin-top:32px;font-size:13px;color:rgba(237,217,138,0.4);letter-spacing:2px;">+7 (928) 66-777-33 · Сочи</div>
       </div>
     </div>
 
@@ -1050,7 +1034,7 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
           <div class="contact-icon">📞</div>
           <div>
             <div class="contact-label">Телефон / WhatsApp</div>
-            <div class="contact-val"><a href="tel:+79384501818">+7 (938) 450-18-18</a></div>
+            <div class="contact-val"><a href="tel:+79286677733">+7 (928) 66-777-33</a></div>
             <div class="contact-note">Заказы, вопросы, резервирование</div>
           </div>
         </div>
@@ -1070,7 +1054,7 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
             <div class="contact-note">Условия уточняйте по телефону</div>
           </div>
         </div>
-        <a href="tel:+79384501818" class="btn-primary" style="margin-top:8px;display:inline-block;">Позвонить и заказать</a>
+        <a href="tel:+79286677733" class="btn-primary" style="margin-top:8px;display:inline-block;">Позвонить и заказать</a>
       </div>
       <div class="map-placeholder" style="padding:0;border:none;">
         <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=39.86%2C43.60%2C39.88%2C43.615&layer=mapnik&marker=43.608%2C39.87" style="width:100%;height:320px;border:none;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -1110,7 +1094,7 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
     
         <a href="#investors">Инвесторам</a>
         <a href="#contacts">Контакты</a>
-        <a href="tel:+79384501818">+7 (938) 450-18-18</a>
+        <a href="tel:+79286677733">+7 (928) 66-777-33</a>
       </div>
     </div>
   </div>
@@ -1146,7 +1130,7 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
     <button class="modal-close" onclick="closeModal()">✕</button>
     <div class="modal-icon">🔥</div>
     <div class="modal-title">Заказ принят!</div>
-    <div class="modal-text">Мы получили ваш заказ и скоро перезвоним для подтверждения.<br><br>Или звоните сами: <strong style="color:var(--gold);">+7 (938) 450-18-18</strong></div>
+    <div class="modal-text">Мы получили ваш заказ и скоро перезвоним для подтверждения.<br><br>Или звоните сами: <strong style="color:var(--gold);">+7 (928) 66-777-33</strong></div>
     <button class="btn-primary" style="width:100%;" onclick="closeModal()">Отлично, жду!</button>
   </div>
 </div>
@@ -1222,7 +1206,7 @@ function switchOrderType(type) {
   if (type === 'delivery') {
     tabD.classList.add('active');
     fields.style.display = 'block';
-    note.textContent = '🚗 Стоимость доставки уточняйте по телефону +7 (938) 450-18-18';
+    note.textContent = '🚗 Стоимость доставки уточняйте по телефону +7 (928) 66-777-33';
   } else if (type === 'pickup') {
     tabP.classList.add('active');
     fields.style.display = 'none';
