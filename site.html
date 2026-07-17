@@ -262,63 +262,50 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
-  header{padding:0 24px;}
+  header{padding:0 16px;}
   nav{display:none;}
   .burger{display:flex;}
-  .container{padding:0 24px;}
+  .container{padding:0 16px;}
   .order-grid,.contacts-grid,.footer-inner{grid-template-columns:1fr;}
-  .promos-grid{grid-template-columns:1fr;}
   .menu-grid{grid-template-columns:1fr;}
   section{padding:72px 0;}
-  /* Hero */
-  #home > div:last-child{display:flex !important;flex-direction:column !important;grid-template-columns:none !important;text-align:center;gap:30px;padding:0 24px;}
-  #home .btn-primary,#home .btn-outline{margin:0 auto;}
-  #home img[alt*="logo"]{width:200px !important;margin:0 auto;}
-  /* Таймер */
-  #home + section > div{flex-direction:column;gap:16px !important;}
+  #home{height:auto;min-height:auto;padding:0;}
+  #home > div:last-child{display:flex !important;flex-direction:column !important;grid-template-columns:none !important;text-align:center;gap:20px;padding:90px 16px 30px;}
+  #home > div:last-child > div:last-child{order:-1 !important;}
+  #home img[alt*="logo"]{width:160px !important;margin:0 auto 15px;display:block;}
+  #home p{font-size:15px !important;line-height:1.5;}
+  #home .btn-primary,#home .btn-outline{width:100%;text-align:center;margin:0 auto;}
+  #home > div:last-child > div:first-child{text-align:center;}
+  #home > div:last-child > div:first-child > div{font-size:9px !important;letter-spacing:2px !important;word-break:break-word;}
+  #home + section > div{flex-direction:column;gap:12px !important;}
 }
 @media(max-width:600px){
-  .hero-h1{font-size:42px;}
-  .hero-btns{flex-direction:column;}
+  .burger{display:flex;}
+  nav{display:none;}
   .btn-primary,.btn-outline{width:100%;text-align:center;}
-  
-  /* Cart notification animation */
-  @keyframes slideIn {
-    from { transform: translateX(100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-  }
-  
   .menu-tabs{gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
   .menu-tabs::-webkit-scrollbar{display:none;}
-  .tab-btn{white-space:nowrap;padding:12px 14px;font-size:9px;letter-spacing:2px;}
-  .menu-card{padding:20px 16px;}
-  .menu-card-price{font-size:22px;}
+  .tab-btn{white-space:nowrap;padding:10px 12px;font-size:9px;letter-spacing:1px;}
+  .menu-card{padding:16px 12px;}
+  .menu-card-price{font-size:20px;}
   .menu-card-name{font-size:13px;}
-  .order-grid{gap:32px;}
-  .order-tab{padding:12px 8px;}
-  .order-tab-icon{font-size:20px;margin-bottom:4px;}
-  .order-tab-label{font-size:8px;letter-spacing:1px;}
-  .form-input{padding:12px 14px;font-size:16px;}
-  .cart-total-sum{font-size:24px;}
-  .contacts-grid{gap:32px;}
-  .contact-item{gap:12px;}
-  .footer-inner{gap:32px;}
-  .footer-bottom{flex-direction:column;gap:16px;text-align:center;}
-  .promo-card{padding:24px 20px;}
-  .promo-title{font-size:22px;}
-  section{padding:60px 0;}
-  .container{padding:0 16px;}
-  /* Hero на телефоне */
-  #home{height:auto;min-height:500px;padding:60px 0;}
-  #home > div:last-child{padding:0 16px !important;}
-  #home > div:last-child > div:last-child{order:-1 !important;}
-  #home img[alt*="logo"]{width:180px !important;margin:0 auto 20px;display:block;}
-  #home p{font-size:16px !important;}
-  #home .btn-primary,#home .btn-outline{width:100%;text-align:center;}
-  #home > div:last-child > div:first-child{text-align:center;}
-  #home > div:last-child > div:first-child > div:first-child{font-size:9px !important;letter-spacing:3px !important;}
-  /* Таймер на телефоне */
-  #home + section > div{flex-direction:column;gap:12px !important;}
+  .order-grid{gap:24px;}
+  .order-tab{padding:10px 6px;}
+  .order-tab-icon{font-size:18px;margin-bottom:2px;}
+  .order-tab-label{font-size:7px;letter-spacing:1px;}
+  .form-input{padding:12px;font-size:16px;}
+  .cart-total-sum{font-size:22px;}
+  .contacts-grid{gap:24px;}
+  .contact-item{gap:10px;}
+  .footer-inner{gap:24px;}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center;}
+  section{padding:50px 0;}
+  .container{padding:0 12px;}
+  #home > div:last-child{padding:80px 12px 24px;}
+  #home > div:last-child > div:last-child{order:-1;}
+  #home img[alt*="logo"]{width:140px !important;}
+  #home p{font-size:14px !important;}
+  #home + section > div{flex-direction:column;gap:10px !important;}
   #home + section > div > div{width:100%;text-align:center;}
 }
 </style>
