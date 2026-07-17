@@ -340,23 +340,22 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
   <a href="#contacts" onclick="toggleMenu()">Контакты</a>
 </div>
 
-<!-- HERO -->
-<section class="hero" id="home" style="background:#0A0A0A;min-height:auto;padding:100px 0 80px;">
-  <div style="max-width:1160px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
-    <!-- Левая часть — текст -->
-    <div>
-      <div class="hero-tag">Сочи · Волжская 37/к3 (Мамайка) · Ежедневно 10:00–22:00</div>
-      <h1 class="hero-h1">Хачапури<br><em>& Мангал</em></h1>
-      <p class="hero-sub" style="font-size:18px;margin-bottom:16px;">Мясо и рыба на живом огне. Черноморские деликатесы и грузинская кухня.</p>
-      <p style="font-family:'Cormorant Garamond',serif;font-size:24px;font-style:italic;color:#F09B4A;margin-bottom:40px;line-height:1.4;">«Попробуй один раз —<br>вернёшься много раз!»</p>
-      <div class="hero-btns">
-        <a href="#order" class="btn-primary">Заказать доставку</a>
-        <a href="#menu" class="btn-outline">Смотреть меню</a>
-      </div>
+<!-- HERO с видео-фоном -->
+<section id="home" style="position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+  <video autoplay muted loop playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+    <source src="https://atarh.github.io/khachma/img/video2.mp4" type="video/mp4">
+  </video>
+  <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(10,10,10,0.6);z-index:1;"></div>
+  <div style="position:relative;z-index:2;max-width:900px;text-align:center;padding:0 24px;">
+    <div style="margin-bottom:40px;">
+      <img src="https://atarh.github.io/khachma/img/logo.png" alt="Хачапури & Мангал" style="max-width:350px;width:100%;height:auto;filter:drop-shadow(0 0 60px rgba(232,131,46,0.4));">
     </div>
-    <!-- Правая часть — лого -->
-    <div style="display:flex;justify-content:center;align-items:center;">
-      <img src="https://atarh.github.io/khachma/img/logo.png" alt="Хачапури & Мангал" style="max-width:100%;height:auto;max-height:400px;object-fit:contain;filter:drop-shadow(0 0 40px rgba(232,131,46,0.3));">
+    <div style="font-size:10px;letter-spacing:6px;text-transform:uppercase;color:#E8832E;font-weight:600;margin-bottom:20px;">Сочи · Волжская 37/к3 (Мамайка) · Ежедневно 10:00–22:00</div>
+    <p style="font-size:18px;color:rgba(240,230,220,0.8);margin-bottom:12px;font-weight:300;">Мясо и рыба на живом огне. Черноморские деликатесы и грузинская кухня.</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:28px;font-style:italic;color:#F09B4A;margin-bottom:40px;line-height:1.4;">«Попробуй один раз —<br>вернёшься много раз!»</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="#order" class="btn-primary">Заказать доставку</a>
+      <a href="#menu" class="btn-outline">Смотреть меню</a>
     </div>
   </div>
 </section>
