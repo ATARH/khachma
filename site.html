@@ -392,7 +392,7 @@ video{position:absolute;top:0;left:0;width:100vw;height:100vh;object-fit:cover;}
       <span id="workStatus" style="font-size:14px;font-weight:600;letter-spacing:2px;color:#4CAF50;">● ОТКРЫТО</span>
     </div>
     <div>
-      <span style="font-size:14px;color:#9A8A7A;">До закрытия: </span>
+      <span id="workLabel" style="font-size:14px;color:#9A8A7A;">До закрытия: </span>
       <span id="workTimer" style="font-size:14px;font-weight:600;color:#FAF5EE;">--:--:--</span>
     </div>
     <div>
@@ -1585,9 +1585,12 @@ function updateWorkTimer() {
   
   if (!statusEl || !timerEl) return;
   
+  var labelEl = document.getElementById('workLabel');
+  
   if (isOpen) {
     statusEl.textContent = '\u25CF \u041E\u0422\u041A\u0420\u042B\u0422\u041E';
     statusEl.style.color = '#4CAF50';
+    if (labelEl) { labelEl.textContent = '\u0414\u043E \u0437\u0430\u043A\u0440\u044B\u0442\u0438\u044F: '; }
     
     var closeTime = new Date(now);
     closeTime.setHours(22, 0, 0, 0);
@@ -1602,6 +1605,7 @@ function updateWorkTimer() {
   } else {
     statusEl.textContent = '\u25CF \u0417\u0410\u041A\u0420\u042B\u0422\u041E';
     statusEl.style.color = '#E8832E';
+    if (labelEl) { labelEl.textContent = '\u0414\u043E \u043E\u0442\u043A\u0440\u044B\u0442\u0438\u044F: '; }
     
     var openTime = new Date(now);
     if (hours >= 22) {
