@@ -1482,7 +1482,7 @@ function animateSparks() {
   requestAnimationFrame(animateSparks);
 }
 animateSparks();
-// Fallback: если canvas не работает, создаём CSS-искорки
+// Fallback: пїЅпїЅпїЅпїЅ canvas пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ CSS-пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 if (!canvas.getContext) {
   for (let i = 0; i < 20; i++) {
     const spark = document.createElement('div');
@@ -1559,6 +1559,32 @@ document.addEventListener('DOMContentLoaded', () => {
     el.style.transitionDelay = (i % 4 * 0.08) + 's';
     revealObserver.observe(el);
   });
+});
+</script>
+
+<!-- tsParticles вЂ” РёСЃРєРѕСЂРєРё РѕРіРЅСЏ -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<script>
+tsParticles.load({
+  id: "tsparticles",
+  options: {
+    fullScreen: { enable: true, zIndex: 1 },
+    particles: {
+      number: { value: 40 },
+      color: { value: ["#E8832E", "#F09B4A", "#FF6B35", "#FFD700"] },
+      shape: { type: "circle" },
+      opacity: { value: { min: 0.1, max: 0.8 }, animation: { enable: true, speed: 0.5, minimumValue: 0 } },
+      size: { value: { min: 1, max: 4 }, animation: { enable: true, speed: 1, minimumValue: 0.5 } },
+      move: { enable: true, speed: { min: 0.5, max: 2 }, direction: "top", outModes: "destroy" },
+      life: { duration: { sync: false, value: 3 }, count: 1 }
+    },
+    emitters: {
+      direction: "top",
+      position: { x: 50, y: 100 },
+      rate: { delay: 0.1, quantity: 2 },
+      size: { width: 100, height: 0 }
+    }
+  }
 });
 </script>
 
