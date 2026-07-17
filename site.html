@@ -1,21 +1,21 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-  <!-- Open Graph / РїСЂРµРІСЊСЋ РІ РјРµСЃСЃРµРЅРґР¶РµСЂР°С… -->
+  <!-- Open Graph / превью в мессенджерах -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="РҐР°С‡Р°РїСѓСЂРё & РњР°РЅРіР°Р» вЂ” РЎРѕС‡Рё">
-  <meta property="og:description" content="РҐР°С‡Р°РїСѓСЂРё РЅР° РјР°РЅРіР°Р»Рµ, РјСЏСЃРѕ Рё СЂС‹Р±Р°. Р”РѕСЃС‚Р°РІРєР° Рё СЃР°РјРѕРІС‹РІРѕР· РІ РЎРѕС‡Рё. Р’РѕР»Р¶СЃРєР°СЏ 37/Рє3 (РњР°РјР°Р№РєР°) В· РљР°Р¶РґС‹Р№ РґРµРЅСЊ СЃ 10:00 РґРѕ 22:00">
+  <meta property="og:title" content="Хачапури & Мангал — Сочи">
+  <meta property="og:description" content="Хачапури на мангале, мясо и рыба. Доставка и самовывоз в Сочи. Волжская 37/к3 (Мамайка) · Каждый день с 10:00 до 22:00">
   <meta property="og:image" content="https://atarh.github.io/khachma/img/logo.png">
   <meta property="og:url" content="https://atarh.github.io/khachma">
   <meta property="og:locale" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="РҐР°С‡Р°РїСѓСЂРё & РњР°РЅРіР°Р» вЂ” РЎРѕС‡Рё">
-  <meta name="twitter:description" content="Р–РёРІРѕР№ РѕРіРѕРЅСЊ. РќР°СЃС‚РѕСЏС‰РµРµ РјСЏСЃРѕ. Р§РµСЂРЅРѕРјРѕСЂСЃРєР°СЏ СЂС‹Р±Р°.">
+  <meta name="twitter:title" content="Хачапури & Мангал — Сочи">
+  <meta name="twitter:description" content="Живой огонь. Настоящее мясо. Черноморская рыба.">
   <meta name="twitter:image" content="https://atarh.github.io/khachma/img/logo.png">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>РҐР°С‡Р°РїСѓСЂРё & РњР°РЅРіР°Р» вЂ” Р—Р°РєР°Р· РµРґС‹ РІ РЎРѕС‡Рё</title>
+<title>Хачапури & Мангал — Заказ еды в Сочи</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Montserrat:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -38,7 +38,7 @@
 html{scroll-behavior:smooth;}
 body{background:var(--ink);color:var(--bone);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden;}
 
-/* в”Ђв”Ђ HEADER в”Ђв”Ђ */
+/* ── HEADER ── */
 header{
   position:fixed;top:0;left:0;right:0;z-index:1000;
   padding:0 48px;height:72px;
@@ -73,7 +73,7 @@ nav a:hover{color:var(--gold);}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
 .burger span{width:24px;height:2px;background:var(--bone);transition:all .3s;}
 
-/* в”Ђв”Ђ HERO в”Ђв”Ђ */
+/* ── HERO ── */
 .hero{
   height:100vh;min-height:600px;position:relative;
   display:flex;align-items:center;overflow:hidden;
@@ -113,7 +113,7 @@ nav a:hover{color:var(--gold);}
 .hero-stat-n{font-family:'DM Serif Display',serif;font-size:32px;color:var(--goldl);line-height:1;}
 .hero-stat-l{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--mist);margin-top:4px;}
 
-/* в”Ђв”Ђ SECTIONS в”Ђв”Ђ */
+/* ── SECTIONS ── */
 section{padding:100px 0;}
 .container{max-width:1160px;margin:0 auto;padding:0 48px;}
 .sec-tag{font-size:9px;letter-spacing:6px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;}
@@ -121,7 +121,7 @@ section{padding:100px 0;}
 .sec-h2 em{font-style:italic;color:var(--goldl);}
 .sec-div{width:40px;height:2px;background:var(--gold);opacity:.5;margin-bottom:48px;}
 
-/* в”Ђв”Ђ MENU SECTION в”Ђв”Ђ */
+/* ── MENU SECTION ── */
 #menu{background:var(--obs);}
 .menu-tabs{display:flex;gap:0;flex-wrap:wrap;margin-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08);}
 .tab-btn{
@@ -151,7 +151,7 @@ section{padding:100px 0;}
 .menu-cat-hidden{display:none;}
 .menu-cat-hidden.active{display:contents;}
 
-/* в”Ђв”Ђ ORDER SECTION в”Ђв”Ђ */
+/* ── ORDER SECTION ── */
 #order{background:var(--ink);}
 .order-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
 .order-type-tabs{display:flex;gap:2px;margin-bottom:32px;}
@@ -195,7 +195,7 @@ select.form-input{cursor:pointer;}
 .cart-total-sum{font-family:'DM Serif Display',serif;font-size:32px;color:var(--gold);}
 .delivery-note{font-size:11px;color:var(--mist);font-weight:300;margin-bottom:20px;padding:12px 16px;background:rgba(255,255,255,.03);border-left:2px solid rgba(201,168,76,.3);}
 
-/* в”Ђв”Ђ PROMO SECTION в”Ђв”Ђ */
+/* ── PROMO SECTION ── */
 #promos{background:var(--graph);}
 .promos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 .promo-card{position:relative;overflow:hidden;background:var(--obs);padding:40px 32px;}
@@ -210,7 +210,7 @@ select.form-input{cursor:pointer;}
 .promo-title{font-family:'DM Serif Display',serif;font-size:26px;color:var(--cream);margin-bottom:12px;line-height:1.2;}
 .promo-desc{font-size:13px;line-height:1.7;color:var(--mist);font-weight:300;}
 
-/* в”Ђв”Ђ CONTACTS в”Ђв”Ђ */
+/* ── CONTACTS ── */
 #contacts{background:var(--obs);}
 .contacts-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
 .contact-items{display:flex;flex-direction:column;gap:24px;}
@@ -228,7 +228,7 @@ select.form-input{cursor:pointer;}
 }
 .map-placeholder a{color:var(--gold);text-decoration:none;font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:600;border-bottom:1px solid rgba(201,168,76,.3);padding-bottom:4px;}
 
-/* в”Ђв”Ђ FOOTER в”Ђв”Ђ */
+/* ── FOOTER ── */
 footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(255,255,255,.05);}
 .footer-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:60px;margin-bottom:48px;}
 .footer-logo{font-family:'DM Serif Display',serif;font-size:32px;color:var(--cream);margin-bottom:6px;}
@@ -241,7 +241,7 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 .footer-bottom{max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(255,255,255,.05);}
 .footer-copy{font-size:11px;color:var(--mist);opacity:.5;}
 
-/* в”Ђв”Ђ SUCCESS MODAL в”Ђв”Ђ */
+/* ── SUCCESS MODAL ── */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:2000;display:none;align-items:center;justify-content:center;backdrop-filter:blur(8px);}
 .modal-overlay.show{display:flex;}
 .modal{background:var(--obs);padding:60px;max-width:480px;width:90%;text-align:center;position:relative;}
@@ -250,7 +250,7 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 .modal-text{font-size:14px;color:var(--mist);line-height:1.7;font-weight:300;margin-bottom:32px;}
 .modal-close{position:absolute;top:20px;right:20px;background:none;border:none;color:var(--mist);font-size:20px;cursor:pointer;}
 
-/* в”Ђв”Ђ MOBILE MENU в”Ђв”Ђ */
+/* ── MOBILE MENU ── */
 .mobile-nav{
   position:fixed;inset:0;background:var(--ink);z-index:999;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;
@@ -260,7 +260,7 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 .mobile-nav a{font-family:'DM Serif Display',serif;font-size:36px;color:var(--cream);text-decoration:none;}
 .mobile-nav a:hover{color:var(--gold);}
 
-/* в”Ђв”Ђ RESPONSIVE в”Ђв”Ђ */
+/* ── RESPONSIVE ── */
 @media(max-width:900px){
   header{padding:0 24px;}
   nav{display:none;}
@@ -316,15 +316,15 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 <!-- HEADER -->
 <header id="header">
   <a class="logo" href="#home" style="display:flex;align-items:center;padding:4px 0;">
-    <img src="https://atarh.github.io/khachma/img/logo.png" alt="РҐР°С‡Р°РїСѓСЂРё & РњР°РЅРіР°Р»" style="height:48px;width:auto;object-fit:contain;">
+    <img src="https://atarh.github.io/khachma/img/logo.png" alt="Хачапури & Мангал" style="height:48px;width:auto;object-fit:contain;">
   </a>
   <nav>
-    <a href="#menu">РњРµРЅСЋ</a>
-    <a href="#order">Р—Р°РєР°Р·Р°С‚СЊ</a>
-    <a href="#promos">РђРєС†РёРё</a>
-    <a href="#reviews">РћС‚Р·С‹РІС‹</a>
-    <a href="#contacts">РљРѕРЅС‚Р°РєС‚С‹</a>
-    <a href="#order" class="nav-order">Р—Р°РєР°Р·Р°С‚СЊ рџ”Ґ</a>
+    <a href="#menu">Меню</a>
+    <a href="#order">Заказать</a>
+    <a href="#promos">Акции</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#contacts">Контакты</a>
+    <a href="#order" class="nav-order">Заказать 🔥</a>
   </nav>
   <div class="burger" id="burger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -333,46 +333,46 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
-  <a href="#menu" onclick="toggleMenu()">РњРµРЅСЋ</a>
-  <a href="#order" onclick="toggleMenu()">Р—Р°РєР°Р·Р°С‚СЊ</a>
-  <a href="#promos" onclick="toggleMenu()">РђРєС†РёРё</a>
-  <a href="#reviews" onclick="toggleMenu()">РћС‚Р·С‹РІС‹</a>
-  <a href="#contacts" onclick="toggleMenu()">РљРѕРЅС‚Р°РєС‚С‹</a>
+  <a href="#menu" onclick="toggleMenu()">Меню</a>
+  <a href="#order" onclick="toggleMenu()">Заказать</a>
+  <a href="#promos" onclick="toggleMenu()">Акции</a>
+  <a href="#reviews" onclick="toggleMenu()">Отзывы</a>
+  <a href="#contacts" onclick="toggleMenu()">Контакты</a>
 </div>
 
-<!-- HERO СЃ РІРёРґРµРѕ-С„РѕРЅРѕРј -->
+<!-- HERO с видео-фоном -->
 <section id="home" style="position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;">
   <video autoplay muted loop playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
     <source src="https://atarh.github.io/khachma/img/video2.mp4" type="video/mp4">
   </video>
   <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(10,10,10,0.55);z-index:1;"></div>
   <div style="position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
-    <!-- Р›РµРІР°СЏ С‡Р°СЃС‚СЊ вЂ” С‚РµРєСЃС‚ -->
+    <!-- Левая часть — текст -->
     <div>
-      <div style="font-size:10px;letter-spacing:6px;text-transform:uppercase;color:#E8832E;font-weight:600;margin-bottom:20px;">РЎРѕС‡Рё В· Р’РѕР»Р¶СЃРєР°СЏ 37/Рє3 (РњР°РјР°Р№РєР°) В· РљР°Р¶РґС‹Р№ РґРµРЅСЊ СЃ 10:00 РґРѕ 22:00</div>
-      <p style="font-size:18px;color:rgba(240,230,220,0.8);margin-bottom:16px;font-weight:300;">РњСЏСЃРѕ Рё СЂС‹Р±Р° РЅР° Р¶РёРІРѕРј РѕРіРЅРµ. Р§РµСЂРЅРѕРјРѕСЂСЃРєРёРµ РґРµР»РёРєР°С‚РµСЃС‹ Рё РіСЂСѓР·РёРЅСЃРєР°СЏ РєСѓС…РЅСЏ.</p>
-      <p style="font-family:'Cormorant Garamond',serif;font-size:32px;font-style:italic;color:#F09B4A;margin-bottom:40px;line-height:1.4;">В«РџРѕРїСЂРѕР±СѓР№ РѕРґРёРЅ СЂР°Р· вЂ”<br>РІРµСЂРЅС‘С€СЊСЃСЏ РјРЅРѕРіРѕ СЂР°Р·!В»</p>
+      <div style="font-size:10px;letter-spacing:6px;text-transform:uppercase;color:#E8832E;font-weight:600;margin-bottom:20px;">Сочи · Волжская 37/к3 (Мамайка) · Каждый день с 10:00 до 22:00</div>
+      <p style="font-size:18px;color:rgba(240,230,220,0.8);margin-bottom:16px;font-weight:300;">Мясо и рыба на живом огне. Черноморские деликатесы и грузинская кухня.</p>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:32px;font-style:italic;color:#F09B4A;margin-bottom:40px;line-height:1.4;">«Попробуй один раз —<br>вернёшься много раз!»</p>
       <div style="display:flex;gap:16px;flex-wrap:wrap;">
-        <a href="#order" class="btn-primary">Р—Р°РєР°Р·Р°С‚СЊ РґРѕСЃС‚Р°РІРєСѓ</a>
-        <a href="#menu" class="btn-outline">РЎРјРѕС‚СЂРµС‚СЊ РјРµРЅСЋ</a>
+        <a href="#order" class="btn-primary">Заказать доставку</a>
+        <a href="#menu" class="btn-outline">Смотреть меню</a>
       </div>
     </div>
-    <!-- РџСЂР°РІР°СЏ С‡Р°СЃС‚СЊ вЂ” Р»РѕРіРѕ -->
+    <!-- Правая часть — лого -->
     <div style="display:flex;justify-content:center;align-items:center;">
-      <img src="https://atarh.github.io/khachma/img/logo.png" alt="РҐР°С‡Р°РїСѓСЂРё & РњР°РЅРіР°Р»" style="max-width:100%;width:260px;height:auto;opacity:0.7;filter:drop-shadow(0 0 40px rgba(232,131,46,0.2));">
+      <img src="https://atarh.github.io/khachma/img/logo.png" alt="Хачапури & Мангал" style="max-width:100%;width:260px;height:auto;opacity:0.7;filter:drop-shadow(0 0 40px rgba(232,131,46,0.2));">
     </div>
   </div>
 </section>
 
-<!-- РўРђР™РњР•Р  Р РђР‘РћРўР« -->
+<!-- ТАЙМЕР РАБОТЫ -->
 <section style="background:#0A0A0A;padding:30px 0;border-bottom:1px solid rgba(232,131,46,0.15);">
   <div style="max-width:1200px;margin:0 auto;padding:0 48px;display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap;text-align:center;">
     <div>
-      <span id="workStatus" style="font-size:14px;font-weight:600;letter-spacing:2px;color:#4CAF50;">в—Џ РћРўРљР Р«РўРћ</span>
+      <span id="workStatus" style="font-size:14px;font-weight:600;letter-spacing:2px;color:#4CAF50;">● ОТКРЫТО</span>
     </div>
     <div>
-      <span style="font-size:14px;color:#9A8A7A;">Р”Рѕ Р·Р°РєСЂС‹С‚РёСЏ: </span>
-      <span id="workTimer" style="font-size:14px;font-weight:600;color:#FAF5EE;">--:--</span>
+      <span style="font-size:14px;color:#9A8A7A;">До закрытия: </span>
+      <span id="workTimer" style="font-size:14px;font-weight:600;color:#FAF5EE;">--:--:--</span>
     </div>
     <div>
       <a href="tel:+79286677733" style="font-size:14px;font-weight:600;color:#FAF5EE;text-decoration:none;">+7 (928) 66-777-33</a>
@@ -383,368 +383,368 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 <!-- MENU -->
 <section id="menu">
   <div class="container">
-    <div class="sec-tag">02 вЂ” РњРµРЅСЋ</div>
-    <h2 class="sec-h2">Р§С‚Рѕ РЅР° <em>РјР°РЅРіР°Р»Рµ</em></h2>
+    <div class="sec-tag">02 — Меню</div>
+    <h2 class="sec-h2">Что на <em>мангале</em></h2>
     <div class="sec-div"></div>
 
     <div class="menu-tabs">
-      <button class="tab-btn active" onclick="showCat('meat',this)">рџҐ© РњСЏСЃРѕ</button>
-      <button class="tab-btn" onclick="showCat('fish',this)">рџђџ Р С‹Р±Р°</button>
-      <button class="tab-btn" onclick="showCat('salad',this)">рџҐ— РЎР°Р»Р°С‚С‹</button>
-      <button class="tab-btn" onclick="showCat('vegs',this)">рџҐ¦ РћРІРѕС‰Рё</button>
-      <button class="tab-btn" onclick="showCat('dough',this)">рџ«“ Р‘Р»СЋРґР° РёР· С‚РµСЃС‚Р°</button>
-      <button class="tab-btn" onclick="showCat('soup',this)">рџ«• РЎСѓРїС‹</button>
-      <button class="tab-btn" onclick="showCat('hot',this)">рџ”Ґ Р“РѕСЂСЏС‡РёРµ Р±Р»СЋРґР°</button>
-      <button class="tab-btn" onclick="showCat('hotstart',this)">рџ«• Р“РѕСЂСЏС‡РёРµ Р·Р°РєСѓСЃРєРё</button>
-      <button class="tab-btn" onclick="showCat('coldstart',this)">рџҐ— РҐРѕР»РѕРґРЅС‹Рµ Р·Р°РєСѓСЃРєРё</button>
-      <button class="tab-btn" onclick="showCat('street',this)">рџЊЇ РЎС‚СЂРёС‚-С„СѓРґ</button>
-      <button class="tab-btn" onclick="showCat('friture',this)">рџЌџ Р¤СЂРёС‚СЋСЂ</button>
-      <button class="tab-btn" onclick="showCat('drinks',this)">рџҐ¤ РќР°РїРёС‚РєРё</button>
-      <button class="tab-btn" onclick="showCat('desserts',this)">рџЌ° Р”РµСЃРµСЂС‚С‹</button>
+      <button class="tab-btn active" onclick="showCat('meat',this)">🥩 Мясо</button>
+      <button class="tab-btn" onclick="showCat('fish',this)">🐟 Рыба</button>
+      <button class="tab-btn" onclick="showCat('salad',this)">🥗 Салаты</button>
+      <button class="tab-btn" onclick="showCat('vegs',this)">🥦 Овощи</button>
+      <button class="tab-btn" onclick="showCat('dough',this)">🫓 Блюда из теста</button>
+      <button class="tab-btn" onclick="showCat('soup',this)">🫕 Супы</button>
+      <button class="tab-btn" onclick="showCat('hot',this)">🔥 Горячие блюда</button>
+      <button class="tab-btn" onclick="showCat('hotstart',this)">🫕 Горячие закуски</button>
+      <button class="tab-btn" onclick="showCat('coldstart',this)">🥗 Холодные закуски</button>
+      <button class="tab-btn" onclick="showCat('street',this)">🌯 Стрит-фуд</button>
+      <button class="tab-btn" onclick="showCat('friture',this)">🍟 Фритюр</button>
+      <button class="tab-btn" onclick="showCat('drinks',this)">🥤 Напитки</button>
+      <button class="tab-btn" onclick="showCat('desserts',this)">🍰 Десерты</button>
     </div>
 
     <div class="menu-grid" id="menuGrid">
 
-      <!-- РњРЇРЎРћ -->
+      <!-- МЯСО -->
       <div class="menu-cat-hidden active" data-cat="meat">
-        <div class="menu-card" onclick="addToCart('РЎРІРёРЅРёРЅР° С€РµСЏ', 230, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РЎРІРёРЅРёРЅР° С€РµСЏ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">230 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Свинина шея', 230, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Свинина шея</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">230 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РЎРІРёРЅРёРЅР° СЂРµР±СЂРѕ', 230, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РЎРІРёРЅРёРЅР° СЂРµР±СЂРѕ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">230 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Свинина ребро', 230, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Свинина ребро</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">230 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р‘Р°СЂР°РЅРёРЅР° РєРѕСЂРµР№РєР°', 510, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р‘Р°СЂР°РЅРёРЅР° РєРѕСЂРµР№РєР°</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">510 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Баранина корейка', 510, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Баранина корейка</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">510 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р‘Р°СЂР°РЅРёРЅР° РјСЏРєРѕС‚СЊ', 440, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р‘Р°СЂР°РЅРёРЅР° РјСЏРєРѕС‚СЊ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">440 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Баранина мякоть', 440, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Баранина мякоть</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">440 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р“РѕРІСЏРґРёРЅР° РІС‹СЂРµР·РєР°', 510, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р“РѕРІСЏРґРёРЅР° РІС‹СЂРµР·РєР°</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">510 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Говядина вырезка', 510, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Говядина вырезка</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">510 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РљСѓСЂРёС†Р° Р±РµРґСЂРѕ Р±РµР· РєРѕСЃС‚Рё', 200, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РљСѓСЂРёС†Р° Р±РµРґСЂРѕ Р±РµР· РєРѕСЃС‚Рё</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">200 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Курица бедро без кости', 200, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Курица бедро без кости</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">200 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РљСѓСЂРёС†Р° С„РёР»Рµ', 210, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РљСѓСЂРёС†Р° С„РёР»Рµ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">210 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Курица филе', 210, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Курица филе</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">210 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РљСѓСЂРёС†Р° РєСЂС‹Р»Рѕ', 170, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РљСѓСЂРёС†Р° РєСЂС‹Р»Рѕ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">170 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Курица крыло', 170, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Курица крыло</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">170 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р›СЋР»СЏ РєСѓСЂРёС†Р°', 190, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р›СЋР»СЏ РєСѓСЂРёС†Р°</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">190 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Люля курица', 190, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Люля курица</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">190 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р›СЋР»СЏ РєР»Р°СЃСЃРёРєР°', 210, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р›СЋР»СЏ РєР»Р°СЃСЃРёРєР°</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">210 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Люля классика', 210, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Люля классика</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">210 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р›СЋР»СЏ Р±Р°СЂР°РЅ', 310, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р›СЋР»СЏ Р±Р°СЂР°РЅ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">310 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Люля баран', 310, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Люля баран</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">310 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р‘Р°СЂР°РЅ РєРµР±Р°Р±', 430, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р‘Р°СЂР°РЅ РєРµР±Р°Р±</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">430 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Баран кебаб', 430, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Баран кебаб</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">430 ₽</div>
         </div>
       </div>
 
-      <!-- Р Р«Р‘Рђ -->
+      <!-- РЫБА -->
       <div class="menu-cat-hidden" data-cat="fish">
-        <div class="menu-card" onclick="addToCart('РЎС‘РјРіР°', 570, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РЎС‘РјРіР°</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">570 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Сёмга', 570, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Сёмга</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">570 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р¤РѕСЂРµР»СЊ СЂР°РґСѓР¶РЅР°СЏ', 260, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р¤РѕСЂРµР»СЊ СЂР°РґСѓР¶РЅР°СЏ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">260 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Форель радужная', 260, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Форель радужная</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">260 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РљСЂРµРІРµС‚РєР° С‚РёРіСЂРѕРІР°СЏ', 380, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РљСЂРµРІРµС‚РєР° С‚РёРіСЂРѕРІР°СЏ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">380 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Креветка тигровая', 380, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Креветка тигровая</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">380 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р‘Р°СЂР°Р±СѓР»СЏ С‡РµСЂРЅРѕРјРѕСЂСЃРєР°СЏ', 230, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р‘Р°СЂР°Р±СѓР»СЏ С‡РµСЂРЅРѕРјРѕСЂСЃРєР°СЏ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">230 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Барабуля черноморская', 230, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Барабуля черноморская</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">230 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РљР°РјР±Р°Р»Р° С‡РµСЂРЅРѕРјРѕСЂСЃРєР°СЏ', 620, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РљР°РјР±Р°Р»Р° С‡РµСЂРЅРѕРјРѕСЂСЃРєР°СЏ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">620 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Камбала черноморская', 620, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Камбала черноморская</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">620 ₽</div>
         </div>
       </div>
 
-      <!-- РЎРђР›РђРўР« -->
+      <!-- САЛАТЫ -->
       <div class="menu-cat-hidden" data-cat="salad">
-        <div class="menu-card" onclick="addToCart('РћРІРѕС‰РЅРѕР№', 310, '250 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РћРІРѕС‰РЅРѕР№</div><div class="menu-card-unit">250 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">310 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Овощной', 310, '250 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Овощной</div><div class="menu-card-unit">250 г · + в корзину</div></div>
+          <div class="menu-card-price">310 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р¦РµР·Р°СЂСЊ СЃ РєСѓСЂРёС†РµР№', 390, '250 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р¦РµР·Р°СЂСЊ СЃ РєСѓСЂРёС†РµР№</div><div class="menu-card-unit">250 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">390 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Цезарь с курицей', 390, '250 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Цезарь с курицей</div><div class="menu-card-unit">250 г · + в корзину</div></div>
+          <div class="menu-card-price">390 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р¦РµР·Р°СЂСЊ СЃ РєСЂРµРІРµС‚РєРѕР№', 510, '250 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р¦РµР·Р°СЂСЊ СЃ РєСЂРµРІРµС‚РєРѕР№</div><div class="menu-card-unit">250 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">510 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Цезарь с креветкой', 510, '250 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Цезарь с креветкой</div><div class="menu-card-unit">250 г · + в корзину</div></div>
+          <div class="menu-card-price">510 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р¦РµР·Р°СЂСЊ СЃ СЃС‘РјРіРѕР№', 510, '250 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р¦РµР·Р°СЂСЊ СЃ СЃС‘РјРіРѕР№</div><div class="menu-card-unit">250 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">510 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Цезарь с сёмгой', 510, '250 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Цезарь с сёмгой</div><div class="menu-card-unit">250 г · + в корзину</div></div>
+          <div class="menu-card-price">510 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РўР°Р№СЃРєРёР№ СЃ РіРѕРІСЏРґРёРЅРѕР№', 510, '250 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РўР°Р№СЃРєРёР№ СЃ РіРѕРІСЏРґРёРЅРѕР№</div><div class="menu-card-unit">250 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">510 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Тайский с говядиной', 510, '250 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Тайский с говядиной</div><div class="menu-card-unit">250 г · + в корзину</div></div>
+          <div class="menu-card-price">510 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РўС‘РїР»С‹Р№ СЃР°Р»Р°С‚ СЃ Р±Р°РєР»Р°Р¶Р°РЅРѕРј', 390, '250 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РўС‘РїР»С‹Р№ СЃР°Р»Р°С‚ СЃ Р±Р°РєР»Р°Р¶Р°РЅРѕРј</div><div class="menu-card-unit">250 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">390 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Тёплый салат с баклажаном', 390, '250 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Тёплый салат с баклажаном</div><div class="menu-card-unit">250 г · + в корзину</div></div>
+          <div class="menu-card-price">390 ₽</div>
         </div>
       </div>
 
-      <!-- РћР’РћР©Р -->
+      <!-- ОВОЩИ -->
       <div class="menu-cat-hidden" data-cat="vegs">
-        <div class="menu-card" onclick="addToCart('РџРѕРјРёРґРѕСЂ РіСЂРёР»СЊ', 130, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РџРѕРјРёРґРѕСЂ РіСЂРёР»СЊ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">130 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Помидор гриль', 130, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Помидор гриль</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">130 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РџРµСЂРµС† РіСЂРёР»СЊ', 130, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РџРµСЂРµС† РіСЂРёР»СЊ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">130 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Перец гриль', 130, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Перец гриль</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">130 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РџРµСЂРµС† С‡РёР»Рё РіСЂРёР»СЊ', 150, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РџРµСЂРµС† С‡РёР»Рё РіСЂРёР»СЊ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">150 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Перец чили гриль', 150, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Перец чили гриль</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">150 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РљР°СЂС‚РѕС„РµР»СЊ СЃ СЃР°Р»РѕРј', 130, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РљР°СЂС‚РѕС„РµР»СЊ СЃ СЃР°Р»РѕРј</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">130 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Картофель с салом', 130, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Картофель с салом</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">130 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РЁР°РјРїРёРЅСЊРѕРЅ РіСЂРёР»СЊ', 170, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РЁР°РјРїРёРЅСЊРѕРЅ РіСЂРёР»СЊ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">170 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Шампиньон гриль', 170, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Шампиньон гриль</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">170 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р‘Р°РєР»Р°Р¶Р°РЅ РіСЂРёР»СЊ', 130, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р‘Р°РєР»Р°Р¶Р°РЅ РіСЂРёР»СЊ</div><div class="menu-card-unit">Р·Р° 100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">130 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Баклажан гриль', 130, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Баклажан гриль</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
+          <div class="menu-card-price">130 ₽</div>
         </div>
       </div>
 
-      <!-- Р‘Р›Р®Р”Рђ РР— РўР•РЎРўРђ -->
+      <!-- БЛЮДА ИЗ ТЕСТА -->
       <div class="menu-cat-hidden" data-cat="dough">
-        <div class="menu-card" onclick="addToCart('РҐР°С‡Р°РїСѓСЂРё РЅР° РјР°РЅРіР°Р»Рµ', 410, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">РҐР°С‡Р°РїСѓСЂРё РЅР° РјР°РЅРіР°Р»Рµ</div><div class="menu-card-unit">1 С€С‚ В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">410 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Хачапури на мангале', 410, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Хачапури на мангале</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">410 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РҐР°С‡Р°РїСѓСЂРё Р°РґР¶Р°СЂСЃРєРёР№', 430, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">РҐР°С‡Р°РїСѓСЂРё Р°РґР¶Р°СЂСЃРєРёР№</div><div class="menu-card-unit">1 С€С‚ В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">430 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Хачапури аджарский', 430, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Хачапури аджарский</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">430 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РҐР°С‡Р°РїСѓСЂРё РёРјРµСЂРµС‚РёРЅСЃРєРёР№', 490, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">РҐР°С‡Р°РїСѓСЂРё РёРјРµСЂРµС‚РёРЅСЃРєРёР№</div><div class="menu-card-unit">1 С€С‚ В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">490 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Хачапури имеретинский', 490, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Хачапури имеретинский</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">490 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РЎС‹СЂ РЅР° РјР°РЅРіР°Р»Рµ', 190, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РЎС‹СЂ РЅР° РјР°РЅРіР°Р»Рµ</div><div class="menu-card-unit">100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">190 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Сыр на мангале', 190, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Сыр на мангале</div><div class="menu-card-unit">100 г · + в корзину</div></div>
+          <div class="menu-card-price">190 ₽</div>
         </div>
       </div>
 
-      <!-- РЎРЈРџР« -->
+      <!-- СУПЫ -->
       <div class="menu-cat-hidden" data-cat="soup">
-        <div class="menu-card" onclick="addToCart('РћРєСЂРѕС€РєР° РЅР° РјР°С†РѕРЅРё', 350, '350 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РћРєСЂРѕС€РєР° РЅР° РјР°С†РѕРЅРё</div><div class="menu-card-unit">350 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">350 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Окрошка на мацони', 350, '350 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Окрошка на мацони</div><div class="menu-card-unit">350 г · + в корзину</div></div>
+          <div class="menu-card-price">350 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РҐР°СЂС‡Рѕ СЃ СЂРёСЃРѕРј', 370, '300 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РҐР°СЂС‡Рѕ СЃ СЂРёСЃРѕРј</div><div class="menu-card-unit">300 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">370 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Харчо с рисом', 370, '300 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Харчо с рисом</div><div class="menu-card-unit">300 г · + в корзину</div></div>
+          <div class="menu-card-price">370 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р©Р°РІРµР»РµРІС‹Р№', 310, '300 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р©Р°РІРµР»РµРІС‹Р№</div><div class="menu-card-unit">300 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">310 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Щавелевый', 310, '300 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Щавелевый</div><div class="menu-card-unit">300 г · + в корзину</div></div>
+          <div class="menu-card-price">310 ₽</div>
         </div>
       </div>
 
-      <!-- Р“РћР РЇР§РР• Р‘Р›Р®Р”Рђ -->
+      <!-- ГОРЯЧИЕ БЛЮДА -->
       <div class="menu-cat-hidden" data-cat="hot">
-        <div class="menu-card" onclick="addToCart('РЎРѕР»СЏРЅРєР° РїРѕ-РіСЂСѓР·РёРЅСЃРєРё', 520, '300 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РЎРѕР»СЏРЅРєР° РїРѕ-РіСЂСѓР·РёРЅСЃРєРё</div><div class="menu-card-unit">300 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">520 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Солянка по-грузински', 520, '300 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Солянка по-грузински</div><div class="menu-card-unit">300 г · + в корзину</div></div>
+          <div class="menu-card-price">520 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р¦С‹РїР»С‘РЅРѕРє С‚Р°РїР°РєР°', 640, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">Р¦С‹РїР»С‘РЅРѕРє С‚Р°РїР°РєР°</div><div class="menu-card-unit">1 С€С‚ В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">640 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Цыплёнок тапака', 640, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Цыплёнок тапака</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">640 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р¦С‹РїР»С‘РЅРѕРє С‡РєРјРµСЂСѓР»Рё', 520, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">Р¦С‹РїР»С‘РЅРѕРє С‡РєРјРµСЂСѓР»Рё</div><div class="menu-card-unit">1 С€С‚ В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">520 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Цыплёнок чкмерули', 520, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Цыплёнок чкмерули</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">520 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р–Р°СЂРєРѕРµ РёР· СЃРІРёРЅРёРЅС‹', 490, '350 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р–Р°СЂРєРѕРµ РёР· СЃРІРёРЅРёРЅС‹</div><div class="menu-card-unit">350 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">490 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Жаркое из свинины', 490, '350 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Жаркое из свинины</div><div class="menu-card-unit">350 г · + в корзину</div></div>
+          <div class="menu-card-price">490 ₽</div>
         </div>
       </div>
 
-      <!-- Р“РћР РЇР§РР• Р—РђРљРЈРЎРљР -->
+      <!-- ГОРЯЧИЕ ЗАКУСКИ -->
       <div class="menu-cat-hidden" data-cat="hotstart">
-        <div class="menu-card" onclick="addToCart('РЎСѓР»СѓРіСѓРЅРё Р¶Р°СЂРµРЅС‹Р№', 340, '200 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РЎСѓР»СѓРіСѓРЅРё Р¶Р°СЂРµРЅС‹Р№</div><div class="menu-card-unit">200 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">340 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Сулугуни жареный', 340, '200 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Сулугуни жареный</div><div class="menu-card-unit">200 г · + в корзину</div></div>
+          <div class="menu-card-price">340 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р›РѕР±РёРѕ', 260, '300 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">Р›РѕР±РёРѕ</div><div class="menu-card-unit">300 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">260 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Лобио', 260, '300 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Лобио</div><div class="menu-card-unit">300 г · + в корзину</div></div>
+          <div class="menu-card-price">260 ₽</div>
         </div>
       </div>
 
-      <!-- РҐРћР›РћР”РќР«Р• Р—РђРљРЈРЎРљР -->
+      <!-- ХОЛОДНЫЕ ЗАКУСКИ -->
       <div class="menu-cat-hidden" data-cat="coldstart">
-        <div class="menu-card" onclick="addToCart('РћРІРѕС‰РЅРѕРµ Р°СЃСЃРѕСЂС‚Рё', 370, '300 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РћРІРѕС‰РЅРѕРµ Р°СЃСЃРѕСЂС‚Рё</div><div class="menu-card-unit">300 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">370 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Овощное ассорти', 370, '300 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Овощное ассорти</div><div class="menu-card-unit">300 г · + в корзину</div></div>
+          <div class="menu-card-price">370 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РЎРѕР»РµРЅСЊСЏ', 350, '300 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РЎРѕР»РµРЅСЊСЏ</div><div class="menu-card-unit">300 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">350 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Соленья', 350, '300 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Соленья</div><div class="menu-card-unit">300 г · + в корзину</div></div>
+          <div class="menu-card-price">350 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РЎС‹СЂРЅРѕРµ Р°СЃСЃРѕСЂС‚Рё', 440, '200 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РЎС‹СЂРЅРѕРµ Р°СЃСЃРѕСЂС‚Рё</div><div class="menu-card-unit">200 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">440 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Сырное ассорти', 440, '200 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Сырное ассорти</div><div class="menu-card-unit">200 г · + в корзину</div></div>
+          <div class="menu-card-price">440 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РЎРµР»РµРґРєР° СЃ РєР°СЂС‚РѕС„РµР»РµРј', 450, '200 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РЎРµР»РµРґРєР° СЃ РєР°СЂС‚РѕС„РµР»РµРј</div><div class="menu-card-unit">200 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">450 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Селедка с картофелем', 450, '200 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Селедка с картофелем</div><div class="menu-card-unit">200 г · + в корзину</div></div>
+          <div class="menu-card-price">450 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РЎС‘РјРіР° Рј/СЃ', 550, '100 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РЎС‘РјРіР° Рј/СЃ</div><div class="menu-card-unit">100 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">550 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Сёмга м/с', 550, '100 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Сёмга м/с</div><div class="menu-card-unit">100 г · + в корзину</div></div>
+          <div class="menu-card-price">550 ₽</div>
         </div>
       </div>
 
-      <!-- РЎРўР РРў-Р¤РЈР” -->
+      <!-- СТРИТ-ФУД -->
       <div class="menu-cat-hidden" data-cat="street">
-        <div class="menu-card" onclick="addToCart('Р‘СѓСЂРіРµСЂ РєР»Р°СЃСЃРёРєР°', 490, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">Р‘СѓСЂРіРµСЂ РєР»Р°СЃСЃРёРєР°</div><div class="menu-card-unit">1 С€С‚ В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">490 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Бургер классика', 490, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Бургер классика</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">490 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р‘СѓСЂРіРµСЂ СЃ РіРѕРІСЏРґРёРЅРѕР№', 540, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">Р‘СѓСЂРіРµСЂ СЃ РіРѕРІСЏРґРёРЅРѕР№</div><div class="menu-card-unit">1 С€С‚ В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">540 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Бургер с говядиной', 540, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Бургер с говядиной</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">540 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РЁР°СѓСЂРјР° СЃ РєСѓСЂРёС†РµР№', 320, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">РЁР°СѓСЂРјР° СЃ РєСѓСЂРёС†РµР№</div><div class="menu-card-unit">1 С€С‚ В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">320 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Шаурма с курицей', 320, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Шаурма с курицей</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">320 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РЁР°СѓСЂРјР° СЃРІРёРЅРёРЅР°', 350, '300 Рі')">
-          <div class="menu-card-left"><div class="menu-card-name">РЁР°СѓСЂРјР° СЃРІРёРЅРёРЅР°</div><div class="menu-card-unit">300 Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">350 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Шаурма свинина', 350, '300 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Шаурма свинина</div><div class="menu-card-unit">300 г · + в корзину</div></div>
+          <div class="menu-card-price">350 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р›СЋР»СЏ РІ Р»Р°РІР°С€Рµ РєСѓСЂРёС†Р°', 480, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">Р›СЋР»СЏ РІ Р»Р°РІР°С€Рµ РєСѓСЂРёС†Р°</div><div class="menu-card-unit">1 С€С‚ В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">480 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Люля в лаваше курица', 480, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Люля в лаваше курица</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">480 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р›СЋР»СЏ РІ Р»Р°РІР°С€Рµ РєР»Р°СЃСЃРёРєР°', 500, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">Р›СЋР»СЏ РІ Р»Р°РІР°С€Рµ РєР»Р°СЃСЃРёРєР°</div><div class="menu-card-unit">1 С€С‚ В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">500 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Люля в лаваше классика', 500, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Люля в лаваше классика</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">500 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РҐРѕС‚РґРѕРі', 300, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">РҐРѕС‚РґРѕРі</div><div class="menu-card-unit">1 С€С‚ В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">300 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Хотдог', 300, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Хотдог</div><div class="menu-card-unit">1 шт · + в корзину</div></div>
+          <div class="menu-card-price">300 ₽</div>
         </div>
       </div>
 
-      <!-- Р¤Р РРўР®Р  -->
+      <!-- ФРИТЮР -->
       <div class="menu-cat-hidden" data-cat="friture">
-        <div class="menu-card" onclick="addToCart('РљР°СЂС‚РѕС„РµР»СЊ С„СЂРё', 170, 'РїРѕСЂС†.')">
-          <div class="menu-card-left"><div class="menu-card-name">РљР°СЂС‚РѕС„РµР»СЊ С„СЂРё</div><div class="menu-card-unit">РїРѕСЂС†. В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">170 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Картофель фри', 170, 'порц.')">
+          <div class="menu-card-left"><div class="menu-card-name">Картофель фри</div><div class="menu-card-unit">порц. · + в корзину</div></div>
+          <div class="menu-card-price">170 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РљР°СЂС‚РѕС„РµР»СЊ РїРѕ-РґРµСЂРµРІРµРЅСЃРєРё', 170, 'РїРѕСЂС†.')">
-          <div class="menu-card-left"><div class="menu-card-name">РљР°СЂС‚РѕС„РµР»СЊ РїРѕ-РґРµСЂРµРІРµРЅСЃРєРё</div><div class="menu-card-unit">РїРѕСЂС†. В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">170 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Картофель по-деревенски', 170, 'порц.')">
+          <div class="menu-card-left"><div class="menu-card-name">Картофель по-деревенски</div><div class="menu-card-unit">порц. · + в корзину</div></div>
+          <div class="menu-card-price">170 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РќР°РіРіРµС‚СЃС‹', 220, 'РїРѕСЂС†.')">
-          <div class="menu-card-left"><div class="menu-card-name">РќР°РіРіРµС‚СЃС‹</div><div class="menu-card-unit">РїРѕСЂС†. В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">220 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Наггетсы', 220, 'порц.')">
+          <div class="menu-card-left"><div class="menu-card-name">Наггетсы</div><div class="menu-card-unit">порц. · + в корзину</div></div>
+          <div class="menu-card-price">220 ₽</div>
         </div>
       </div>
-    <!-- РќРђРџРРўРљР -->
+    <!-- НАПИТКИ -->
       <div class="menu-cat-hidden" data-cat="drinks">
-        <div class="menu-card" onclick="addToCart('РђРґСЂРµРЅР°Р»РёРЅ 0.5', 160, '0.5 Р»')">
-          <div class="menu-card-left"><div class="menu-card-name">РђРґСЂРµРЅР°Р»РёРЅ</div><div class="menu-card-unit">0.5 Р» В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">160 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Адреналин 0.5', 160, '0.5 л')">
+          <div class="menu-card-left"><div class="menu-card-name">Адреналин</div><div class="menu-card-unit">0.5 л · + в корзину</div></div>
+          <div class="menu-card-price">160 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РђРґСЂРµРЅР°Р»РёРЅ 0.33', 110, '0.33 Р»')">
-          <div class="menu-card-left"><div class="menu-card-name">РђРґСЂРµРЅР°Р»РёРЅ</div><div class="menu-card-unit">0.33 Р» В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">110 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Адреналин 0.33', 110, '0.33 л')">
+          <div class="menu-card-left"><div class="menu-card-name">Адреналин</div><div class="menu-card-unit">0.33 л · + в корзину</div></div>
+          <div class="menu-card-price">110 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РЎРїСЂР°Р№С‚ / РџРµРїСЃРё', 100, '0.33 Р»')">
-          <div class="menu-card-left"><div class="menu-card-name">РЎРїСЂР°Р№С‚ / РџРµРїСЃРё</div><div class="menu-card-unit">0.33 Р» В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">100 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Спрайт / Пепси', 100, '0.33 л')">
+          <div class="menu-card-left"><div class="menu-card-name">Спрайт / Пепси</div><div class="menu-card-unit">0.33 л · + в корзину</div></div>
+          <div class="menu-card-price">100 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р¤Р°РЅС‚Р° / РљРѕР»Р° 0.5', 120, '0.5 Р»')">
-          <div class="menu-card-left"><div class="menu-card-name">Р¤Р°РЅС‚Р° / РљРѕР»Р°</div><div class="menu-card-unit">0.5 Р» В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">120 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Фанта / Кола 0.5', 120, '0.5 л')">
+          <div class="menu-card-left"><div class="menu-card-name">Фанта / Кола</div><div class="menu-card-unit">0.5 л · + в корзину</div></div>
+          <div class="menu-card-price">120 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РљРѕР»Р° 0.33', 150, '0.33 Р»')">
-          <div class="menu-card-left"><div class="menu-card-name">РљРѕР»Р°</div><div class="menu-card-unit">0.33 Р» В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">150 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Кола 0.33', 150, '0.33 л')">
+          <div class="menu-card-left"><div class="menu-card-name">Кола</div><div class="menu-card-unit">0.33 л · + в корзину</div></div>
+          <div class="menu-card-price">150 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р С‹С‡Р°Р»-СЃСѓ (РіР°Р·)', 130, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">Р С‹С‡Р°Р»-СЃСѓ</div><div class="menu-card-unit">РіР°Р· В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">130 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Рычал-су (газ)', 130, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Рычал-су</div><div class="menu-card-unit">газ · + в корзину</div></div>
+          <div class="menu-card-price">130 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РќР°Р±РµРіР»Р°РІРё (РіР°Р·)', 170, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">РќР°Р±РµРіР»Р°РІРё</div><div class="menu-card-unit">РіР°Р· В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">170 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Набеглави (газ)', 170, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Набеглави</div><div class="menu-card-unit">газ · + в корзину</div></div>
+          <div class="menu-card-price">170 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РџРёР»РёРіСЂРёРј (Р±/Рі)', 70, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">РџРёР»РёРіСЂРёРј</div><div class="menu-card-unit">Р±/Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">70 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Пилигрим (б/г)', 70, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Пилигрим</div><div class="menu-card-unit">б/г · + в корзину</div></div>
+          <div class="menu-card-price">70 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РўР°РЅ (Р°РІС‚РѕСЂСЃРєРёР№)', 180, '0.5 Р»')">
-          <div class="menu-card-left"><div class="menu-card-name">РўР°РЅ (Р°РІС‚РѕСЂСЃРєРёР№)</div><div class="menu-card-unit">0.5 Р» В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">180 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Тан (авторский)', 180, '0.5 л')">
+          <div class="menu-card-left"><div class="menu-card-name">Тан (авторский)</div><div class="menu-card-unit">0.5 л · + в корзину</div></div>
+          <div class="menu-card-price">180 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РљРѕРјРїРѕС‚ (РґРѕРј)', 120, '0.5 Р»')">
-          <div class="menu-card-left"><div class="menu-card-name">РљРѕРјРїРѕС‚ (РґРѕРј)</div><div class="menu-card-unit">0.5 Р» В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">120 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Компот (дом)', 120, '0.5 л')">
+          <div class="menu-card-left"><div class="menu-card-name">Компот (дом)</div><div class="menu-card-unit">0.5 л · + в корзину</div></div>
+          <div class="menu-card-price">120 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РќР°С‚Р°С…С‚Р°СЂРё (Р°СЃСЃРѕСЂС‚)', 170, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">РќР°С‚Р°С…С‚Р°СЂРё</div><div class="menu-card-unit">Р°СЃСЃРѕСЂС‚ В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">170 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Натахтари (ассорт)', 170, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Натахтари</div><div class="menu-card-unit">ассорт · + в корзину</div></div>
+          <div class="menu-card-price">170 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р‘РѕСЂР¶РѕРјРё (РіР°Р·)', 180, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">Р‘РѕСЂР¶РѕРјРё</div><div class="menu-card-unit">РіР°Р· В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">180 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Боржоми (газ)', 180, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Боржоми</div><div class="menu-card-unit">газ · + в корзину</div></div>
+          <div class="menu-card-price">180 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РњРµРІРµСЂ (Р±/Рі)', 100, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">РњРµРІРµСЂ</div><div class="menu-card-unit">Р±/Рі В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">100 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Мевер (б/г)', 100, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Мевер</div><div class="menu-card-unit">б/г · + в корзину</div></div>
+          <div class="menu-card-price">100 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Р§Р°Р№', 80, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">Р§Р°Р№</div><div class="menu-card-unit">В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">80 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Чай', 80, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Чай</div><div class="menu-card-unit">· + в корзину</div></div>
+          <div class="menu-card-price">80 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('РљРѕС„Рµ РїРѕ РІРѕСЃС‚РѕС‡РЅРѕРјСѓ', 120, '1 С€С‚')">
-          <div class="menu-card-left"><div class="menu-card-name">РљРѕС„Рµ РїРѕ РІРѕСЃС‚РѕС‡РЅРѕРјСѓ</div><div class="menu-card-unit">В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">120 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Кофе по восточному', 120, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Кофе по восточному</div><div class="menu-card-unit">· + в корзину</div></div>
+          <div class="menu-card-price">120 ₽</div>
         </div>
       </div>
 
-      <!-- Р”Р•РЎР•Р РўР« -->
+      <!-- ДЕСЕРТЫ -->
       <div class="menu-cat-hidden" data-cat="desserts">
-        <div class="menu-card" onclick="addToCart('Р”РµСЃРµСЂС‚С‹ РІ Р°СЃСЃРѕСЂС‚РёРјРµРЅС‚Рµ', 350, '1 РїРѕСЂС†РёСЏ')">
-          <div class="menu-card-left"><div class="menu-card-name">Р”РµСЃРµСЂС‚С‹ РІ Р°СЃСЃРѕСЂС‚РёРјРµРЅС‚Рµ</div><div class="menu-card-unit">1 РїРѕСЂС†РёСЏ В· + РІ РєРѕСЂР·РёРЅСѓ</div></div>
-          <div class="menu-card-price">350 в‚Ѕ</div>
+        <div class="menu-card" onclick="addToCart('Десерты в ассортименте', 350, '1 порция')">
+          <div class="menu-card-left"><div class="menu-card-name">Десерты в ассортименте</div><div class="menu-card-unit">1 порция · + в корзину</div></div>
+          <div class="menu-card-price">350 ₽</div>
         </div>
       </div>
     </div><!-- /menu-grid -->
@@ -755,112 +755,112 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 <!-- REAL PHOTO GALLERY -->
 <section style="padding:0;background:#181410;">
   <div style="max-width:1160px;margin:0 auto;padding:60px 48px 40px;">
-    <div style="font-size:9px;letter-spacing:6px;text-transform:uppercase;color:#E8832E;font-weight:600;margin-bottom:16px;">РќР°С€Р° РєСѓС…РЅСЏ</div>
-    <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,52px);color:#FAFAF8;margin-bottom:40px;">Р–РёРІРѕР№ РѕРіРѕРЅСЊ вЂ” <em style="font-style:italic;color:#F09B4A;">С‡РµСЃС‚РЅС‹Р№ РІРєСѓСЃ</em></h2>
+    <div style="font-size:9px;letter-spacing:6px;text-transform:uppercase;color:#E8832E;font-weight:600;margin-bottom:16px;">Наша кухня</div>
+    <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,52px);color:#FAFAF8;margin-bottom:40px;">Живой огонь — <em style="font-style:italic;color:#F09B4A;">честный вкус</em></h2>
   </div>
   <div style="display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:340px 340px;gap:3px;max-width:1400px;margin:0 auto;">
     <div style="grid-row:span 2;overflow:hidden;position:relative;">
       <img src="https://atarh.github.io/khachma/img/img04.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:24px 28px;background:linear-gradient(to top,rgba(12,12,12,.85),transparent);font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#E8832E;font-weight:600;">Р‘Р°СЂР°РЅРёРЅР° РєРѕСЂРµР№РєР° В· Р¶РёРІРѕР№ РѕРіРѕРЅСЊ</div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:24px 28px;background:linear-gradient(to top,rgba(12,12,12,.85),transparent);font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#E8832E;font-weight:600;">Баранина корейка · живой огонь</div>
     </div>
     <div style="overflow:hidden;position:relative;">
       <img src="https://atarh.github.io/khachma/img/img05.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform .6s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(12,12,12,.8),transparent);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#E8832E;font-weight:600;">РЎС‘РјРіР° РЅР° РјР°РЅРіР°Р»Рµ</div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(12,12,12,.8),transparent);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#E8832E;font-weight:600;">Сёмга на мангале</div>
     </div>
     <div style="overflow:hidden;position:relative;">
       <img src="https://atarh.github.io/khachma/img/img06.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform .6s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(12,12,12,.8),transparent);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#E8832E;font-weight:600;">РҐР°С‡Р°РїСѓСЂРё РїРѕ-Р°РґР¶Р°СЂСЃРєРё</div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(12,12,12,.8),transparent);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#E8832E;font-weight:600;">Хачапури по-аджарски</div>
     </div>
     <div style="overflow:hidden;position:relative;">
       <img src="https://atarh.github.io/khachma/img/img07.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform .6s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(12,12,12,.8),transparent);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#E8832E;font-weight:600;">Р›СЋР»СЏ-РєРµР±Р°Р±</div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(12,12,12,.8),transparent);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#E8832E;font-weight:600;">Люля-кебаб</div>
     </div>
     <div style="overflow:hidden;position:relative;">
       <img src="https://atarh.github.io/khachma/img/img08.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform .6s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(12,12,12,.8),transparent);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#E8832E;font-weight:600;">РљСЂРµРІРµС‚РєР° С‚РёРіСЂРѕРІР°СЏ</div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(12,12,12,.8),transparent);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#E8832E;font-weight:600;">Креветка тигровая</div>
     </div>
   </div>
   <div style="max-width:1160px;margin:0 auto;padding:40px 48px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.06);margin-top:3px;">
-    <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:#E8E0D0;max-width:480px;line-height:1.5;">В«РћРіРѕРЅСЊ вЂ” РѕСЃРЅРѕРІР° РІСЃРµРіРѕ. РћСЃС‚Р°Р»СЊРЅРѕРµ вЂ” РґРѕРїРѕР»РЅРµРЅРёРµ.В»</div>
-    <div style="font-size:10px;letter-spacing:5px;text-transform:uppercase;color:#E8832E;font-weight:600;white-space:nowrap;">Р’РѕР»Р¶СЃРєР°СЏ 37/Рє3 В· РЎРѕС‡Рё</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:#E8E0D0;max-width:480px;line-height:1.5;">«Огонь — основа всего. Остальное — дополнение.»</div>
+    <div style="font-size:10px;letter-spacing:5px;text-transform:uppercase;color:#E8832E;font-weight:600;white-space:nowrap;">Волжская 37/к3 · Сочи</div>
   </div>
 </section>
 <!-- ORDER -->
 <section id="order">
   <div class="container">
-    <div class="sec-tag">03 вЂ” Р—Р°РєР°Р·</div>
-    <h2 class="sec-h2">РћС„РѕСЂРјРёС‚СЊ <em>Р·Р°РєР°Р·</em></h2>
+    <div class="sec-tag">03 — Заказ</div>
+    <h2 class="sec-h2">Оформить <em>заказ</em></h2>
     <div class="sec-div"></div>
 
     <div class="order-grid">
       <div>
         <div class="order-type-tabs">
           <div class="order-tab active" id="tabDelivery" onclick="switchOrderType('delivery')">
-            <div class="order-tab-icon">рџљ—</div>
-            <div class="order-tab-label">Р”РѕСЃС‚Р°РІРєР°</div>
+            <div class="order-tab-icon">🚗</div>
+            <div class="order-tab-label">Доставка</div>
           </div>
           <div class="order-tab" id="tabPickup" onclick="switchOrderType('pickup')">
-            <div class="order-tab-icon">рџЏѓ</div>
-            <div class="order-tab-label">РЎР°РјРѕРІС‹РІРѕР·</div>
+            <div class="order-tab-icon">🏃</div>
+            <div class="order-tab-label">Самовывоз</div>
           </div>
           <div class="order-tab" id="tabPreorder" onclick="switchOrderType('preorder')">
-            <div class="order-tab-icon">вЏ±</div>
-            <div class="order-tab-label">РџСЂРµРґР·Р°РєР°Р·</div>
+            <div class="order-tab-icon">⏱</div>
+            <div class="order-tab-label">Предзаказ</div>
           </div>
         </div>
         <div id="preorderBanner" style="display:none;margin-bottom:24px;padding:24px 28px;background:rgba(201,168,76,0.08);border-left:3px solid #E8832E;">
-          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#F09B4A;margin-bottom:8px;">РџСЂРµРґР·Р°РєР°Р·: РІР°С€ Р·Р°РєР°Р· РіРѕС‚РѕРІРёС‚СЃСЏ Рє РІР°С€РµРјСѓ РїСЂРёРµР·РґСѓ</div>
-          <div style="font-size:13px;color:#888;font-weight:300;line-height:1.7;">РџРѕР·РІРѕРЅРёС‚Рµ РёР»Рё РѕС„РѕСЂРјРёС‚Рµ Р·Р°РєР°Р· Р·РґРµСЃСЊ вЂ” СѓРєР°Р¶РёС‚Рµ РІСЂРµРјСЏ РєРѕРіРґР° РїР»Р°РЅРёСЂСѓРµС‚Рµ РїСЂРёРµС…Р°С‚СЊ. РњС‹ СЂР°Р·РѕР¶Р¶С‘Рј РјР°РЅРіР°Р» Р·Р°СЂР°РЅРµРµ, Рё Рє РІР°С€РµРјСѓ РїСЂРёРµР·РґСѓ РІСЃС‘ Р±СѓРґРµС‚ РіРѕСЂСЏС‡РёРј. РќРёРєР°РєРѕРіРѕ РѕР¶РёРґР°РЅРёСЏ.</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#F09B4A;margin-bottom:8px;">Предзаказ: ваш заказ готовится к вашему приезду</div>
+          <div style="font-size:13px;color:#888;font-weight:300;line-height:1.7;">Позвоните или оформите заказ здесь — укажите время когда планируете приехать. Мы разожжём мангал заранее, и к вашему приезду всё будет горячим. Никакого ожидания.</div>
         </div>
 
         <div class="form-group">
-          <label class="form-label">Р’Р°С€Рµ РёРјСЏ</label>
-          <input class="form-input" id="fname" type="text" placeholder="РљР°Рє РІР°СЃ Р·РѕРІСѓС‚?">
+          <label class="form-label">Ваше имя</label>
+          <input class="form-input" id="fname" type="text" placeholder="Как вас зовут?">
         </div>
         <div class="form-group">
-          <label class="form-label">РўРµР»РµС„РѕРЅ</label>
+          <label class="form-label">Телефон</label>
           <input class="form-input" id="fphone" type="tel" placeholder="+7 (___) ___-__-__">
         </div>
         <div id="deliveryFields">
           <div class="form-group">
-            <label class="form-label">РђРґСЂРµСЃ РґРѕСЃС‚Р°РІРєРё</label>
-            <input class="form-input" id="faddress" type="text" placeholder="РЈР»РёС†Р°, РґРѕРј, РєРІР°СЂС‚РёСЂР°">
+            <label class="form-label">Адрес доставки</label>
+            <input class="form-input" id="faddress" type="text" placeholder="Улица, дом, квартира">
           </div>
         </div>
         <div class="form-group" id="arrivalTimeGroup" style="display:none;">
-          <label class="form-label">вЏ± Р’СЂРµРјСЏ РїСЂРёРµР·РґР°</label>
-          <input class="form-input" id="farrival" type="text" placeholder="РќР°РїСЂРёРјРµСЂ: С‡РµСЂРµР· 30 РјРёРЅСѓС‚, РІ 18:00">
+          <label class="form-label">⏱ Время приезда</label>
+          <input class="form-input" id="farrival" type="text" placeholder="Например: через 30 минут, в 18:00">
         </div>
         <div class="form-group">
-          <label class="form-label">РљРѕРјРјРµРЅС‚Р°СЂРёР№ Рє Р·Р°РєР°Р·Сѓ</label>
-          <input class="form-input" id="fcomment" type="text" placeholder="РћСЃС‚СЂРµРµ, Р±РµР· Р»СѓРєР°, РїРѕР·РІРѕРЅРёС‚Рµ Р·Р° 10 РјРёРЅСѓС‚...">
+          <label class="form-label">Комментарий к заказу</label>
+          <input class="form-input" id="fcomment" type="text" placeholder="Острее, без лука, позвоните за 10 минут...">
         </div>
         <div class="form-group">
-          <label class="form-label">РЎРїРѕСЃРѕР± РѕРїР»Р°С‚С‹</label>
+          <label class="form-label">Способ оплаты</label>
           <select class="form-input" id="fpay">
-            <option>РќР°Р»РёС‡РЅС‹Рµ РїСЂРё РїРѕР»СѓС‡РµРЅРёРё</option>
-            <option>РљР°СЂС‚Р° РїСЂРё РїРѕР»СѓС‡РµРЅРёРё</option>
-            <option>РџРµСЂРµРІРѕРґ РЅР° РєР°СЂС‚Сѓ</option>
+            <option>Наличные при получении</option>
+            <option>Карта при получении</option>
+            <option>Перевод на карту</option>
           </select>
         </div>
-        <button class="btn-primary" style="width:100%;padding:18px;" onclick="submitOrder()">РћС‚РїСЂР°РІРёС‚СЊ Р·Р°РєР°Р· рџ”Ґ</button>
-        <p style="font-size:11px;color:var(--mist);margin-top:12px;text-align:center;font-weight:300;">РџРѕСЃР»Рµ РѕС‚РїСЂР°РІРєРё РјС‹ РїРµСЂРµР·РІРѕРЅРёРј РґР»СЏ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ</p>
+        <button class="btn-primary" style="width:100%;padding:18px;" onclick="submitOrder()">Отправить заказ 🔥</button>
+        <p style="font-size:11px;color:var(--mist);margin-top:12px;text-align:center;font-weight:300;">После отправки мы перезвоним для подтверждения</p>
       </div>
 
       <div class="order-cart" id="cartBlock">
-        <div class="cart-title">Р’Р°С€ Р·Р°РєР°Р·</div>
-        <div class="cart-hint">Р’С‹Р±РёСЂР°Р№С‚Рµ Р±Р»СЋРґР° РёР· РјРµРЅСЋ вЂ” РѕРЅРё РїРѕСЏРІСЏС‚СЃСЏ Р·РґРµСЃСЊ. РќР°Р¶РјРёС‚Рµ РЅР° Р±Р»СЋРґРѕ С‡С‚РѕР±С‹ РґРѕР±Р°РІРёС‚СЊ.</div>
+        <div class="cart-title">Ваш заказ</div>
+        <div class="cart-hint">Выбирайте блюда из меню — они появятся здесь. Нажмите на блюдо чтобы добавить.</div>
         <div id="cartEmpty" class="cart-empty">
-          <div class="cart-empty-icon">рџ›’</div>
-          <div class="cart-empty-text">РљРѕСЂР·РёРЅР° РїРѕРєР° РїСѓСЃС‚Р°</div>
+          <div class="cart-empty-icon">🛒</div>
+          <div class="cart-empty-text">Корзина пока пуста</div>
         </div>
         <div id="cartItems" class="cart-items" style="display:none;"></div>
         <div id="cartTotal" style="display:none;">
           <div class="cart-total">
-            <div class="cart-total-label">РС‚РѕРіРѕ</div>
-            <div class="cart-total-sum" id="cartSum">0 в‚Ѕ</div>
+            <div class="cart-total-label">Итого</div>
+            <div class="cart-total-sum" id="cartSum">0 ₽</div>
           </div>
-          <div class="delivery-note" id="deliveryNote">рџљ— РЎС‚РѕРёРјРѕСЃС‚СЊ РґРѕСЃС‚Р°РІРєРё СѓС‚РѕС‡РЅСЏР№С‚Рµ РїРѕ С‚РµР»РµС„РѕРЅСѓ +7 (928) 66-777-33</div>
+          <div class="delivery-note" id="deliveryNote">🚗 Стоимость доставки уточняйте по телефону +7 (928) 66-777-33</div>
         </div>
       </div>
     </div>
@@ -870,19 +870,19 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 <!-- PROMOS -->
 <section id="promos">
   <div class="container">
-    <div class="sec-tag">04 вЂ” РђРєС†РёРё</div>
-    <h2 class="sec-h2">РЎРїРµС†РёР°Р»СЊРЅС‹Рµ <em>РїСЂРµРґР»РѕР¶РµРЅРёСЏ</em></h2>
+    <div class="sec-tag">04 — Акции</div>
+    <h2 class="sec-h2">Специальные <em>предложения</em></h2>
     <div class="sec-div"></div>
     <div class="promos-grid">
 
 
       <div class="promo-card new">
-        <div class="promo-badge">рџ†• РќРѕРІРёРЅРєР°</div>
-        <div class="promo-title">Р С‹Р±Р° СЃ Р§С‘СЂРЅРѕРіРѕ РјРѕСЂСЏ</div>
-        <div class="promo-desc">Р‘Р°СЂР°Р±СѓР»СЏ Рё СЃР°СЂРіР°РЅ С‡РµСЂРЅРѕРјРѕСЂСЃРєРёРµ вЂ” СЃРІРµР¶РёР№ СѓР»РѕРІ РЅР° РјР°РЅРіР°Р»Рµ. РџРѕРїСЂРѕР±СѓР№С‚Рµ С‚Рѕ, С‡С‚Рѕ Р±РѕР»СЊС€РёРЅСЃС‚РІРѕ РєР°С„Рµ РЅРµ РїСЂРµРґР»Р°РіР°РµС‚ РІРѕРІСЃРµ.</div>
+        <div class="promo-badge">🆕 Новинка</div>
+        <div class="promo-title">Рыба с Чёрного моря</div>
+        <div class="promo-desc">Барабуля и сарган черноморские — свежий улов на мангале. Попробуйте то, что большинство кафе не предлагает вовсе.</div>
       </div>
     </div>
-    <p style="font-size:12px;color:var(--mist);margin-top:32px;text-align:center;font-weight:300;">Р—РІРѕРЅРёС‚Рµ РґР»СЏ РёРЅС„РѕСЂРјР°С†РёРё: <a href="tel:+79286677733" style="color:var(--gold);">+7 (928) 66-777-33</a></p>
+    <p style="font-size:12px;color:var(--mist);margin-top:32px;text-align:center;font-weight:300;">Звоните для информации: <a href="tel:+79286677733" style="color:var(--gold);">+7 (928) 66-777-33</a></p>
   </div>
 </section>
 
@@ -890,51 +890,51 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 <!-- REVIEWS SECTION -->
 <section id="reviews" style="background:#1E1A14;padding:100px 0;">
   <div style="max-width:1160px;margin:0 auto;padding:0 48px;">
-    <div style="font-size:9px;letter-spacing:6px;text-transform:uppercase;color:#E8832E;font-weight:600;margin-bottom:16px;">РћС‚Р·С‹РІС‹ РіРѕСЃС‚РµР№</div>
-    <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,52px);color:#FAFAF8;margin-bottom:12px;">Р§С‚Рѕ РіРѕРІРѕСЂСЏС‚ <em style="font-style:italic;color:#F09B4A;">РЅР°С€Рё РіРѕСЃС‚Рё</em></h2>
+    <div style="font-size:9px;letter-spacing:6px;text-transform:uppercase;color:#E8832E;font-weight:600;margin-bottom:16px;">Отзывы гостей</div>
+    <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,52px);color:#FAFAF8;margin-bottom:12px;">Что говорят <em style="font-style:italic;color:#F09B4A;">наши гости</em></h2>
     <div style="width:40px;height:2px;background:#E8832E;opacity:.5;margin-bottom:48px;"></div>
 
-    <!-- Р РµР№С‚РёРЅРі -->
+    <!-- Рейтинг -->
     <div style="display:flex;align-items:center;gap:32px;margin-bottom:48px;padding:32px 40px;background:#1A1A1A;border-left:3px solid #E8832E;">
       <div style="text-align:center;">
         <div style="font-family:'DM Serif Display',serif;font-size:72px;color:#F09B4A;line-height:1;">4.8</div>
-        <div style="color:#E8832E;font-size:22px;letter-spacing:4px;">в…в…в…в…в…</div>
-        <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#888;margin-top:8px;">РЇРЅРґРµРєСЃ РљР°СЂС‚С‹</div>
+        <div style="color:#E8832E;font-size:22px;letter-spacing:4px;">★★★★★</div>
+        <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#888;margin-top:8px;">Яндекс Карты</div>
       </div>
       <div style="flex:1;">
-        <div style="font-family:'DM Serif Display',serif;font-size:24px;color:#FAFAF8;margin-bottom:8px;">РҐР°С‡Р°РїСѓСЂРё & РњР°РЅРіР°Р»</div>
-        <div style="font-size:14px;color:#888;font-weight:300;line-height:1.7;margin-bottom:20px;">Р§РёС‚Р°Р№С‚Рµ РѕС‚Р·С‹РІС‹ РЅР°С€РёС… РіРѕСЃС‚РµР№ Рё РѕСЃС‚Р°РІСЊС‚Рµ СЃРІРѕР№ вЂ” СЌС‚Рѕ РїРѕРјРѕРіР°РµС‚ РЅР°Рј СЃС‚Р°РЅРѕРІРёС‚СЊСЃСЏ Р»СѓС‡С€Рµ Рё РїРѕРјРѕРіР°РµС‚ РґСЂСѓРіРёРј РЅР°Р№С‚Рё РЅР°СЃ.</div>
+        <div style="font-family:'DM Serif Display',serif;font-size:24px;color:#FAFAF8;margin-bottom:8px;">Хачапури & Мангал</div>
+        <div style="font-size:14px;color:#888;font-weight:300;line-height:1.7;margin-bottom:20px;">Читайте отзывы наших гостей и оставьте свой — это помогает нам становиться лучше и помогает другим найти нас.</div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="https://yandex.ru/maps/org/khachapuri_mangal/236604443678/reviews/?ll=39.700154%2C43.630179&z=16" target="_blank" style="padding:12px 28px;background:#E8832E;color:#181410;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#F5B06A'" onmouseout="this.style.background='#E8832E'">в­ђ РћСЃС‚Р°РІРёС‚СЊ РѕС‚Р·С‹РІ</a>
-          <a href="https://yandex.ru/maps/org/khachapuri_mangal/236604443678/reviews/?ll=39.700154%2C43.630179&z=16" target="_blank" style="padding:11px 28px;background:transparent;color:#E8832E;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(201,168,76,.5);transition:all .2s;" onmouseover="this.style.borderColor='#E8832E'" onmouseout="this.style.borderColor='rgba(201,168,76,.5)'">Р§РёС‚Р°С‚СЊ РІСЃРµ РѕС‚Р·С‹РІС‹ в†’</a>
+          <a href="https://yandex.ru/maps/org/khachapuri_mangal/236604443678/reviews/?ll=39.700154%2C43.630179&z=16" target="_blank" style="padding:12px 28px;background:#E8832E;color:#181410;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#F5B06A'" onmouseout="this.style.background='#E8832E'">⭐ Оставить отзыв</a>
+          <a href="https://yandex.ru/maps/org/khachapuri_mangal/236604443678/reviews/?ll=39.700154%2C43.630179&z=16" target="_blank" style="padding:11px 28px;background:transparent;color:#E8832E;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(201,168,76,.5);transition:all .2s;" onmouseover="this.style.borderColor='#E8832E'" onmouseout="this.style.borderColor='rgba(201,168,76,.5)'">Читать все отзывы →</a>
         </div>
       </div>
     </div>
 
-    <!-- РљР°СЂС‚РѕС‡РєРё РѕС‚Р·С‹РІРѕРІ (РїСЂРёРјРµСЂС‹ СЃС‚РёР»СЏ) -->
+    <!-- Карточки отзывов (примеры стиля) -->
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:48px;">
       <div style="background:#1A1A1A;padding:32px;border-top:2px solid rgba(201,168,76,.3);">
-        <div style="color:#E8832E;font-size:18px;margin-bottom:12px;">в…в…в…в…в…</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#E8E0D0;line-height:1.6;margin-bottom:16px;">В«Р›СѓС‡С€РёР№ С€Р°С€Р»С‹Рє РІ РЎРѕС‡Рё! Р‘Р°СЂР°РЅРёРЅР° РїСЂРѕСЃС‚Рѕ С‚Р°РµС‚ РІРѕ СЂС‚Сѓ, Р° СЂС‹Р±Р° СЃ РјР°РЅРіР°Р»Р° вЂ” СЌС‚Рѕ РІРѕРѕР±С‰Рµ РѕС‚РґРµР»СЊРЅР°СЏ РёСЃС‚РѕСЂРёСЏ.В»</div>
-        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#888;">Р“РѕСЃС‚СЊ В· РЇРЅРґРµРєСЃ РљР°СЂС‚С‹</div>
+        <div style="color:#E8832E;font-size:18px;margin-bottom:12px;">★★★★★</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#E8E0D0;line-height:1.6;margin-bottom:16px;">«Лучший шашлык в Сочи! Баранина просто тает во рту, а рыба с мангала — это вообще отдельная история.»</div>
+        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#888;">Гость · Яндекс Карты</div>
       </div>
       <div style="background:#1A1A1A;padding:32px;border-top:2px solid rgba(201,168,76,.3);">
-        <div style="color:#E8832E;font-size:18px;margin-bottom:12px;">в…в…в…в…в…</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#E8E0D0;line-height:1.6;margin-bottom:16px;">В«Р—Р°РєР°Р·С‹РІР°Р»Рё С‡РµСЂРµР· РїСЂРµРґР·Р°РєР°Р· вЂ” РІСЃС‘ Р±С‹Р»Рѕ РіРѕС‚РѕРІРѕ Рє РїСЂРёРµР·РґСѓ. РћС‡РµРЅСЊ СѓРґРѕР±РЅРѕ Рё РІРєСѓСЃРЅРѕ. Р РµРєРѕРјРµРЅРґСѓСЋ!В»</div>
-        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#888;">Р“РѕСЃС‚СЊ В· РЇРЅРґРµРєСЃ РљР°СЂС‚С‹</div>
+        <div style="color:#E8832E;font-size:18px;margin-bottom:12px;">★★★★★</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#E8E0D0;line-height:1.6;margin-bottom:16px;">«Заказывали через предзаказ — всё было готово к приезду. Очень удобно и вкусно. Рекомендую!»</div>
+        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#888;">Гость · Яндекс Карты</div>
       </div>
       <div style="background:#1A1A1A;padding:32px;border-top:2px solid rgba(201,168,76,.3);">
-        <div style="color:#E8832E;font-size:18px;margin-bottom:12px;">в…в…в…в…в…</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#E8E0D0;line-height:1.6;margin-bottom:16px;">В«РҐР°С‡Р°РїСѓСЂРё РЅР° РјР°РЅРіР°Р»Рµ вЂ” СЌС‚Рѕ С€РµРґРµРІСЂ. РџСЂРёС…РѕРґРёРј РєР°Р¶РґСѓСЋ РЅРµРґРµР»СЋ РІСЃРµР№ СЃРµРјСЊС‘Р№. РЎРїР°СЃРёР±Рѕ Р·Р° РєР°С‡РµСЃС‚РІРѕ!В»</div>
-        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#888;">Р“РѕСЃС‚СЊ В· РЇРЅРґРµРєСЃ РљР°СЂС‚С‹</div>
+        <div style="color:#E8832E;font-size:18px;margin-bottom:12px;">★★★★★</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#E8E0D0;line-height:1.6;margin-bottom:16px;">«Хачапури на мангале — это шедевр. Приходим каждую неделю всей семьёй. Спасибо за качество!»</div>
+        <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#888;">Гость · Яндекс Карты</div>
       </div>
     </div>
 
-    <!-- РџСЂРёР·С‹РІ -->
+    <!-- Призыв -->
     <div style="text-align:center;padding:40px;background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);">
-      <div style="font-family:'DM Serif Display',serif;font-size:24px;color:#FAFAF8;margin-bottom:8px;">Р‘С‹Р»Рё Сѓ РЅР°СЃ? РџРѕРґРµР»РёС‚РµСЃСЊ РІРїРµС‡Р°С‚Р»РµРЅРёРµРј!</div>
-      <div style="font-size:13px;color:#888;font-weight:300;margin-bottom:24px;">Р’Р°С€ РѕС‚Р·С‹РІ РїРѕРјРѕРіР°РµС‚ РЅР°Рј СЂР°СЃС‚Рё Рё РїРѕРјРѕРіР°РµС‚ РґСЂСѓРіРёРј РЅР°Р№С‚Рё С…РѕСЂРѕС€РµРµ РјРµСЃС‚Рѕ</div>
-      <a href="https://yandex.ru/maps/org/khachapuri_mangal/236604443678/reviews/?ll=39.700154%2C43.630179&z=16" target="_blank" style="padding:14px 36px;background:#E8832E;color:#181410;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-decoration:none;display:inline-block;">РќР°РїРёСЃР°С‚СЊ РѕС‚Р·С‹РІ РЅР° РЇРЅРґРµРєСЃ РљР°СЂС‚Р°С…</a>
+      <div style="font-family:'DM Serif Display',serif;font-size:24px;color:#FAFAF8;margin-bottom:8px;">Были у нас? Поделитесь впечатлением!</div>
+      <div style="font-size:13px;color:#888;font-weight:300;margin-bottom:24px;">Ваш отзыв помогает нам расти и помогает другим найти хорошее место</div>
+      <a href="https://yandex.ru/maps/org/khachapuri_mangal/236604443678/reviews/?ll=39.700154%2C43.630179&z=16" target="_blank" style="padding:14px 36px;background:#E8832E;color:#181410;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-decoration:none;display:inline-block;">Написать отзыв на Яндекс Картах</a>
     </div>
   </div>
 </section>
@@ -942,50 +942,50 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 <!-- CONTACTS -->
 <section id="contacts">
   <div class="container">
-    <div class="sec-tag">06 вЂ” РљРѕРЅС‚Р°РєС‚С‹</div>
-    <h2 class="sec-h2">Р“РґРµ РЅР°СЃ <em>РЅР°Р№С‚Рё</em></h2>
+    <div class="sec-tag">06 — Контакты</div>
+    <h2 class="sec-h2">Где нас <em>найти</em></h2>
     <div class="sec-div"></div>
     <div class="contacts-grid">
       <div class="contact-items">
         <div class="contact-item">
-          <div class="contact-icon">рџ“Ќ</div>
+          <div class="contact-icon" style="color:#E8832E;">•</div>
           <div>
-            <div class="contact-label">РђРґСЂРµСЃ</div>
-            <div class="contact-val">Р’РѕР»Р¶СЃРєР°СЏ СѓР»., 37/Рє3, РЎРѕС‡Рё</div>
-            <div class="contact-note">РњРёРєСЂРѕСЂР°Р№РѕРЅ РњР°РјР°Р№РєР°</div>
+            <div class="contact-label">Адрес</div>
+            <div class="contact-val">Волжская ул., 37/к3, Сочи</div>
+            <div class="contact-note">Микрорайон Мамайка</div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">рџ“ћ</div>
+          <div class="contact-icon" style="color:#E8832E;">•</div>
           <div>
-            <div class="contact-label">РўРµР»РµС„РѕРЅ РґР»СЏ СЃРІСЏР·Рё</div>
+            <div class="contact-label">Телефон для связи</div>
             <div class="contact-val"><a href="tel:+79286677733">+7 (928) 66-777-33</a></div>
-            <div class="contact-note">Р—Р°РєР°Р·С‹, РІРѕРїСЂРѕСЃС‹, СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРёРµ</div>
+            <div class="contact-note">Заказы, вопросы, резервирование</div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">рџ•ђ</div>
+          <div class="contact-icon" style="color:#E8832E;">•</div>
           <div>
-            <div class="contact-label">Р§Р°СЃС‹ СЂР°Р±РѕС‚С‹</div>
-            <div class="contact-val">РљР°Р¶РґС‹Р№ РґРµРЅСЊ СЃ 10:00 РґРѕ 22:00</div>
-            <div class="contact-note">Р‘РµР· РІС‹С…РѕРґРЅС‹С… Рё РїСЂР°Р·РґРЅРёРєРѕРІ</div>
+            <div class="contact-label">Часы работы</div>
+            <div class="contact-val">Каждый день с 10:00 до 22:00</div>
+            <div class="contact-note">Без выходных и праздников</div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">рџљ—</div>
+          <div class="contact-icon" style="color:#E8832E;">•</div>
           <div>
-            <div class="contact-label">Р”РѕСЃС‚Р°РІРєР°</div>
-            <div class="contact-val">РџРѕ РЎРѕС‡Рё</div>
-            <div class="contact-note">РЈСЃР»РѕРІРёСЏ СѓС‚РѕС‡РЅСЏР№С‚Рµ РїРѕ С‚РµР»РµС„РѕРЅСѓ</div>
+            <div class="contact-label">Доставка</div>
+            <div class="contact-val">По Сочи</div>
+            <div class="contact-note">Условия уточняйте по телефону</div>
           </div>
         </div>
-        <a href="tel:+79286677733" class="btn-primary" style="margin-top:8px;display:inline-block;">РџРѕР·РІРѕРЅРёС‚СЊ Рё Р·Р°РєР°Р·Р°С‚СЊ</a>
+        <a href="tel:+79286677733" class="btn-primary" style="margin-top:8px;display:inline-block;">Позвонить и заказать</a>
       </div>
       <div class="map-placeholder" style="padding:0;border:none;">
         <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=39.86%2C43.60%2C39.88%2C43.615&layer=mapnik&marker=43.608%2C39.87" style="width:100%;height:320px;border:none;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div style="padding:12px;text-align:center;">
-          <div style="font-size:13px;color:var(--mist);margin-bottom:8px;">Р’РѕР»Р¶СЃРєР°СЏ СѓР»., 37/Рє3, РЎРѕС‡Рё (РњР°РјР°Р№РєР°)</div>
-          <a href="https://yandex.ru/maps/org/khachapuri_mangal/236604443678/reviews/?ll=39.700154%2C43.630179&z=16" target="_blank">РћС‚РєСЂС‹С‚СЊ РЅР° РЇРЅРґРµРєСЃ РљР°СЂС‚Р°С… в†’</a>
+          <div style="font-size:13px;color:var(--mist);margin-bottom:8px;">Волжская ул., 37/к3, Сочи (Мамайка)</div>
+          <a href="https://yandex.ru/maps/org/khachapuri_mangal/236604443678/reviews/?ll=39.700154%2C43.630179&z=16" target="_blank">Открыть на Яндекс Картах →</a>
         </div>
       </div>
     </div>
@@ -996,34 +996,34 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-logo">РҐР°С‡Р°РїСѓСЂРё</div>
-      <div class="footer-hash">& РњР°РЅРіР°Р»</div>
-      <div class="footer-desc">РҐР°С‡Р°РїСѓСЂРё РЅР° РјР°РЅРіР°Р»Рµ, РјСЏСЃРѕ Рё СЂС‹Р±Р°. РЎРѕС‡Рё, Р’РѕР»Р¶СЃРєР°СЏ 37/Рє3 (РњР°РјР°Р№РєР°).</div>
+      <div class="footer-logo">Хачапури</div>
+      <div class="footer-hash">& Мангал</div>
+      <div class="footer-desc">Хачапури на мангале, мясо и рыба. Сочи, Волжская 37/к3 (Мамайка).</div>
     </div>
     <div>
-      <div class="footer-col-title">РњРµРЅСЋ</div>
+      <div class="footer-col-title">Меню</div>
       <div class="footer-links">
-        <a href="#menu" onclick="showCat('meat',null)">РњСЏСЃРѕ РЅР° РјР°РЅРіР°Р»Рµ</a>
-        <a href="#menu" onclick="showCat('fish',null)">Р С‹Р±Р°</a>
-        <a href="#menu" onclick="showCat('chicken',null)">РџС‚РёС†Р°</a>
-        <a href="#menu" onclick="showCat('hacha',null)">РҐР°С‡Р°РїСѓСЂРё Рё СЃСѓРїС‹</a>
-        <a href="#menu" onclick="showCat('street',null)">РЎС‚СЂРёС‚-С„СѓРґ</a>
+        <a href="#menu" onclick="showCat('meat',null)">Мясо на мангале</a>
+        <a href="#menu" onclick="showCat('fish',null)">Рыба</a>
+        <a href="#menu" onclick="showCat('chicken',null)">Птица</a>
+        <a href="#menu" onclick="showCat('hacha',null)">Хачапури и супы</a>
+        <a href="#menu" onclick="showCat('street',null)">Стрит-фуд</a>
       </div>
     </div>
     <div>
-      <div class="footer-col-title">РРЅС„РѕСЂРјР°С†РёСЏ</div>
+      <div class="footer-col-title">Информация</div>
       <div class="footer-links">
-        <a href="#order">Р—Р°РєР°Р·Р°С‚СЊ РґРѕСЃС‚Р°РІРєСѓ</a>
-        <a href="#promos">РђРєС†РёРё</a>
+        <a href="#order">Заказать доставку</a>
+        <a href="#promos">Акции</a>
         
-            <a href="#contacts">РљРѕРЅС‚Р°РєС‚С‹</a>
+            <a href="#contacts">Контакты</a>
         <a href="tel:+79286677733">+7 (928) 66-777-33</a>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">В© 2026 РҐР°С‡Р°РїСѓСЂРё & РњР°РЅРіР°Р» В· РЎРѕС‡Рё</div>
-    <div class="footer-copy">РљР°Р¶РґС‹Р№ РґРµРЅСЊ СЃ 10:00 РґРѕ 22:00</div>
+    <div class="footer-copy">© 2026 Хачапури & Мангал · Сочи</div>
+    <div class="footer-copy">Каждый день с 10:00 до 22:00</div>
   </div>
 </footer>
 
@@ -1031,23 +1031,23 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 <!-- SUCCESS MODAL -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
-    <button class="modal-close" onclick="closeModal()">вњ•</button>
-    <div class="modal-icon">рџ”Ґ</div>
-    <div class="modal-title">Р—Р°РєР°Р· РїСЂРёРЅСЏС‚!</div>
-    <div class="modal-text">Р’Р°С€ Р·Р°РєР°Р· РѕС‚РїСЂР°РІР»РµРЅ! РњС‹ СЃРєРѕСЂРѕ РїРµСЂРµР·РІРѕРЅРёРј РґР»СЏ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ.<br><br>РР»Рё Р·РІРѕРЅРёС‚Рµ СЃР°РјРё: <strong style="color:var(--gold);">+7 (928) 66-777-33</strong></div>
-    <button class="btn-primary" style="width:100%;" onclick="closeModal()">РћС‚Р»РёС‡РЅРѕ, Р¶РґСѓ!</button>
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-icon">🔥</div>
+    <div class="modal-title">Заказ принят!</div>
+    <div class="modal-text">Ваш заказ отправлен! Мы скоро перезвоним для подтверждения.<br><br>Или звоните сами: <strong style="color:var(--gold);">+7 (928) 66-777-33</strong></div>
+    <button class="btn-primary" style="width:100%;" onclick="closeModal()">Отлично, жду!</button>
   </div>
 </div>
 
 <script>
-// в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
-// TELEGRAM BOT вЂ” Р·Р°РјРµРЅРёС‚Рµ РЅР° СЃРІРѕРё РґР°РЅРЅС‹Рµ
-// РџРѕР»СѓС‡РёС‚Рµ С‚РѕРєРµРЅ Сѓ @BotFather, chat_id С‡РµСЂРµР· getUpdates
-// в•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђв•ђ
+// ═══════════════════════════════════════════════════════
+// TELEGRAM BOT — замените на свои данные
+// Получите токен у @BotFather, chat_id через getUpdates
+// ═══════════════════════════════════════════════════════
 const BOT_TOKEN = '8940221196:AAELm02kYo-9mA61C4p0TgiHaYsKZekaP2Y';
 const CHAT_ID = '5045502979';
 
-// в”Ђв”Ђ CART (СЃ localStorage) в”Ђв”Ђ
+// ── CART (с localStorage) ──
 let cart = JSON.parse(localStorage.getItem('khachma_cart') || '[]');
 
 function saveCart() {
@@ -1061,16 +1061,16 @@ function addToCart(name, price, unit) {
   saveCart();
   renderCart();
   updateMenuIndicators();
-  // РџРѕРєР°Р·С‹РІР°РµРј РјРёРЅРё-СѓРІРµРґРѕРјР»РµРЅРёРµ РІРјРµСЃС‚Рѕ РїСЂРѕРєСЂСѓС‚РєРё
+  // Показываем мини-уведомление вместо прокрутки
   showCartNotification(name);
 }
 
 function showCartNotification(name) {
-  // РЈР±РёСЂР°РµРј СЃС‚Р°СЂРѕРµ СѓРІРµРґРѕРјР»РµРЅРёРµ
+  // Убираем старое уведомление
   const old = document.getElementById('cartNotification');
   if (old) old.remove();
   
-  // РЎРѕР·РґР°С‘Рј СѓРІРµРґРѕРјР»РµРЅРёРµ
+  // Создаём уведомление
   const notif = document.createElement('div');
   notif.id = 'cartNotification';
   notif.style.cssText = `
@@ -1081,10 +1081,10 @@ function showCartNotification(name) {
     box-shadow: 0 8px 32px rgba(0,0,0,0.4);
     animation: slideIn 0.3s ease;
   `;
-  notif.innerHTML = `вњ… <span style="color:#E8832E;">${name}</span> РґРѕР±Р°РІР»РµРЅ РІ РєРѕСЂР·РёРЅСѓ`;
+  notif.innerHTML = `✅ <span style="color:#E8832E;">${name}</span> добавлен в корзину`;
   document.body.appendChild(notif);
   
-  // РЈР±РёСЂР°РµРј С‡РµСЂРµР· 2 СЃРµРєСѓРЅРґС‹
+  // Убираем через 2 секунды
   setTimeout(() => {
     notif.style.opacity = '0';
     notif.style.transition = 'opacity 0.3s';
@@ -1118,21 +1118,21 @@ function renderCart() {
   items.innerHTML = cart.map((item,i) => `
     <div class="cart-item">
       <div>
-        <div class="cart-item-name">${item.name}${item.qty>1?' Г—'+item.qty:''}</div>
+        <div class="cart-item-name">${item.name}${item.qty>1?' ×'+item.qty:''}</div>
         ${item.unit?'<div style="font-size:11px;color:var(--mist);">'+item.unit+'</div>':''}
       </div>
       <div style="display:flex;align-items:center;gap:12px;">
-        <div class="cart-item-price">${item.price * item.qty} в‚Ѕ</div>
-        <button class="cart-item-remove" onclick="removeFromCart(${i})">вњ•</button>
+        <div class="cart-item-price">${item.price * item.qty} ₽</div>
+        <button class="cart-item-remove" onclick="removeFromCart(${i})">✕</button>
       </div>
     </div>
   `).join('');
 
   const totalSum = cart.reduce((a,i) => a + i.price*i.qty, 0);
-  sum.textContent = totalSum.toLocaleString('ru') + ' в‚Ѕ';
+  sum.textContent = totalSum.toLocaleString('ru') + ' ₽';
 }
 
-// в”Ђв”Ђ ORDER TYPE в”Ђв”Ђ
+// ── ORDER TYPE ──
 function switchOrderType(type) {
   const tabD = document.getElementById('tabDelivery');
   const tabP = document.getElementById('tabPickup');
@@ -1151,21 +1151,21 @@ function switchOrderType(type) {
   if (type === 'delivery') {
     tabD.classList.add('active');
     fields.style.display = 'block';
-    note.textContent = 'рџљ— РЎС‚РѕРёРјРѕСЃС‚СЊ РґРѕСЃС‚Р°РІРєРё СѓС‚РѕС‡РЅСЏР№С‚Рµ РїРѕ С‚РµР»РµС„РѕРЅСѓ +7 (928) 66-777-33';
+    note.textContent = '🚗 Стоимость доставки уточняйте по телефону +7 (928) 66-777-33';
   } else if (type === 'pickup') {
     tabP.classList.add('active');
     fields.style.display = 'none';
-    note.textContent = 'рџЏѓ РЎР°РјРѕРІС‹РІРѕР·: Р’РѕР»Р¶СЃРєР°СЏ 37/Рє3 (РњР°РјР°Р№РєР°) В· РљР°Р¶РґС‹Р№ РґРµРЅСЊ СЃ 10:00 РґРѕ 22:00';
+    note.textContent = '🏃 Самовывоз: Волжская 37/к3 (Мамайка) · Каждый день с 10:00 до 22:00';
   } else if (type === 'preorder') {
     tabPre.classList.add('active');
     fields.style.display = 'none';
     banner.style.display = 'block';
     arrivalGroup.style.display = 'block';
-    note.textContent = 'вЏ± РњС‹ РЅР°С‡РЅС‘Рј РіРѕС‚РѕРІРёС‚СЊ Р·Р°СЂР°РЅРµРµ вЂ” Рє РІР°С€РµРјСѓ РїСЂРёРµР·РґСѓ РІСЃС‘ Р±СѓРґРµС‚ РіРѕСЂСЏС‡РёРј';
+    note.textContent = '⏱ Мы начнём готовить заранее — к вашему приезду всё будет горячим';
   }
 }
 
-// в”Ђв”Ђ ORDER HISTORY (localStorage) в”Ђв”Ђ
+// ── ORDER HISTORY (localStorage) ──
 function saveOrderHistory(orderData) {
   let history = JSON.parse(localStorage.getItem('khachma_orders') || '[]');
   orderData.id = Date.now();
@@ -1176,10 +1176,10 @@ function saveOrderHistory(orderData) {
   localStorage.setItem('khachma_orders', JSON.stringify(history));
 }
 
-// в”Ђв”Ђ SEND TO TELEGRAM в”Ђв”Ђ
+// ── SEND TO TELEGRAM ──
 async function sendToTelegram(text) {
-  if (BOT_TOKEN === 'РЎР®Р”Рђ_Р’РђРЁ_РўРћРљР•Рќ_РћРў_BOTFATHER') {
-    console.log('Telegram bot РЅРµ РЅР°СЃС‚СЂРѕРµРЅ. РўРµРєСЃС‚ Р·Р°РєР°Р·Р°:', text);
+  if (BOT_TOKEN === 'СЮДА_ВАШ_ТОКЕН_ОТ_BOTFATHER') {
+    console.log('Telegram bot не настроен. Текст заказа:', text);
     return false;
   }
   try {
@@ -1191,12 +1191,12 @@ async function sendToTelegram(text) {
     });
     return response.ok;
   } catch (e) {
-    console.error('РћС€РёР±РєР° РѕС‚РїСЂР°РІРєРё РІ Telegram:', e);
+    console.error('Ошибка отправки в Telegram:', e);
     return false;
   }
 }
 
-// в”Ђв”Ђ SUBMIT (РРЎРџР РђР’Р›Р•РќРћ) в”Ђв”Ђ
+// ── SUBMIT (ИСПРАВЛЕНО) ──
 async function submitOrder() {
   const name = document.getElementById('fname').value.trim();
   const phone = document.getElementById('fphone').value.trim();
@@ -1206,11 +1206,11 @@ async function submitOrder() {
   const pay = document.getElementById('fpay').value;
 
   if (!name || !phone) {
-    alert('РџРѕР¶Р°Р»СѓР№СЃС‚Р°, СѓРєР°Р¶РёС‚Рµ РёРјСЏ Рё С‚РµР»РµС„РѕРЅ');
+    alert('Пожалуйста, укажите имя и телефон');
     return;
   }
   if (cart.length === 0) {
-    alert('Р”РѕР±Р°РІСЊС‚Рµ С…РѕС‚СЏ Р±С‹ РѕРґРЅРѕ Р±Р»СЋРґРѕ РІ РєРѕСЂР·РёРЅСѓ');
+    alert('Добавьте хотя бы одно блюдо в корзину');
     return;
   }
 
@@ -1218,24 +1218,24 @@ async function submitOrder() {
   const isPickup = document.getElementById('tabPickup').classList.contains('active');
   const isPreorder = document.getElementById('tabPreorder').classList.contains('active');
 
-  let orderType = isDelivery ? 'рџљ— Р”РѕСЃС‚Р°РІРєР°' : isPickup ? 'рџЏѓ РЎР°РјРѕРІС‹РІРѕР·' : 'вЏ± РџСЂРµРґР·Р°РєР°Р·';
+  let orderType = isDelivery ? '🚗 Доставка' : isPickup ? '🏃 Самовывоз' : '⏱ Предзаказ';
 
-  const items = cart.map(i => `вЂў ${i.name}${i.qty > 1 ? ' Г—' + i.qty : ''} вЂ” ${i.price * i.qty} в‚Ѕ`);
+  const items = cart.map(i => `• ${i.name}${i.qty > 1 ? ' ×' + i.qty : ''} — ${i.price * i.qty} ₽`);
   const total = cart.reduce((a, i) => a + i.price * i.qty, 0);
 
-  // Р¤РѕСЂРјРёСЂСѓРµРј РєСЂР°СЃРёРІРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ РґР»СЏ Telegram
-  let telegramMsg = `рџ”Ґ <b>РќРћР’Р«Р™ Р—РђРљРђР—</b> вЂ” РҐР°С‡Р°РїСѓСЂРё &amp; РњР°РЅРіР°Р»\n\n`;
-  telegramMsg += `рџ‘¤ <b>РРјСЏ:</b> ${name}\n`;
-  telegramMsg += `рџ“ћ <b>РўРµР»РµС„РѕРЅ:</b> ${phone}\n`;
-  telegramMsg += `рџ“‹ <b>РўРёРї:</b> ${orderType}\n`;
-  if (address) telegramMsg += `рџ“Ќ <b>РђРґСЂРµСЃ:</b> ${address}\n`;
-  if (arrival) telegramMsg += `вЏ± <b>Р’СЂРµРјСЏ РїСЂРёРµР·РґР°:</b> ${arrival}\n`;
-  telegramMsg += `рџ’і <b>РћРїР»Р°С‚Р°:</b> ${pay}\n\n`;
-  telegramMsg += `рџ›’ <b>РЎРѕСЃС‚Р°РІ Р·Р°РєР°Р·Р°:</b>\n${items.join('\n')}\n\n`;
-  telegramMsg += `рџ’° <b>РС‚РѕРіРѕ:</b> ${total.toLocaleString('ru')} в‚Ѕ`;
-  if (comment) telegramMsg += `\n\nрџ’¬ <b>РљРѕРјРјРµРЅС‚Р°СЂРёР№:</b> ${comment}`;
+  // Формируем красивое сообщение для Telegram
+  let telegramMsg = `🔥 <b>НОВЫЙ ЗАКАЗ</b> — Хачапури &amp; Мангал\n\n`;
+  telegramMsg += `👤 <b>Имя:</b> ${name}\n`;
+  telegramMsg += `📞 <b>Телефон:</b> ${phone}\n`;
+  telegramMsg += `📋 <b>Тип:</b> ${orderType}\n`;
+  if (address) telegramMsg += `📍 <b>Адрес:</b> ${address}\n`;
+  if (arrival) telegramMsg += `⏱ <b>Время приезда:</b> ${arrival}\n`;
+  telegramMsg += `💳 <b>Оплата:</b> ${pay}\n\n`;
+  telegramMsg += `🛒 <b>Состав заказа:</b>\n${items.join('\n')}\n\n`;
+  telegramMsg += `💰 <b>Итого:</b> ${total.toLocaleString('ru')} ₽`;
+  if (comment) telegramMsg += `\n\n💬 <b>Комментарий:</b> ${comment}`;
 
-  // РЎРѕС…СЂР°РЅСЏРµРј РІ РёСЃС‚РѕСЂРёСЋ
+  // Сохраняем в историю
   saveOrderHistory({
     name: name,
     phone: phone,
@@ -1248,18 +1248,18 @@ async function submitOrder() {
     total: total
   });
 
-  // РћС‚РїСЂР°РІР»СЏРµРј РІ Telegram
+  // Отправляем в Telegram
   const sent = await sendToTelegram(telegramMsg);
 
-  // РџРѕРєР°Р·С‹РІР°РµРј РјРѕРґР°Р»РєСѓ СѓСЃРїРµС…Р°
+  // Показываем модалку успеха
   document.getElementById('modalOverlay').classList.add('show');
   
-  // РћС‡РёС‰Р°РµРј РєРѕСЂР·РёРЅСѓ
+  // Очищаем корзину
   cart = [];
   saveCart();
   renderCart();
   
-  // РћС‡РёС‰Р°РµРј С„РѕСЂРјСѓ
+  // Очищаем форму
   document.getElementById('orderForm').reset();
 }
 
@@ -1267,7 +1267,7 @@ function closeModal() {
   document.getElementById('modalOverlay').classList.remove('show');
 }
 
-// в”Ђв”Ђ MARK ITEMS IN CART в”Ђв”Ђ
+// ── MARK ITEMS IN CART ──
 function updateMenuIndicators() {
   document.querySelectorAll('.menu-card').forEach(card => {
     const name = card.querySelector('.menu-card-name').textContent;
@@ -1277,11 +1277,11 @@ function updateMenuIndicators() {
       card.style.borderLeft = '3px solid #4CAF50';
       card.style.background = 'rgba(76,175,80,0.08)';
       
-      // Р”РѕР±Р°РІР»СЏРµРј РіР°Р»РѕС‡РєСѓ РµСЃР»Рё РµС‰С‘ РЅРµС‚
+      // Добавляем галочку если ещё нет
       if (!card.querySelector('.cart-check')) {
         const check = document.createElement('span');
         check.className = 'cart-check';
-        check.innerHTML = 'вњ“';
+        check.innerHTML = '✓';
         check.style.cssText = `
           position: absolute; top: 8px; right: 8px;
           width: 24px; height: 24px; border-radius: 50%;
@@ -1293,24 +1293,24 @@ function updateMenuIndicators() {
         card.appendChild(check);
       }
       
-      // РћР±РЅРѕРІР»СЏРµРј С‚РµРєСЃС‚
+      // Обновляем текст
       const unit = card.querySelector('.menu-card-unit');
       if (unit && !unit.dataset.original) {
         unit.dataset.original = unit.textContent;
       }
       if (unit) {
-        unit.textContent = `вњ“ Р’ РєРѕСЂР·РёРЅРµ: ${inCart.qty} С€С‚. В· + РµС‰С‘`;
+        unit.textContent = `✓ В корзине: ${inCart.qty} шт. · + ещё`;
         unit.style.color = '#4CAF50';
       }
     } else {
       card.style.borderLeft = '2px solid transparent';
       card.style.background = '';
       
-      // РЈР±РёСЂР°РµРј РіР°Р»РѕС‡РєСѓ
+      // Убираем галочку
       const check = card.querySelector('.cart-check');
       if (check) check.remove();
       
-      // Р’РѕР·РІСЂР°С‰Р°РµРј С‚РµРєСЃС‚
+      // Возвращаем текст
       const unit = card.querySelector('.menu-card-unit');
       if (unit && unit.dataset.original) {
         unit.textContent = unit.dataset.original;
@@ -1321,7 +1321,7 @@ function updateMenuIndicators() {
   });
 }
 
-// в”Ђв”Ђ MENU TABS в”Ђв”Ђ
+// ── MENU TABS ──
 function showCat(cat, btn) {
   document.querySelectorAll('[data-cat]').forEach(el => {
     el.classList.remove('active');
@@ -1331,12 +1331,12 @@ function showCat(cat, btn) {
   btn.classList.add('active');
 }
 
-// в”Ђв”Ђ MOBILE MENU в”Ђв”Ђ
+// ── MOBILE MENU ──
 function toggleMenu() {
   document.getElementById('mobileNav').classList.toggle('open');
 }
 
-// в”Ђв”Ђ HEADER SCROLL в”Ђв”Ђ
+// ── HEADER SCROLL ──
 window.addEventListener('scroll', () => {
   const h = document.getElementById('header');
   h.style.background = window.scrollY > 50
@@ -1344,7 +1344,7 @@ window.addEventListener('scroll', () => {
     : 'rgba(12,12,12,0.92)';
 });
 
-// в”Ђв”Ђ INIT в”Ђв”Ђ
+// ── INIT ──
 document.addEventListener('DOMContentLoaded', () => {
   renderCart();
   switchOrderType('delivery');
@@ -1353,7 +1353,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <style>
-/* в”Ђв”Ђ РРЎРљРћР РљР в”Ђв”Ђ */
+/* ── ИСКОРКИ ── */
 .sparks-canvas {
   position: fixed;
   top: 0; left: 0;
@@ -1362,7 +1362,7 @@ document.addEventListener('DOMContentLoaded', () => {
   z-index: 10000;
 }
 
-/* в”Ђв”Ђ РџРћРЇР’Р›Р•РќРР• РџР Р РЎРљР РћР›Р›Р• в”Ђв”Ђ */
+/* ── ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ ── */
 .reveal {
   opacity: 0;
   transform: translateY(32px);
@@ -1391,7 +1391,7 @@ document.addEventListener('DOMContentLoaded', () => {
   transform: translateX(0);
 }
 
-/* Р—Р°РґРµСЂР¶РєРё РґР»СЏ РєР°СЃРєР°РґРЅРѕРіРѕ РїРѕСЏРІР»РµРЅРёСЏ */
+/* Задержки для каскадного появления */
 .delay-1 { transition-delay: 0.1s; }
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
@@ -1401,7 +1401,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <canvas class="sparks-canvas" id="sparksCanvas"></canvas>
 
 <script>
-// в”Ђв”Ђ РРЎРљРћР РљР в”Ђв”Ђ
+// ── ИСКОРКИ ──
 const canvas = document.getElementById('sparksCanvas');
 const ctx = canvas.getContext('2d');
 
@@ -1414,7 +1414,7 @@ window.addEventListener('resize', () => {
 });
 
 const sparks = [];
-const MAX_SPARKS = 18; // РЅРµРјРЅРѕРіРѕ, С‡С‚РѕР±С‹ РЅРµ С‚РѕСЂРјРѕР·РёР»Рѕ
+const MAX_SPARKS = 18; // немного, чтобы не тормозило
 
 class Spark {
   constructor() { this.reset(); }
@@ -1426,7 +1426,7 @@ class Spark {
     this.speedY = -(Math.random() * 2 + 1.5);
     this.life = 1;
     this.decay = Math.random() * 0.012 + 0.006;
-    // Р¦РІРµС‚Р°: Р·РѕР»РѕС‚Рѕ РёР»Рё РѕСЂР°РЅР¶РµРІС‹Р№
+    // Цвета: золото или оранжевый
     this.color = Math.random() > 0.5
       ? `rgba(212,160,23,`
       : `rgba(232,100,10,`;
@@ -1443,7 +1443,7 @@ class Spark {
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     ctx.fillStyle = this.color + this.life + ')';
     ctx.fill();
-    // Р›С‘РіРєРѕРµ СЃРІРµС‡РµРЅРёРµ
+    // Лёгкое свечение
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size * 2, 0, Math.PI * 2);
     ctx.fillStyle = this.color + (this.life * 0.15) + ')';
@@ -1451,10 +1451,10 @@ class Spark {
   }
 }
 
-// РЎРѕР·РґР°С‘Рј РёСЃРєРѕСЂРєРё
+// Создаём искорки
 for (let i = 0; i < MAX_SPARKS; i++) {
   const s = new Spark();
-  s.y = Math.random() * canvas.height; // СЂР°Р·Р±СЂРѕСЃ РїРѕ РІС‹СЃРѕС‚Рµ РїСЂРё СЃС‚Р°СЂС‚Рµ
+  s.y = Math.random() * canvas.height; // разброс по высоте при старте
   sparks.push(s);
 }
 
@@ -1464,7 +1464,7 @@ function animateSparks() {
   requestAnimationFrame(animateSparks);
 }
 animateSparks();
-// Fallback: пїЅпїЅпїЅпїЅ canvas пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ CSS-пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+// Fallback: ���� canvas �� ��������, ������ CSS-�������
 if (!canvas.getContext) {
   for (let i = 0; i < 20; i++) {
     const spark = document.createElement('div');
@@ -1486,7 +1486,7 @@ if (!canvas.getContext) {
   }
 }
 
-// в”Ђв”Ђ РџРћРЇР’Р›Р•РќРР• РџР Р РЎРљР РћР›Р›Р• в”Ђв”Ђ
+// ── ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ ──
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -1495,22 +1495,22 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-// РџСЂРёРјРµРЅСЏРµРј Р°РЅРёРјР°С†РёРё Рє СЌР»РµРјРµРЅС‚Р°Рј
+// Применяем анимации к элементам
 document.addEventListener('DOMContentLoaded', () => {
-  // Р—Р°РіРѕР»РѕРІРєРё СЃРµРєС†РёР№
+  // Заголовки секций
   document.querySelectorAll('.sec-h2, .section-h2, .inv-h2').forEach((el, i) => {
     el.classList.add('reveal');
     revealObserver.observe(el);
   });
 
-  // РљР°СЂС‚РѕС‡РєРё РјРµРЅСЋ
+  // Карточки меню
   document.querySelectorAll('.menu-card').forEach((el, i) => {
     el.classList.add('reveal');
     el.style.transitionDelay = (i % 6 * 0.06) + 's';
     revealObserver.observe(el);
   });
 
-  // РљР°СЂС‚РѕС‡РєРё Р°РєС†РёР№
+  // Карточки акций
   document.querySelectorAll('.promo-card').forEach((el, i) => {
     el.classList.add('reveal');
     el.style.transitionDelay = (i * 0.15) + 's';
@@ -1521,21 +1521,21 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(el);
   });
 
-  // РљРѕРЅС‚Р°РєС‚С‹
+  // Контакты
   document.querySelectorAll('.contact-item').forEach((el, i) => {
     el.classList.add('reveal-left');
     el.style.transitionDelay = (i * 0.12) + 's';
     revealObserver.observe(el);
   });
 
-  // РЎС‚РѕР»Р±РёРєРё С„РёР»РѕСЃРѕС„РёРё
+  // Столбики философии
   document.querySelectorAll('.pillar-item').forEach((el, i) => {
     el.classList.add('reveal');
     el.style.transitionDelay = (i * 0.15) + 's';
     revealObserver.observe(el);
   });
 
-  // Р“Р°Р»РµСЂРµСЏ С„РѕС‚Рѕ
+  // Галерея фото
   document.querySelectorAll('.gallery-cell, [style*="aspect-ratio:1"]').forEach((el, i) => {
     el.classList.add('reveal');
     el.style.transitionDelay = (i % 4 * 0.08) + 's';
@@ -1544,7 +1544,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<!-- tsParticles вЂ” РёСЃРєРѕСЂРєРё РѕРіРЅСЏ -->
+<!-- tsParticles — искорки огня -->
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 <script>
 tsParticles.load({
@@ -1570,48 +1570,48 @@ tsParticles.load({
 });
 </script>
 
-<!-- РўРђР™РњР•Р  Р РђР‘РћРўР« -->
+<!-- ТАЙМЕР РАБОТЫ -->
 <script>
 function updateWorkTimer() {
-  const now = new Date();
-  const hours = now.getHours();
-  const mins = now.getMinutes();
-  const secs = now.getSeconds();
+  var now = new Date();
+  var hours = now.getHours();
+  var mins = now.getMinutes();
+  var secs = now.getSeconds();
   
-  const isOpen = (hours >= 10 && hours < 22);
-  const statusEl = document.getElementById('workStatus');
-  const timerEl = document.getElementById('workTimer');
+  var isOpen = (hours >= 10 && hours < 22);
+  var statusEl = document.getElementById('workStatus');
+  var timerEl = document.getElementById('workTimer');
   
   if (!statusEl || !timerEl) return;
   
   if (isOpen) {
-    statusEl.textContent = 'в—Џ РћРўРљР Р«РўРћ';
+    statusEl.textContent = '\u25CF \u041E\u0422\u041A\u0420\u042B\u0422\u041E';
     statusEl.style.color = '#4CAF50';
     
-    const closeTime = new Date(now);
+    var closeTime = new Date(now);
     closeTime.setHours(22, 0, 0, 0);
-    const diff = closeTime - now;
+    var diff = closeTime - now;
     
-    const h = Math.floor(diff / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
+    var h = Math.floor(diff / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
     
     timerEl.textContent = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
     timerEl.style.color = '#FAF5EE';
   } else {
-    statusEl.textContent = 'в—Џ Р—РђРљР Р«РўРћ';
+    statusEl.textContent = '\u25CF \u0417\u0410\u041A\u0420\u042B\u0422\u041E';
     statusEl.style.color = '#E8832E';
     
-    const openTime = new Date(now);
+    var openTime = new Date(now);
     if (hours >= 22) {
       openTime.setDate(openTime.getDate() + 1);
     }
     openTime.setHours(10, 0, 0, 0);
-    const diff = openTime - now;
+    var diff = openTime - now;
     
-    const h = Math.floor(diff / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
+    var h = Math.floor(diff / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
     
     timerEl.textContent = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
     timerEl.style.color = '#E8832E';
