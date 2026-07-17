@@ -311,9 +311,12 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
   /* Hero на телефоне */
   #home{height:auto;min-height:500px;padding:60px 0;}
   #home > div:last-child{padding:0 16px !important;}
-  #home img[alt*="logo"]{width:160px !important;}
+  #home > div:last-child > div:last-child{order:-1 !important;}
+  #home img[alt*="logo"]{width:180px !important;margin:0 auto 20px;display:block;}
   #home p{font-size:16px !important;}
   #home .btn-primary,#home .btn-outline{width:100%;text-align:center;}
+  #home > div:last-child > div:first-child{text-align:center;}
+  #home > div:last-child > div:first-child > div:first-child{font-size:9px !important;letter-spacing:3px !important;}
   /* Таймер на телефоне */
   #home + section > div{flex-direction:column;gap:12px !important;}
   #home + section > div > div{width:100%;text-align:center;}
