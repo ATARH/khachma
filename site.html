@@ -35,8 +35,8 @@
   --green:    #4CAF50;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--ink);color:var(--bone);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden;}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100vw;}
+body{background:var(--ink);color:var(--bone);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden;max-width:100vw;}
 
 /* ── HEADER ── */
 header{
@@ -261,8 +261,11 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 .mobile-nav a:hover{color:var(--gold);}
 
 /* ── RESPONSIVE ── */
+*{box-sizing:border-box;}
+html,body{overflow-x:hidden;width:100%;}
+video{position:absolute;top:0;left:0;width:100vw;height:100vh;object-fit:cover;}
 @media(max-width:900px){
-  header{padding:0 12px;height:60px;}
+  header{padding:0 12px;height:56px;}
   header .logo img{height:40px;}
   nav{display:none;}
   .burger{display:flex;}
@@ -270,18 +273,15 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
   .order-grid,.contacts-grid,.footer-inner{grid-template-columns:1fr;}
   .menu-grid{grid-template-columns:1fr;}
   section{padding:72px 0;}
-  #home{height:auto;min-height:auto;padding:0;}
-  #home > div:last-child{display:flex !important;flex-direction:column !important;grid-template-columns:none !important;text-align:center;gap:20px;padding:80px 16px 30px;}
-  #home > div:last-child > div:last-child{order:-1 !important;}
-  #home img[alt*="logo"]{width:140px !important;margin:0 auto 15px;display:block;}
-  #home p{font-size:15px !important;line-height:1.5;}
-  #home .btn-primary,#home .btn-outline{width:100%;text-align:center;margin:0 auto;}
-  #home > div:last-child > div:first-child{text-align:center;}
-  #home > div:last-child > div:first-child > div{font-size:9px !important;letter-spacing:2px !important;word-break:break-word;}
+  .hero-inner{flex-direction:column !important;gap:20px !important;padding:80px 16px 30px !important;text-align:center;}
+  .hero-inner > div{width:100%;}
+  .hero-inner img{width:160px !important;margin:0 auto;}
+  .hero-inner p{font-size:15px !important;}
+  .hero-inner .btn-primary,.hero-inner .btn-outline{width:100%;text-align:center;margin:0 auto;}
   #home + section > div{flex-direction:column;gap:12px !important;}
 }
 @media(max-width:600px){
-  header{height:56px;}
+  header{height:50px;}
   header .logo img{height:36px;}
   .burger{display:flex;}
   nav{display:none;}
@@ -304,10 +304,9 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
   .footer-bottom{flex-direction:column;gap:12px;text-align:center;}
   section{padding:50px 0;}
   .container{padding:0 12px;}
-  #home > div:last-child{padding:70px 12px 24px;}
-  #home > div:last-child > div:last-child{order:-1;}
-  #home img[alt*="logo"]{width:130px !important;}
-  #home p{font-size:13px !important;}
+  .hero-inner{padding:70px 12px 24px !important;}
+  .hero-inner img{width:140px !important;}
+  .hero-inner p{font-size:13px !important;}
   #home + section > div{flex-direction:column;gap:10px !important;}
   #home + section > div > div{width:100%;text-align:center;}
 }
@@ -343,14 +342,14 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 </div>
 
 <!-- HERO с видео-фоном -->
-<section id="home" style="position:relative;height:100vh;min-height:600px;display:flex;align-items:center;overflow:hidden;">
-  <video autoplay muted loop playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;will-change:transform;">
+<section id="home" style="position:relative;height:100vh;min-height:600px;display:flex;align-items:center;overflow:hidden;width:100%;max-width:100vw;">
+  <video autoplay muted loop playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
     <source src="https://atarh.github.io/khachma/img/video2.mp4" type="video/mp4">
   </video>
   <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(10,10,10,0.55);z-index:1;"></div>
-  <div style="position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+  <div class="hero-inner" style="position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:0 48px;display:flex;align-items:center;gap:60px;">
     <!-- Левая часть — текст -->
-    <div>
+    <div style="flex:1;">
       <p style="font-size:18px;color:#F09B4A;margin-bottom:12px;font-weight:400;">Мясо и рыба на живом огне. Черноморские деликатесы и грузинская кухня.</p>
       <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:rgba(240,230,220,0.7);font-weight:400;margin-bottom:20px;">Сочи · Волжская 37/к3 (Мамайка) · Каждый день с 10:00 до 22:00</div>
       <p style="font-family:'Cormorant Garamond',serif;font-size:32px;font-style:italic;color:#F09B4A;margin-bottom:40px;line-height:1.4;">«Попробуй один раз —<br>вернёшься много раз!»</p>
@@ -360,8 +359,8 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
       </div>
     </div>
     <!-- Правая часть — лого -->
-    <div style="display:flex;justify-content:center;align-items:center;">
-      <img src="https://atarh.github.io/khachma/img/logo.png" alt="Хачапури & Мангал" style="max-width:100%;width:260px;height:auto;opacity:0.7;filter:drop-shadow(0 0 40px rgba(232,131,46,0.2));">
+    <div style="flex-shrink:0;">
+      <img src="https://atarh.github.io/khachma/img/logo.png" alt="Хачапури & Мангал" style="width:260px;height:auto;opacity:0.7;filter:drop-shadow(0 0 40px rgba(232,131,46,0.2));">
     </div>
   </div>
 </section>
