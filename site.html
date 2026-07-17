@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
@@ -363,18 +363,21 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
     </div>
   </div>
 </section>
+
+<!-- ТАЙМЕР РАБОТЫ -->
+<section style="background:#0A0A0A;padding:40px 0;border-top:1px solid rgba(232,131,46,0.15);border-bottom:1px solid rgba(232,131,46,0.15);">
+  <div style="max-width:1200px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;text-align:center;">
+    <div>
+      <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#E8832E;font-weight:600;margin-bottom:8px;">Статус</div>
+      <div id="workStatus" style="font-family:'DM Serif Display',serif;font-size:24px;color:#F09B4A;">Открыто</div>
     </div>
-    <div class="hero-stat">
-      <div class="hero-stat-n">100%</div>
-      <div class="hero-stat-l">Живой огонь</div>
+    <div>
+      <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#E8832E;font-weight:600;margin-bottom:8px;">До закрытия</div>
+      <div id="workTimer" style="font-family:'DM Serif Display',serif;font-size:24px;color:#FAF5EE;">--:--:--</div>
     </div>
-    <div class="hero-stat">
-      <div class="hero-stat-n">10:00</div>
-      <div class="hero-stat-l">Открываемся</div>
-    </div>
-    <div class="hero-stat">
-      <div class="hero-stat-n">+7 (928) 66-777-33</div>
-      <div class="hero-stat-l">Звоните и заказывайте</div>
+    <div>
+      <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#E8832E;font-weight:600;margin-bottom:8px;">Позвоните</div>
+      <a href="tel:+79286677733" style="font-family:'DM Serif Display',serif;font-size:24px;color:#FAF5EE;text-decoration:none;">+7 (928) 66-777-33</a>
     </div>
   </div>
 </section>
@@ -1567,6 +1570,61 @@ tsParticles.load({
     }
   }
 });
+</script>
+
+<!-- ТАЙМЕР РАБОТЫ КАФЕ -->
+<script>
+function updateWorkTimer() {
+  const now = new Date();
+  const hours = now.getHours();
+  const mins = now.getMinutes();
+  const secs = now.getSeconds();
+  
+  const isOpen = (hours >= 10 && hours < 22);
+  const statusEl = document.getElementById('workStatus');
+  const timerEl = document.getElementById('workTimer');
+  
+  if (!statusEl || !timerEl) return;
+  
+  if (isOpen) {
+    statusEl.textContent = '🟢 Открыто';
+    statusEl.style.color = '#4CAF50';
+    
+    // Время до закрытия (22:00)
+    const closeTime = new Date(now);
+    closeTime.setHours(22, 0, 0, 0);
+    const diff = closeTime - now;
+    
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    
+    timerEl.textContent = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    timerEl.style.color = '#FAF5EE';
+  } else {
+    statusEl.textContent = '🔴 Закрыто';
+    statusEl.style.color = '#E8832E';
+    
+    // Время до открытия (10:00)
+    const openTime = new Date(now);
+    if (hours >= 22) {
+      openTime.setDate(openTime.getDate() + 1);
+    }
+    openTime.setHours(10, 0, 0, 0);
+    const diff = openTime - now;
+    
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    
+    timerEl.textContent = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    timerEl.style.color = '#E8832E';
+  }
+}
+
+// Обновляем каждую секунду
+setInterval(updateWorkTimer, 1000);
+updateWorkTimer();
 </script>
 
 </body>
