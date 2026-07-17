@@ -309,7 +309,7 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
   section{padding:60px 0;}
   .container{padding:0 16px;}
   /* Hero на телефоне */
-  #home{min-height:auto;padding:60px 0;}
+  #home{height:auto;min-height:500px;padding:60px 0;}
   #home > div:last-child{padding:0 16px !important;}
   #home img[alt*="logo"]{width:160px !important;}
   #home p{font-size:16px !important;}
@@ -350,8 +350,8 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 </div>
 
 <!-- HERO с видео-фоном -->
-<section id="home" style="position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;">
-  <video autoplay muted loop playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+<section id="home" style="position:relative;height:100vh;min-height:600px;display:flex;align-items:center;overflow:hidden;">
+  <video autoplay muted loop playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;will-change:transform;">
     <source src="https://atarh.github.io/khachma/img/video2.mp4" type="video/mp4">
   </video>
   <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(10,10,10,0.55);z-index:1;"></div>
@@ -873,25 +873,6 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- PROMOS -->
-<section id="promos">
-  <div class="container">
-    <div class="sec-tag">04 — Акции</div>
-    <h2 class="sec-h2">Специальные <em>предложения</em></h2>
-    <div class="sec-div"></div>
-    <div class="promos-grid">
-
-
-      <div class="promo-card new">
-        <div class="promo-badge">🆕 Новинка</div>
-        <div class="promo-title">Рыба с Чёрного моря</div>
-        <div class="promo-desc">Барабуля и сарган черноморские — свежий улов на мангале. Попробуйте то, что большинство кафе не предлагает вовсе.</div>
-      </div>
-    </div>
-    <p style="font-size:12px;color:var(--mist);margin-top:32px;text-align:center;font-weight:300;">Звоните для информации: <a href="tel:+79286677733" style="color:var(--gold);">+7 (928) 66-777-33</a></p>
   </div>
 </section>
 
