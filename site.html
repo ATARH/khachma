@@ -1210,51 +1210,44 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 </footer>
 
 
-<!-- MESSENGER MODAL -->
-<div class="modal-overlay" id="messengerModal">
-  <div class="modal" style="max-width:420px;">
-    <button class="modal-close" onclick="closeMessengerModal()">✕</button>
-    <div class="modal-icon">📲</div>
-    <div class="modal-title" style="font-size:24px;">Как отправить заказ?</div>
-    <div class="modal-text">Выберите мессенджер — мы получим ваш заказ и перезвоним для подтверждения.</div>
-    <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
-      <button class="btn-primary" style="width:100%;background:#25D366;display:flex;align-items:center;justify-content:center;gap:12px;font-size:14px;" onclick="sendViaMessenger('whatsapp')">
-        <span style="font-size:22px;">💬</span> Отправить в WhatsApp
-      </button>
-      <button class="btn-primary" style="width:100%;background:#229ED9;display:flex;align-items:center;justify-content:center;gap:12px;font-size:14px;" onclick="sendViaMessenger('telegram')">
-        <span style="font-size:22px;">✈️</span> Отправить в Telegram
-      </button>
-      <button class="btn-ghost" style="width:100%;margin-top:4px;" onclick="closeMessengerModal()">Отмена</button>
-    </div>
-  </div>
-</div>
-
 <!-- SUCCESS MODAL -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
     <div class="modal-icon">🔥</div>
     <div class="modal-title">Заказ принят!</div>
-    <div class="modal-text">Мы получили ваш заказ и скоро перезвоним для подтверждения.<br><br>Или звоните сами: <strong style="color:var(--gold);">+7 (928) 66-777-33</strong></div>
+    <div class="modal-text">Ваш заказ отправлен! Мы скоро перезвоним для подтверждения.<br><br>Или звоните сами: <strong style="color:var(--gold);">+7 (928) 66-777-33</strong></div>
     <button class="btn-primary" style="width:100%;" onclick="closeModal()">Отлично, жду!</button>
   </div>
 </div>
 
 <script>
-// ── CART ──
-let cart = [];
+// ═══════════════════════════════════════════════════════
+// TELEGRAM BOT — замените на свои данные
+// Получите токен у @BotFather, chat_id через getUpdates
+// ═══════════════════════════════════════════════════════
+const BOT_TOKEN = '8940221196:AAELm02kYo-9mA61C4p0TgiHaYsKZekaP2Y';
+const CHAT_ID = '5045502979';
+
+// ── CART (с localStorage) ──
+let cart = JSON.parse(localStorage.getItem('khachma_cart') || '[]');
+
+function saveCart() {
+  localStorage.setItem('khachma_cart', JSON.stringify(cart));
+}
 
 function addToCart(name, price, unit) {
   const existing = cart.find(i => i.name === name);
   if (existing) { existing.qty++; }
   else { cart.push({name, price, unit, qty:1}); }
+  saveCart();
   renderCart();
-  // Scroll to order
   document.getElementById('order').scrollIntoView({behavior:'smooth'});
 }
 
 function removeFromCart(idx) {
   cart.splice(idx,1);
+  saveCart();
   renderCart();
 }
 
@@ -1301,7 +1294,6 @@ function switchOrderType(type) {
   const banner = document.getElementById('preorderBanner');
   const arrivalGroup = document.getElementById('arrivalTimeGroup');
 
-  // Сбрасываем все
   tabD.classList.remove('active');
   tabP.classList.remove('active');
   tabPre.classList.remove('active');
@@ -1325,8 +1317,39 @@ function switchOrderType(type) {
   }
 }
 
-// ── SUBMIT ──
-function submitOrder() {
+// ── ORDER HISTORY (localStorage) ──
+function saveOrderHistory(orderData) {
+  let history = JSON.parse(localStorage.getItem('khachma_orders') || '[]');
+  orderData.id = Date.now();
+  orderData.date = new Date().toLocaleString('ru-RU');
+  orderData.status = 'new';
+  history.unshift(orderData);
+  if (history.length > 50) history = history.slice(0, 50);
+  localStorage.setItem('khachma_orders', JSON.stringify(history));
+}
+
+// ── SEND TO TELEGRAM ──
+async function sendToTelegram(text) {
+  if (BOT_TOKEN === 'СЮДА_ВАШ_ТОКЕН_ОТ_BOTFATHER') {
+    console.log('Telegram bot не настроен. Текст заказа:', text);
+    return false;
+  }
+  try {
+    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({chat_id: CHAT_ID, text: text, parse_mode: 'HTML'})
+    });
+    return response.ok;
+  } catch (e) {
+    console.error('Ошибка отправки в Telegram:', e);
+    return false;
+  }
+}
+
+// ── SUBMIT (ИСПРАВЛЕНО) ──
+async function submitOrder() {
   const name = document.getElementById('fname').value.trim();
   const phone = document.getElementById('fphone').value.trim();
   const address = document.getElementById('faddress') ? document.getElementById('faddress').value.trim() : '';
@@ -1343,56 +1366,53 @@ function submitOrder() {
     return;
   }
 
-  // Определяем тип заказа
   const isDelivery = document.getElementById('tabDelivery').classList.contains('active');
   const isPickup = document.getElementById('tabPickup').classList.contains('active');
   const isPreorder = document.getElementById('tabPreorder').classList.contains('active');
 
   let orderType = isDelivery ? '🚗 Доставка' : isPickup ? '🏃 Самовывоз' : '⏱ Предзаказ';
 
-  // Формируем текст заказа
-  const items = cart.map(i => `• ${i.name}${i.qty > 1 ? ' ×' + i.qty : ''} — ${i.price * i.qty} ₽`).join('%0A');
+  const items = cart.map(i => `• ${i.name}${i.qty > 1 ? ' ×' + i.qty : ''} — ${i.price * i.qty} ₽`);
   const total = cart.reduce((a, i) => a + i.price * i.qty, 0);
 
-  let msg = `🔥 НОВЫЙ ЗАКАЗ — Хачапури %26 Мангал%0A%0A`;
-  msg += `👤 Имя: ${name}%0A`;
-  msg += `📞 Телефон: ${phone}%0A`;
-  msg += `📋 Тип: ${orderType}%0A`;
-  if (address) msg += `📍 Адрес: ${address}%0A`;
-  if (arrival) msg += `⏱ Время приезда: ${arrival}%0A`;
-  msg += `💳 Оплата: ${pay}%0A%0A`;
-  msg += `🛒 Состав заказа:%0A${items}%0A%0A`;
-  msg += `💰 Итого: ${total.toLocaleString('ru')} ₽`;
-  if (comment) msg += `%0A%0A💬 Комментарий: ${comment}`;
+  // Формируем красивое сообщение для Telegram
+  let telegramMsg = `🔥 <b>НОВЫЙ ЗАКАЗ</b> — Хачапури &amp; Мангал\n\n`;
+  telegramMsg += `👤 <b>Имя:</b> ${name}\n`;
+  telegramMsg += `📞 <b>Телефон:</b> ${phone}\n`;
+  telegramMsg += `📋 <b>Тип:</b> ${orderType}\n`;
+  if (address) telegramMsg += `📍 <b>Адрес:</b> ${address}\n`;
+  if (arrival) telegramMsg += `⏱ <b>Время приезда:</b> ${arrival}\n`;
+  telegramMsg += `💳 <b>Оплата:</b> ${pay}\n\n`;
+  telegramMsg += `🛒 <b>Состав заказа:</b>\n${items.join('\n')}\n\n`;
+  telegramMsg += `💰 <b>Итого:</b> ${total.toLocaleString('ru')} ₽`;
+  if (comment) telegramMsg += `\n\n💬 <b>Комментарий:</b> ${comment}`;
 
-  // Показываем выбор мессенджера
-  document.getElementById('messengerModal').classList.add('show');
-  document.getElementById('messengerModal').dataset.msg = msg;
+  // Сохраняем в историю
+  saveOrderHistory({
+    name: name,
+    phone: phone,
+    address: address,
+    comment: comment,
+    arrival: arrival,
+    payment: pay,
+    type: orderType,
+    items: cart.map(i => ({name: i.name, qty: i.qty, price: i.price, unit: i.unit})),
+    total: total
+  });
 
-  // Сохраняем заказ для очистки после выбора
-  window._pendingCart = [...cart];
-}
+  // Отправляем в Telegram
+  const sent = await sendToTelegram(telegramMsg);
 
-function sendViaMessenger(type) {
-  const msg = document.getElementById('messengerModal').dataset.msg;
-  const phone = '${phone}';
-
-  let url = '';
-  if (type === 'whatsapp') {
-    url = `https://wa.me/${phone}?text=${msg}`;
-  } else if (type === 'telegram') {
-    url = `https://t.me/zharovnyaMyasoDaRyba?text=${msg}`;
-  }
-
-  window.open(url, '_blank');
-  document.getElementById('messengerModal').classList.remove('show');
+  // Показываем модалку успеха
   document.getElementById('modalOverlay').classList.add('show');
+  
+  // Очищаем корзину
   cart = [];
+  saveCart();
   renderCart();
-}
-
-function closeMessengerModal() {
-  document.getElementById('messengerModal').classList.remove('show');
+  
+  // Очищаем форму
+  document.getElementById('orderForm').reset();
 }
 
 function closeModal() {
@@ -1402,12 +1422,11 @@ function closeModal() {
 // ── MENU TABS ──
 function showCat(cat, btn) {
   document.querySelectorAll('[data-cat]').forEach(el => {
-    el.classList.toggle('active', el.dataset.cat === cat);
+    el.classList.remove('active');
   });
-  if (btn) {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  }
+  document.querySelector(`[data-cat="${cat}"]`).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
 }
 
 // ── MOBILE MENU ──
@@ -1421,6 +1440,12 @@ window.addEventListener('scroll', () => {
   h.style.background = window.scrollY > 50
     ? 'rgba(12,12,12,0.98)'
     : 'rgba(12,12,12,0.92)';
+});
+
+// ── INIT ──
+document.addEventListener('DOMContentLoaded', () => {
+  renderCart();
+  switchOrderType('delivery');
 });
 </script>
 
