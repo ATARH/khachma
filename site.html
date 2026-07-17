@@ -140,6 +140,7 @@ section{padding:100px 0;}
   border-left:2px solid transparent;
 }
 .menu-card:hover{background:var(--slate);border-left-color:var(--gold);}
+.menu-card.in-cart{border-left-color:#4CAF50 !important;background:rgba(76,175,80,0.08) !important;}
 .menu-card-left{}
 .menu-card-name{font-size:14px;color:var(--cream);font-weight:400;margin-bottom:4px;}
 .menu-card-unit{font-size:10px;color:var(--mist);letter-spacing:2px;}
@@ -1057,6 +1058,7 @@ function addToCart(name, price, unit) {
   else { cart.push({name, price, unit, qty:1}); }
   saveCart();
   renderCart();
+  updateMenuIndicators();
   // Показываем мини-уведомление вместо прокрутки
   showCartNotification(name);
 }
@@ -1092,6 +1094,7 @@ function removeFromCart(idx) {
   cart.splice(idx,1);
   saveCart();
   renderCart();
+  updateMenuIndicators();
 }
 
 function renderCart() {
@@ -1262,6 +1265,60 @@ function closeModal() {
   document.getElementById('modalOverlay').classList.remove('show');
 }
 
+// ── MARK ITEMS IN CART ──
+function updateMenuIndicators() {
+  document.querySelectorAll('.menu-card').forEach(card => {
+    const name = card.querySelector('.menu-card-name').textContent;
+    const inCart = cart.find(i => i.name === name);
+    
+    if (inCart) {
+      card.style.borderLeft = '3px solid #4CAF50';
+      card.style.background = 'rgba(76,175,80,0.08)';
+      
+      // Добавляем галочку если ещё нет
+      if (!card.querySelector('.cart-check')) {
+        const check = document.createElement('span');
+        check.className = 'cart-check';
+        check.innerHTML = '✓';
+        check.style.cssText = `
+          position: absolute; top: 8px; right: 8px;
+          width: 24px; height: 24px; border-radius: 50%;
+          background: #4CAF50; color: white;
+          display: flex; align-items: center; justify-content: center;
+          font-size: 14px; font-weight: bold;
+        `;
+        card.style.position = 'relative';
+        card.appendChild(check);
+      }
+      
+      // Обновляем текст
+      const unit = card.querySelector('.menu-card-unit');
+      if (unit && !unit.dataset.original) {
+        unit.dataset.original = unit.textContent;
+      }
+      if (unit) {
+        unit.textContent = `✓ В корзине: ${inCart.qty} шт. · + ещё`;
+        unit.style.color = '#4CAF50';
+      }
+    } else {
+      card.style.borderLeft = '2px solid transparent';
+      card.style.background = '';
+      
+      // Убираем галочку
+      const check = card.querySelector('.cart-check');
+      if (check) check.remove();
+      
+      // Возвращаем текст
+      const unit = card.querySelector('.menu-card-unit');
+      if (unit && unit.dataset.original) {
+        unit.textContent = unit.dataset.original;
+        unit.style.color = '';
+        delete unit.dataset.original;
+      }
+    }
+  });
+}
+
 // ── MENU TABS ──
 function showCat(cat, btn) {
   document.querySelectorAll('[data-cat]').forEach(el => {
@@ -1289,6 +1346,7 @@ window.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', () => {
   renderCart();
   switchOrderType('delivery');
+  updateMenuIndicators();
 });
 </script>
 
