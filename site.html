@@ -265,18 +265,19 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
   header{padding:0 24px;}
   nav{display:none;}
   .burger{display:flex;}
-  .hero-content{padding:0 24px;}
-  .hero-stats{left:24px;right:24px;flex-wrap:wrap;}
-  .hero-stat{flex:1;min-width:140px;}
   .container{padding:0 24px;}
-  .order-grid,.inv-grid,.contacts-grid,.footer-inner{grid-template-columns:1fr;}
+  .order-grid,.contacts-grid,.footer-inner{grid-template-columns:1fr;}
   .promos-grid{grid-template-columns:1fr;}
   .menu-grid{grid-template-columns:1fr;}
   section{padding:72px 0;}
+  /* Hero */
+  #home > div:last-child{grid-template-columns:1fr !important;text-align:center;gap:30px;}
+  #home .btn-primary,#home .btn-outline{margin:0 auto;}
+  /* Таймер */
+  #home + section > div{flex-direction:column;gap:16px !important;}
 }
 @media(max-width:600px){
   .hero-h1{font-size:42px;}
-  .hero-stats{display:none;}
   .hero-btns{flex-direction:column;}
   .btn-primary,.btn-outline{width:100%;text-align:center;}
   
@@ -306,8 +307,14 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
   .promo-title{font-size:22px;}
   section{padding:60px 0;}
   .container{padding:0 16px;}
-  #food-gallery [style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr) !important;}
-  #food-gallery [style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr !important;}
+  /* Hero на телефоне */
+  #home{min-height:auto;padding:60px 0;}
+  #home > div:last-child{padding:0 16px;}
+  #home img[alt*="logo"]{width:180px !important;}
+  #home p{font-size:16px !important;}
+  /* Таймер на телефоне */
+  #home + section > div{flex-direction:column;gap:12px !important;}
+  #home + section > div > div{width:100%;}
 }
 </style>
 </head>
