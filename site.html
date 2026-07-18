@@ -370,9 +370,9 @@ html,body{overflow-x:hidden;width:100%;}
   <div class="hero-inner" style="position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:0 48px;display:flex;align-items:center;gap:60px;">
     <!-- Левая часть — текст -->
     <div style="flex:1;">
-      <p style="font-size:18px;color:#F09B4A;margin-bottom:12px;font-weight:400;">Мясо и рыба на живом огне. Черноморские деликатесы и кавказская кухня.</p>
-      <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:rgba(240,230,220,0.7);font-weight:400;margin-bottom:20px;">Сочи · Волжская 37/к3 (Мамайка) · Каждый день с 10:00 до 22:00</div>
-      <p style="font-family:'Cormorant Garamond',serif;font-size:32px;font-style:italic;color:#F09B4A;margin-bottom:40px;line-height:1.4;">«Попробуй один раз —<br>вернёшься много раз!»</p>
+      <p style="font-size:18px;color:#F09B4A;margin-bottom:12px;font-weight:400;" class="hero-reveal">Мясо и рыба на живом огне. Черноморские деликатесы и кавказская кухня.</p>
+      <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:rgba(240,230,220,0.7);font-weight:400;margin-bottom:20px;" class="hero-reveal">Сочи · Волжская 37/к3 (Мамайка) · Каждый день с 10:00 до 22:00</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:32px;font-style:italic;color:#F09B4A;margin-bottom:40px;line-height:1.4;" class="hero-reveal">«Попробуй один раз —<br>вернёшься много раз!»</p>
       <div style="display:flex;gap:16px;flex-wrap:wrap;">
         <a href="#order" class="btn-primary">Заказать доставку</a>
         <a href="#menu" class="btn-outline">Смотреть меню</a>
@@ -1357,6 +1357,17 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <style>
+/* ── HERO REVEAL ── */
+.hero-reveal{opacity:0;transform:translateY(20px);animation:heroFadeIn 0.8s ease forwards;}
+.hero-reveal:nth-child(1){animation-delay:0.3s;}
+.hero-reveal:nth-child(2){animation-delay:0.6s;}
+.hero-reveal:nth-child(3){animation-delay:0.9s;}
+@keyframes heroFadeIn{to{opacity:1;transform:translateY(0);}}
+
+/* ── BUTTON PULSE ── */
+.btn-primary{animation:btnPulse 3s ease-in-out infinite;}
+@keyframes btnPulse{0%,100%{box-shadow:0 0 0 0 rgba(232,131,46,0.3);}50%{box-shadow:0 0 20px 4px rgba(232,131,46,0.15);}}
+
 /* ── ВИДЕО-КАРУСЕЛЬ ── */
 @keyframes foodScroll {
   from { transform: translateX(0); }
@@ -1626,6 +1637,46 @@ tsParticles.load({
     requestAnimationFrame(loop);
   }
   loop();
+})();
+</script>
+
+<!-- MOUSE TRAIL — лёгкий canvas-след -->
+<canvas id="mouseTrail" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9998;"></canvas>
+<script>
+(function(){
+  if(window.innerWidth < 768) return;
+  const c = document.getElementById('mouseTrail');
+  const cx = c.getContext('2d');
+  let w,h;
+  function resize(){ w=c.width=window.innerWidth; h=c.height=window.innerHeight; }
+  resize();
+  window.addEventListener('resize',resize);
+
+  let mx=-100,my=-100;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
+  document.addEventListener('mouseleave',()=>{mx=-100;my=-100;});
+
+  const trail=[];
+  const MAX=30;
+
+  function animate(){
+    cx.clearRect(0,0,w,h);
+    trail.unshift({x:mx,y:my});
+    if(trail.length>MAX) trail.pop();
+
+    for(let i=0;i<trail.length;i++){
+      const t=trail[i];
+      const a=1-i/trail.length;
+      const r=a*6;
+      if(r<0.5) continue;
+      cx.beginPath();
+      cx.arc(t.x,t.y,r,0,Math.PI*2);
+      cx.fillStyle=`rgba(232,131,46,${a*0.4})`;
+      cx.fill();
+    }
+    requestAnimationFrame(animate);
+  }
+  animate();
 })();
 </script>
 
