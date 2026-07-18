@@ -1329,27 +1329,42 @@ document.addEventListener('DOMContentLoaded', () => {
   switchOrderType('delivery');
   updateMenuIndicators();
 
-  // Видео-карусель — 5 видео, дублируем для бесшовной прокрутки
+  // Видео-карусель
   const videos = ['vish1.mp4','vish2.mp4','vish3.mp4','vish4.mp4','vish5.mp4'];
   const marquee = document.getElementById('foodMarquee');
-  const allVideos = [...videos, ...videos];
-  allVideos.forEach((src) => {
+  const isMob = window.innerWidth <= 768;
+  const list = isMob ? videos : [...videos, ...videos];
+  list.forEach((src) => {
     const div = document.createElement('div');
     div.className = 'food-item';
     div.innerHTML = `<video muted playsinline preload="auto" loop><source src="https://atarh.github.io/khachma/img/${src}" type="video/mp4"></video>`;
     marquee.appendChild(div);
   });
-  // Автозапуск видео на десктопе, на мобилке по скроллу
-  if(window.innerWidth > 768){
-    marquee.querySelectorAll('video').forEach(v => v.play().catch(()=>{}));
-  } else {
-    const vObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if(e.isIntersecting) e.target.play().catch(()=>{});
-        else { e.target.pause(); e.target.currentTime = 0; }
+
+  // Автозапуск — все видео сразу
+  function playAll(){
+    marquee.querySelectorAll('video').forEach(v => {
+      v.play().catch(()=>{
+        // Fallback: повторяем попытку
+        setTimeout(()=>v.play().catch(()=>{}), 500);
       });
-    }, {threshold:0.2});
-    marquee.querySelectorAll('video').forEach(v => vObs.observe(v));
+    });
+  }
+  playAll();
+
+  // На мобилке — JS-прокрутка вместо CSS animation
+  if(isMob){
+    marquee.style.animation = 'none';
+    let pos = 0;
+    const speed = 0.5;
+    function scrollMarquee(){
+      pos -= speed;
+      const half = marquee.scrollWidth / 2;
+      if(Math.abs(pos) >= half) pos = 0;
+      marquee.style.transform = `translateX(${pos}px)`;
+      requestAnimationFrame(scrollMarquee);
+    }
+    scrollMarquee();
   }
 });
 </script>
@@ -1385,7 +1400,7 @@ document.addEventListener('DOMContentLoaded', () => {
   height: 100%;
   object-fit: cover;
 }
-.food-item:hover { transform: scale(1.04); box-shadow: 0 0 30px rgba(232,131,46,.15); }
+.food-item:hover { box-shadow: 0 0 20px rgba(232,131,46,.1); }
 
 /* ── ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ ── */
 .reveal {
