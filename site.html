@@ -1549,11 +1549,11 @@ tsParticles.load({
     fullScreen: { enable: true, zIndex: 1 },
     fpsLimit: 60,
     particles: {
-      number: { value: 20, density: { enable: true, area: 1200 } },
+      number: { value: 40, density: { enable: true, area: 600 } },
       color: { value: ["#E8832E", "#F09B4A", "#D4A017"] },
       shape: { type: "circle" },
-      opacity: { value: { min: 0.1, max: 0.35 } },
-      size: { value: { min: 1, max: 2.5 } },
+      opacity: { value: { min: 0.15, max: 0.45 } },
+      size: { value: { min: 1, max: 3 } },
       move: {
         enable: true,
         speed: 0.8,
@@ -1613,14 +1613,14 @@ tsParticles.load({
   document.addEventListener('touchend',()=>{mx=-100;my=-100;});
 
   const trail=[];
-  const MAX=isMobile?40:30;
+  const MAX=isMobile?50:50;
 
   function animate(){
     cx.clearRect(0,0,w,h);
     trail.unshift({x:mx,y:my});
     while(trail.length>MAX) trail.pop();
 
-    const dotSize=isMobile?3.5:5;
+    const dotSize=isMobile?4:6;
     for(let i=0;i<trail.length;i++){
       const t=trail[i];
       const a=1-i/trail.length;
