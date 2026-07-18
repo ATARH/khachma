@@ -1354,15 +1354,6 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 <style>
-/* ── ИСКОРКИ ── */
-.sparks-canvas {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none;
-  z-index: 10000;
-}
-
 /* ── ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ ── */
 .reveal {
   opacity: 0;
@@ -1399,95 +1390,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .delay-4 { transition-delay: 0.4s; }
 </style>
 
-<canvas class="sparks-canvas" id="sparksCanvas"></canvas>
-
-<script>
-// ── ИСКОРКИ ──
-const canvas = document.getElementById('sparksCanvas');
-const ctx = canvas.getContext('2d');
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-window.addEventListener('resize', () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
-
-const sparks = [];
-const MAX_SPARKS = 18; // немного, чтобы не тормозило
-
-class Spark {
-  constructor() { this.reset(); }
-  reset() {
-    this.x = Math.random() * canvas.width;
-    this.y = canvas.height + 10;
-    this.size = Math.random() * 2.5 + 0.5;
-    this.speedX = (Math.random() - 0.5) * 1.2;
-    this.speedY = -(Math.random() * 2 + 1.5);
-    this.life = 1;
-    this.decay = Math.random() * 0.012 + 0.006;
-    // Цвета: золото или оранжевый
-    this.color = Math.random() > 0.5
-      ? `rgba(212,160,23,`
-      : `rgba(232,100,10,`;
-  }
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    this.speedY *= 0.99;
-    this.life -= this.decay;
-    if (this.life <= 0) this.reset();
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = this.color + this.life + ')';
-    ctx.fill();
-    // Лёгкое свечение
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size * 2, 0, Math.PI * 2);
-    ctx.fillStyle = this.color + (this.life * 0.15) + ')';
-    ctx.fill();
-  }
-}
-
-// Создаём искорки
-for (let i = 0; i < MAX_SPARKS; i++) {
-  const s = new Spark();
-  s.y = Math.random() * canvas.height; // разброс по высоте при старте
-  sparks.push(s);
-}
-
-function animateSparks() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  sparks.forEach(s => { s.update(); s.draw(); });
-  requestAnimationFrame(animateSparks);
-}
-animateSparks();
-// Fallback: ���� canvas �� ��������, ������ CSS-�������
-if (!canvas.getContext) {
-  for (let i = 0; i < 20; i++) {
-    const spark = document.createElement('div');
-    spark.style.cssText = `
-      position: fixed;
-      width: ${Math.random() * 4 + 2}px;
-      height: ${Math.random() * 4 + 2}px;
-      background: ${Math.random() > 0.5 ? '#E8832E' : '#F09B4A'};
-      border-radius: 50%;
-      left: ${Math.random() * 100}%;
-      bottom: ${Math.random() * 30}%;
-      pointer-events: none;
-      z-index: 10000;
-      animation: sparkFloat ${Math.random() * 3 + 2}s ease-in-out infinite;
-      animation-delay: ${Math.random() * 2}s;
-      opacity: 0.7;
-    `;
-    document.body.appendChild(spark);
-  }
-}
-
-// ── ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ ──
+<script>// ── ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ ──
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -1545,31 +1448,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-<!-- tsParticles — искорки огня -->
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-<script>
-tsParticles.load({
-  id: "tsparticles",
-  options: {
-    fullScreen: { enable: true, zIndex: 1 },
-    particles: {
-      number: { value: 40 },
-      color: { value: ["#E8832E", "#F09B4A", "#FF6B35", "#FFD700"] },
-      shape: { type: "circle" },
-      opacity: { value: { min: 0.1, max: 0.8 }, animation: { enable: true, speed: 0.5, minimumValue: 0 } },
-      size: { value: { min: 1, max: 4 }, animation: { enable: true, speed: 1, minimumValue: 0.5 } },
-      move: { enable: true, speed: { min: 0.5, max: 2 }, direction: "top", outModes: "destroy" },
-      life: { duration: { sync: false, value: 3 }, count: 1 }
-    },
-    emitters: {
-      direction: "top",
-      position: { x: 50, y: 100 },
-      rate: { delay: 0.1, quantity: 2 },
-      size: { width: 100, height: 0 }
-    }
-  }
-});
-</script>
+
 
 <!-- ТАЙМЕР РАБОТЫ -->
 <script>
