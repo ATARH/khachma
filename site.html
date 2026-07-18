@@ -281,7 +281,6 @@ html,body{overflow-x:hidden;width:100%;}
   .hero-inner .btn-primary,.hero-inner .btn-outline{width:100%;text-align:center;margin:0 auto;}
   #home + section > div{flex-direction:column;gap:12px !important;}
   #cursorParticles{display:none!important;}
-  #tsparticles{display:none!important;}
   .food-item{width:160px;height:240px;}
   #foodMarquee{animation-duration:20s!important;}
 }
@@ -1538,41 +1537,6 @@ function updateWorkTimer() {
 
 setInterval(updateWorkTimer, 1000);
 updateWorkTimer();
-</script>
-
-<!-- PARTICLES — Repulse Sigmoid (subtle) -->
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-<script>
-tsParticles.load({
-  id: "cursorParticles",
-  options: {
-    fullScreen: { enable: true, zIndex: 1 },
-    fpsLimit: 60,
-    particles: {
-      number: { value: 40, density: { enable: true, area: 600 } },
-      color: { value: ["#E8832E", "#F09B4A", "#D4A017"] },
-      shape: { type: "circle" },
-      opacity: { value: { min: 0.15, max: 0.45 } },
-      size: { value: { min: 1, max: 3 } },
-      move: {
-        enable: true,
-        speed: 0.8,
-        direction: "none",
-        outModes: "bounce"
-      }
-    },
-    interactivity: {
-      events: {
-        onHover: { enable: true, mode: "repulse" },
-        resize: true
-      },
-      modes: {
-        repulse: { distance: 80, duration: 0.4, factor: 4, speed: 1, maxSpeed: 4, easing: "ease-out-quad" }
-      }
-    },
-    detectRetina: true
-  }
-});
 </script>
 
 <!-- MOUSE TRAIL — canvas-след (мышь + тач) -->
