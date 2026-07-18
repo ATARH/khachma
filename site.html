@@ -1560,7 +1560,7 @@ updateWorkTimer();
     if(prevX>0){
       const dx=mx-prevX, dy=my-prevY;
       const dist=Math.sqrt(dx*dx+dy*dy);
-      const step=isMobile?2:4;
+      const step=isMobile?1.5:3;
       if(dist>step){
         const steps=Math.floor(dist/step);
         for(let i=1;i<steps;i++){
@@ -1577,14 +1577,14 @@ updateWorkTimer();
   document.addEventListener('touchend',()=>{mx=-100;my=-100;});
 
   const trail=[];
-  const MAX=90;
+  const MAX=120;
 
   function animate(){
     cx.clearRect(0,0,w,h);
     trail.unshift({x:mx,y:my});
     while(trail.length>MAX) trail.pop();
 
-    const dotSize=isMobile?2.5:4;
+    const dotSize=isMobile?1.8:3.5;
     for(let i=0;i<trail.length;i++){
       const t=trail[i];
       const a=1-i/trail.length;
