@@ -773,35 +773,18 @@ video{position:absolute;top:0;left:0;width:100vw;height:100vh;object-fit:cover;}
 </section>
 
 
-<!-- REAL PHOTO GALLERY -->
+<!-- REAL VIDEO GALLERY -->
 <section style="padding:0;background:#181410;">
   <div style="max-width:1160px;margin:0 auto;padding:60px 48px 40px;">
     <div style="font-size:9px;letter-spacing:6px;text-transform:uppercase;color:#E8832E;font-weight:600;margin-bottom:16px;">Наша кухня</div>
     <h2 style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,52px);color:#FAFAF8;margin-bottom:40px;">Живой огонь — <em style="font-style:italic;color:#F09B4A;">честный вкус</em></h2>
   </div>
-  <div style="display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:340px 340px;gap:3px;max-width:1400px;margin:0 auto;">
-    <div style="grid-row:span 2;overflow:hidden;position:relative;">
-      <img src="https://atarh.github.io/khachma/img/img04.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:24px 28px;background:linear-gradient(to top,rgba(12,12,12,.85),transparent);font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#E8832E;font-weight:600;">Баранина корейка · живой огонь</div>
-    </div>
-    <div style="overflow:hidden;position:relative;">
-      <img src="https://atarh.github.io/khachma/img/img05.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform .6s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(12,12,12,.8),transparent);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#E8832E;font-weight:600;">Сёмга на мангале</div>
-    </div>
-    <div style="overflow:hidden;position:relative;">
-      <img src="https://atarh.github.io/khachma/img/img06.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform .6s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(12,12,12,.8),transparent);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#E8832E;font-weight:600;">Хачапури по-аджарски</div>
-    </div>
-    <div style="overflow:hidden;position:relative;">
-      <img src="https://atarh.github.io/khachma/img/img07.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform .6s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(12,12,12,.8),transparent);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#E8832E;font-weight:600;">Люля-кебаб</div>
-    </div>
-    <div style="overflow:hidden;position:relative;">
-      <img src="https://atarh.github.io/khachma/img/img08.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform .6s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
-      <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(12,12,12,.8),transparent);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#E8832E;font-weight:600;">Креветка тигровая</div>
-    </div>
+  <div style="position:relative;overflow:hidden;">
+    <div style="position:absolute;top:0;left:0;bottom:0;width:120px;background:linear-gradient(to right,#181410,transparent);z-index:2;pointer-events:none;"></div>
+    <div style="position:absolute;top:0;right:0;bottom:0;width:120px;background:linear-gradient(to left,#181410,transparent);z-index:2;pointer-events:none;"></div>
+    <div id="foodMarquee" style="display:flex;gap:12px;width:max-content;animation:foodScroll 30s linear infinite;"></div>
   </div>
-  <div style="max-width:1160px;margin:0 auto;padding:40px 48px;text-align:center;border-top:1px solid rgba(255,255,255,.06);margin-top:3px;">
+  <div style="max-width:1160px;margin:0 auto;padding:40px 48px;text-align:center;border-top:1px solid rgba(255,255,255,.06);margin-top:0;">
     <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:#E8E0D0;max-width:480px;line-height:1.5;margin:0 auto;">«Огонь — основа всего. Остальное — дополнение.»</div>
   </div>
 </section>
@@ -1350,10 +1333,62 @@ document.addEventListener('DOMContentLoaded', () => {
   renderCart();
   switchOrderType('delivery');
   updateMenuIndicators();
+
+  // Видео-карусель
+  const videos = ['vish1.mp4','vish2.mp4','vish3.mp4','vish4.mp4','vish5.mp4','vish6.mp4','vish7.mp4','vish8.mp4'];
+  const labels = ['Шашлык','Хачапури','Сёмга','Люля-кебаб','Баранина','Креветка','Хинкали','Курица'];
+  const marquee = document.getElementById('foodMarquee');
+  const allVideos = [...videos, ...videos];
+  allVideos.forEach((src, i) => {
+    const div = document.createElement('div');
+    div.className = 'food-item';
+    div.innerHTML = `
+      <video muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0;">
+        <source src="https://atarh.github.io/khachma/img/${src}" type="video/mp4">
+      </video>
+      <div class="food-label">${labels[i % labels.length]}</div>
+    `;
+    marquee.appendChild(div);
+  });
 });
 </script>
 
 <style>
+/* ── ВИДЕО-КАРУСЕЛЬ ── */
+@keyframes foodScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.food-item {
+  flex-shrink: 0;
+  width: 220px;
+  height: 320px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background: var(--graph);
+}
+.food-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.food-item .food-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 14px 16px;
+  background: linear-gradient(transparent, rgba(12,12,12,.85));
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.food-item:hover .food-label { opacity: 1; }
+.food-item:hover { transform: scale(1.04); box-shadow: 0 0 30px rgba(232,131,46,.15); }
+
 /* ── ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ ── */
 .reveal {
   opacity: 0;
