@@ -336,13 +336,13 @@ html,body{overflow-x:hidden;width:100%;}
   </a>
   <a href="tel:+79286677733" class="mobile-phone" style="display:none;color:var(--gold);font-size:14px;font-weight:700;text-decoration:none;letter-spacing:1px;">+7 (928) 66-777-33</a>
   <nav>
-    <a href="tel:+79286677733" style="color:var(--gold);font-size:12px;font-weight:600;">📞 +7 (928) 66-777-33</a>
+    <a href="tel:+79286677733" style="color:var(--gold);font-size:12px;font-weight:600;">+7 (928) 66-777-33</a>
     <a href="#menu">Меню</a>
     <a href="#order">Заказать</a>
     <a href="#promos">Акции</a>
     <a href="#reviews">Отзывы</a>
     <a href="#contacts">Контакты</a>
-    <a href="#order" class="nav-order">Заказать 🔥</a>
+    <a href="#order" class="nav-order">Заказать</a>
   </nav>
   <div class="burger" id="burger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -351,7 +351,7 @@ html,body{overflow-x:hidden;width:100%;}
 
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
-  <a href="tel:+79286677733" style="color:var(--gold);font-size:18px;margin-bottom:12px;">📞 +7 (928) 66-777-33</a>
+  <a href="tel:+79286677733" style="color:var(--gold);font-size:18px;margin-bottom:12px;">+7 (928) 66-777-33</a>
   <a href="#menu" onclick="toggleMenu()">Меню</a>
   <a href="#order" onclick="toggleMenu()">Заказать</a>
   <a href="#promos" onclick="toggleMenu()">Акции</a>
@@ -407,19 +407,19 @@ html,body{overflow-x:hidden;width:100%;}
     <div class="sec-div"></div>
 
     <div class="menu-tabs">
-      <button class="tab-btn active" onclick="showCat('meat',this)">🥩 Мясо</button>
-      <button class="tab-btn" onclick="showCat('fish',this)">🐟 Рыба</button>
-      <button class="tab-btn" onclick="showCat('salad',this)">🥗 Салаты</button>
-      <button class="tab-btn" onclick="showCat('vegs',this)">🥦 Овощи</button>
-      <button class="tab-btn" onclick="showCat('dough',this)">🫓 Блюда из теста</button>
-      <button class="tab-btn" onclick="showCat('soup',this)">🫕 Супы</button>
-      <button class="tab-btn" onclick="showCat('hot',this)">🔥 Горячие блюда</button>
-      <button class="tab-btn" onclick="showCat('hotstart',this)">🫕 Горячие закуски</button>
-      <button class="tab-btn" onclick="showCat('coldstart',this)">🥗 Холодные закуски</button>
-      <button class="tab-btn" onclick="showCat('street',this)">🌯 Стрит-фуд</button>
-      <button class="tab-btn" onclick="showCat('friture',this)">🍟 Фритюр</button>
-      <button class="tab-btn" onclick="showCat('drinks',this)">🥤 Напитки</button>
-      <button class="tab-btn" onclick="showCat('desserts',this)">🍰 Десерты</button>
+      <button class="tab-btn active" onclick="showCat('meat',this)">Мясо</button>
+      <button class="tab-btn" onclick="showCat('fish',this)">Рыба</button>
+      <button class="tab-btn" onclick="showCat('salad',this)">Салаты</button>
+      <button class="tab-btn" onclick="showCat('vegs',this)">Овощи</button>
+      <button class="tab-btn" onclick="showCat('dough',this)">Блюда из теста</button>
+      <button class="tab-btn" onclick="showCat('soup',this)">Супы</button>
+      <button class="tab-btn" onclick="showCat('hot',this)">Горячие блюда</button>
+      <button class="tab-btn" onclick="showCat('hotstart',this)">Горячие закуски</button>
+      <button class="tab-btn" onclick="showCat('coldstart',this)">Холодные закуски</button>
+      <button class="tab-btn" onclick="showCat('street',this)">Стрит-фуд</button>
+      <button class="tab-btn" onclick="showCat('friture',this)">Фритюр</button>
+      <button class="tab-btn" onclick="showCat('drinks',this)">Напитки</button>
+      <button class="tab-btn" onclick="showCat('desserts',this)">Десерты</button>
     </div>
 
     <div class="menu-grid" id="menuGrid">
@@ -797,15 +797,12 @@ html,body{overflow-x:hidden;width:100%;}
       <div>
         <div class="order-type-tabs">
           <div class="order-tab active" id="tabDelivery" onclick="switchOrderType('delivery')">
-            <div class="order-tab-icon">🚗</div>
             <div class="order-tab-label">Доставка</div>
           </div>
           <div class="order-tab" id="tabPickup" onclick="switchOrderType('pickup')">
-            <div class="order-tab-icon">🏃</div>
             <div class="order-tab-label">Самовывоз</div>
           </div>
           <div class="order-tab" id="tabPreorder" onclick="switchOrderType('preorder')">
-            <div class="order-tab-icon">⏱</div>
             <div class="order-tab-label">Предзаказ</div>
           </div>
         </div>
@@ -829,7 +826,7 @@ html,body{overflow-x:hidden;width:100%;}
           </div>
         </div>
         <div class="form-group" id="arrivalTimeGroup" style="display:none;">
-          <label class="form-label">⏱ Время приезда</label>
+          <label class="form-label">Время приезда</label>
           <input class="form-input" id="farrival" type="text" placeholder="Например: через 30 минут, в 18:00">
         </div>
         <div class="form-group">
@@ -844,7 +841,7 @@ html,body{overflow-x:hidden;width:100%;}
             <option>Перевод на карту</option>
           </select>
         </div>
-        <button class="btn-primary" style="width:100%;padding:18px;" onclick="submitOrder()">Отправить заказ 🔥</button>
+        <button class="btn-primary" style="width:100%;padding:18px;" onclick="submitOrder()">Отправить заказ</button>
         <p style="font-size:11px;color:var(--mist);margin-top:12px;text-align:center;font-weight:300;">После отправки мы перезвоним для подтверждения</p>
       </div>
 
@@ -852,7 +849,7 @@ html,body{overflow-x:hidden;width:100%;}
         <div class="cart-title">Ваш заказ</div>
         <div class="cart-hint">Выбирайте блюда из меню — они появятся здесь. Нажмите на блюдо чтобы добавить.</div>
         <div id="cartEmpty" class="cart-empty">
-          <div class="cart-empty-icon">🛒</div>
+          <div class="cart-empty-icon">Корзина</div>
           <div class="cart-empty-text">Корзина пока пуста</div>
         </div>
         <div id="cartItems" class="cart-items" style="display:none;"></div>
@@ -861,7 +858,7 @@ html,body{overflow-x:hidden;width:100%;}
             <div class="cart-total-label">Итого</div>
             <div class="cart-total-sum" id="cartSum">0 ₽</div>
           </div>
-          <div class="delivery-note" id="deliveryNote">🚗 Стоимость доставки уточняйте по телефону +7 (928) 66-777-33</div>
+          <div class="delivery-note" id="deliveryNote">Стоимость доставки уточняйте по телефону +7 (928) 66-777-33</div>
         </div>
       </div>
     </div>
@@ -887,7 +884,7 @@ html,body{overflow-x:hidden;width:100%;}
         <div style="font-family:'DM Serif Display',serif;font-size:24px;color:#FAFAF8;margin-bottom:8px;">Хачапури & Мангал</div>
         <div style="font-size:14px;color:#888;font-weight:300;line-height:1.7;margin-bottom:20px;">Читайте отзывы наших гостей и оставьте свой — это помогает нам становиться лучше и помогает другим найти нас.</div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="https://yandex.ru/maps/org/khachapuri_mangal/236604443678/reviews/?ll=39.700154%2C43.630179&z=16" target="_blank" style="padding:12px 28px;background:#E8832E;color:#181410;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#F5B06A'" onmouseout="this.style.background='#E8832E'">⭐ Оставить отзыв</a>
+          <a href="https://yandex.ru/maps/org/khachapuri_mangal/236604443678/reviews/?ll=39.700154%2C43.630179&z=16" target="_blank" style="padding:12px 28px;background:#E8832E;color:#181410;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#F5B06A'" onmouseout="this.style.background='#E8832E'">Оставить отзыв</a>
           <a href="https://yandex.ru/maps/org/khachapuri_mangal/236604443678/reviews/?ll=39.700154%2C43.630179&z=16" target="_blank" style="padding:11px 28px;background:transparent;color:#E8832E;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(201,168,76,.5);transition:all .2s;" onmouseover="this.style.borderColor='#E8832E'" onmouseout="this.style.borderColor='rgba(201,168,76,.5)'">Читать все отзывы →</a>
         </div>
       </div>
@@ -1014,7 +1011,7 @@ html,body{overflow-x:hidden;width:100%;}
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">✕</button>
-    <div class="modal-icon">🔥</div>
+    <div class="modal-icon">✓</div>
     <div class="modal-title">Заказ принят!</div>
     <div class="modal-text">Ваш заказ отправлен! Мы скоро перезвоним для подтверждения.<br><br>Или звоните сами: <strong style="color:var(--gold);">+7 (928) 66-777-33</strong></div>
     <button class="btn-primary" style="width:100%;" onclick="closeModal()">Отлично, жду!</button>
@@ -1063,7 +1060,7 @@ function showCartNotification(name) {
     box-shadow: 0 8px 32px rgba(0,0,0,0.4);
     animation: slideIn 0.3s ease;
   `;
-  notif.innerHTML = `✅ <span style="color:#E8832E;">${name}</span> добавлен в корзину`;
+  notif.innerHTML = `<span style="color:#4CAF50;">✓</span> <span style="color:#E8832E;">${name}</span> добавлен в корзину`;
   document.body.appendChild(notif);
   
   // Убираем через 2 секунды
@@ -1133,17 +1130,17 @@ function switchOrderType(type) {
   if (type === 'delivery') {
     tabD.classList.add('active');
     fields.style.display = 'block';
-    note.textContent = '🚗 Стоимость доставки уточняйте по телефону +7 (928) 66-777-33';
+    note.textContent = 'Стоимость доставки уточняйте по телефону +7 (928) 66-777-33';
   } else if (type === 'pickup') {
     tabP.classList.add('active');
     fields.style.display = 'none';
-    note.textContent = '🏃 Самовывоз: Волжская 37/к3 (Мамайка) · Каждый день с 10:00 до 22:00';
+    note.textContent = 'Самовывоз: Волжская 37/к3 (Мамайка) · Каждый день с 10:00 до 22:00';
   } else if (type === 'preorder') {
     tabPre.classList.add('active');
     fields.style.display = 'none';
     banner.style.display = 'block';
     arrivalGroup.style.display = 'block';
-    note.textContent = '⏱ Мы начнём готовить заранее — к вашему приезду всё будет горячим';
+    note.textContent = 'Мы начнём готовить заранее — к вашему приезду всё будет горячим';
   }
 }
 
@@ -1200,22 +1197,22 @@ async function submitOrder() {
   const isPickup = document.getElementById('tabPickup').classList.contains('active');
   const isPreorder = document.getElementById('tabPreorder').classList.contains('active');
 
-  let orderType = isDelivery ? '🚗 Доставка' : isPickup ? '🏃 Самовывоз' : '⏱ Предзаказ';
+  let orderType = isDelivery ? 'Доставка' : isPickup ? 'Самовывоз' : 'Предзаказ';
 
   const items = cart.map(i => `• ${i.name}${i.qty > 1 ? ' ×' + i.qty : ''} — ${i.price * i.qty} ₽`);
   const total = cart.reduce((a, i) => a + i.price * i.qty, 0);
 
   // Формируем красивое сообщение для Telegram
-  let telegramMsg = `🔥 <b>НОВЫЙ ЗАКАЗ</b> — Хачапури &amp; Мангал\n\n`;
-  telegramMsg += `👤 <b>Имя:</b> ${name}\n`;
-  telegramMsg += `📞 <b>Телефон:</b> ${phone}\n`;
-  telegramMsg += `📋 <b>Тип:</b> ${orderType}\n`;
-  if (address) telegramMsg += `📍 <b>Адрес:</b> ${address}\n`;
-  if (arrival) telegramMsg += `⏱ <b>Время приезда:</b> ${arrival}\n`;
-  telegramMsg += `💳 <b>Оплата:</b> ${pay}\n\n`;
-  telegramMsg += `🛒 <b>Состав заказа:</b>\n${items.join('\n')}\n\n`;
-  telegramMsg += `💰 <b>Итого:</b> ${total.toLocaleString('ru')} ₽`;
-  if (comment) telegramMsg += `\n\n💬 <b>Комментарий:</b> ${comment}`;
+  let telegramMsg = `<b>НОВЫЙ ЗАКАЗ</b> — Хачапури &amp; Мангал\n\n`;
+  telegramMsg += `<b>Имя:</b> ${name}\n`;
+  telegramMsg += `<b>Телефон:</b> ${phone}\n`;
+  telegramMsg += `<b>Тип:</b> ${orderType}\n`;
+  if (address) telegramMsg += `<b>Адрес:</b> ${address}\n`;
+  if (arrival) telegramMsg += `<b>Время приезда:</b> ${arrival}\n`;
+  telegramMsg += `<b>Оплата:</b> ${pay}\n\n`;
+  telegramMsg += `<b>Состав заказа:</b>\n${items.join('\n')}\n\n`;
+  telegramMsg += `<b>Итого:</b> ${total.toLocaleString('ru')} ₽`;
+  if (comment) telegramMsg += `\n\n<b>Комментарий:</b> ${comment}`;
 
   // Сохраняем в историю
   saveOrderHistory({
