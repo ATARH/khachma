@@ -365,6 +365,7 @@ html,body{overflow-x:hidden;width:100%;}
   <video autoplay muted loop playsinline style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;">
     <source src="https://atarh.github.io/khachma/img/video2.mp4" type="video/mp4">
   </video>
+  <canvas id="heroSparks" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;"></canvas>
   <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(10,10,10,0.55);z-index:1;"></div>
   <div class="hero-inner" style="position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:0 48px;display:flex;align-items:center;gap:60px;">
     <!-- Левая часть — текст -->
@@ -1529,7 +1530,7 @@ setInterval(updateWorkTimer, 1000);
 updateWorkTimer();
 </script>
 
-<!-- PARTICLES — Repulse Sigmoid -->
+<!-- PARTICLES — Repulse Sigmoid (subtle) -->
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 <script>
 tsParticles.load({
@@ -1538,14 +1539,14 @@ tsParticles.load({
     fullScreen: { enable: true, zIndex: 1 },
     fpsLimit: 60,
     particles: {
-      number: { value: 45, density: { enable: true, area: 800 } },
-      color: { value: ["#E8832E", "#F09B4A", "#D4A017", "#FAF5EE"] },
+      number: { value: 20, density: { enable: true, area: 1200 } },
+      color: { value: ["#E8832E", "#F09B4A", "#D4A017"] },
       shape: { type: "circle" },
-      opacity: { value: { min: 0.2, max: 0.6 } },
-      size: { value: { min: 1.5, max: 4 } },
+      opacity: { value: { min: 0.1, max: 0.35 } },
+      size: { value: { min: 1, max: 2.5 } },
       move: {
         enable: true,
-        speed: 1.2,
+        speed: 0.8,
         direction: "none",
         outModes: "bounce"
       }
@@ -1556,12 +1557,76 @@ tsParticles.load({
         resize: true
       },
       modes: {
-        repulse: { distance: 120, duration: 0.4, factor: 5, speed: 1, maxSpeed: 6, easing: "ease-out-quad" }
+        repulse: { distance: 80, duration: 0.4, factor: 4, speed: 1, maxSpeed: 4, easing: "ease-out-quad" }
       }
     },
     detectRetina: true
   }
 });
+</script>
+
+<!-- Hero sparks — лёгкие искры на видео-фоне -->
+<script>
+(function(){
+  const c = document.getElementById('heroSparks');
+  if(!c) return;
+  const cx = c.getContext('2d');
+  let w, h;
+  function resize(){ w = c.width = c.offsetWidth; h = c.height = c.offsetHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const sparks = [];
+  const COUNT = 12;
+
+  class Spark {
+    constructor(){ this.reset(); }
+    reset(){
+      this.x = Math.random()*w;
+      this.y = h + Math.random()*20;
+      this.size = Math.random()*1.8+0.5;
+      this.vy = -(Math.random()*1+0.5);
+      this.vx = (Math.random()-0.5)*0.3;
+      this.life = 1;
+      this.decay = Math.random()*0.008+0.004;
+    }
+    update(){
+      this.x += this.vx;
+      this.y += this.vy;
+      this.life -= this.decay;
+      if(this.life<=0) this.reset();
+    }
+    draw(){
+      const a = this.life;
+      cx.beginPath();
+      cx.arc(this.x, this.y, this.size, 0, Math.PI*2);
+      cx.fillStyle = `rgba(232,131,46,${a*0.5})`;
+      cx.fill();
+      cx.beginPath();
+      cx.arc(this.x, this.y, this.size*2, 0, Math.PI*2);
+      cx.fillStyle = `rgba(240,155,74,${a*0.08})`;
+      cx.fill();
+    }
+  }
+  for(let i=0;i<COUNT;i++){
+    const s = new Spark();
+    s.y = Math.random()*h;
+    sparks.push(s);
+  }
+
+  let heroVisible = true;
+  const hObs = new IntersectionObserver(([e])=>{ heroVisible = e.isIntersecting; }, {threshold:0.1});
+  hObs.observe(document.getElementById('home'));
+
+  function loop(){
+    if(heroVisible){
+      cx.clearRect(0,0,w,h);
+      sparks.forEach(s=>{ s.update(); s.draw(); });
+    }
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
 </script>
 
 </body>
