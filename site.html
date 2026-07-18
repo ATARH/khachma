@@ -1635,5 +1635,74 @@ updateWorkTimer();
   </a>
 </div>
 
+<!-- CURSOR PARTICLES -->
+<canvas id="cursorParticles" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;"></canvas>
+<script>
+(function(){
+  const c = document.getElementById('cursorParticles');
+  const cx = c.getContext('2d');
+  let w, h;
+  function resize(){ w = c.width = window.innerWidth; h = c.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+
+  let mouse = { x: -1000, y: -1000 };
+  document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+  document.addEventListener('mouseleave', () => { mouse.x = -1000; mouse.y = -1000; });
+
+  const particles = [];
+  const MAX = 50;
+
+  class Particle {
+    constructor(){
+      this.x = mouse.x + (Math.random()-0.5)*20;
+      this.y = mouse.y + (Math.random()-0.5)*20;
+      this.vx = (Math.random()-0.5)*1.5;
+      this.vy = (Math.random()-0.5)*1.5;
+      this.life = 1;
+      this.decay = Math.random()*0.02+0.01;
+      this.size = Math.random()*2.5+0.5;
+      const colors = [[232,131,46],[240,155,74],[245,176,106],[212,160,23]];
+      this.rgb = colors[Math.floor(Math.random()*colors.length)];
+    }
+    update(){
+      this.x += this.vx;
+      this.y += this.vy;
+      this.vx *= 0.97;
+      this.vy *= 0.97;
+      this.life -= this.decay;
+    }
+    draw(){
+      const [r,g,b] = this.rgb;
+      const a = this.life;
+      cx.beginPath();
+      cx.arc(this.x, this.y, this.size, 0, Math.PI*2);
+      cx.fillStyle = `rgba(${r},${g},${b},${a})`;
+      cx.fill();
+      cx.beginPath();
+      cx.arc(this.x, this.y, this.size*3, 0, Math.PI*2);
+      cx.fillStyle = `rgba(${r},${g},${b},${a*0.12})`;
+      cx.fill();
+    }
+  }
+
+  let frame = 0;
+  function animate(){
+    cx.clearRect(0,0,w,h);
+    frame++;
+    if(mouse.x > 0 && frame % 2 === 0 && particles.length < MAX){
+      particles.push(new Particle());
+    }
+    for(let i=particles.length-1;i>=0;i--){
+      particles[i].update();
+      particles[i].draw();
+      if(particles[i].life<=0) particles.splice(i,1);
+    }
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+</script>
+
 </body>
 </html>
