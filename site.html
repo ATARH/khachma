@@ -1336,18 +1336,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Видео-карусель
   const videos = ['vish1.mp4','vish2.mp4','vish3.mp4','vish4.mp4','vish5.mp4','vish6.mp4','vish7.mp4','vish8.mp4'];
-  const labels = ['Шашлык','Хачапури','Сёмга','Люля-кебаб','Баранина','Креветка','Хинкали','Курица'];
   const marquee = document.getElementById('foodMarquee');
   const allVideos = [...videos, ...videos];
-  allVideos.forEach((src, i) => {
+  allVideos.forEach((src) => {
     const div = document.createElement('div');
     div.className = 'food-item';
-    div.innerHTML = `
-      <video muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0;">
-        <source src="https://atarh.github.io/khachma/img/${src}" type="video/mp4">
-      </video>
-      <div class="food-label">${labels[i % labels.length]}</div>
-    `;
+    div.innerHTML = `<video autoplay muted loop playsinline preload="auto"><source src="https://atarh.github.io/khachma/img/${src}" type="video/mp4"></video>`;
     marquee.appendChild(div);
   });
 });
@@ -1373,20 +1367,6 @@ document.addEventListener('DOMContentLoaded', () => {
   height: 100%;
   object-fit: cover;
 }
-.food-item .food-label {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 14px 16px;
-  background: linear-gradient(transparent, rgba(12,12,12,.85));
-  font-size: 9px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 600;
-  opacity: 0;
-  transition: opacity .3s;
-}
-.food-item:hover .food-label { opacity: 1; }
 .food-item:hover { transform: scale(1.04); box-shadow: 0 0 30px rgba(232,131,46,.15); }
 
 /* ── ПОЯВЛЕНИЕ ПРИ СКРОЛЛЕ ── */
