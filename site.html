@@ -1640,11 +1640,10 @@ tsParticles.load({
 })();
 </script>
 
-<!-- MOUSE TRAIL — лёгкий canvas-след -->
+<!-- MOUSE TRAIL — canvas-след (мышь + тач) -->
 <canvas id="mouseTrail" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9998;"></canvas>
 <script>
 (function(){
-  if(window.innerWidth < 768) return;
   const c = document.getElementById('mouseTrail');
   const cx = c.getContext('2d');
   let w,h;
@@ -1655,6 +1654,8 @@ tsParticles.load({
   let mx=-100,my=-100;
   document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
   document.addEventListener('mouseleave',()=>{mx=-100;my=-100;});
+  document.addEventListener('touchmove',e=>{mx=e.touches[0].clientX;my=e.touches[0].clientY;},{passive:true});
+  document.addEventListener('touchend',()=>{mx=-100;my=-100;});
 
   const trail=[];
   const MAX=30;
