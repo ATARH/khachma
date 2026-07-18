@@ -283,6 +283,7 @@ html,body{overflow-x:hidden;width:100%;}
   #cursorParticles{display:none!important;}
   #tsparticles{display:none!important;}
   .food-item{width:160px;height:240px;}
+  #foodMarquee{animation-duration:20s!important;}
 }
 @media(max-width:600px){
   header{height:50px;}
@@ -1329,16 +1330,28 @@ document.addEventListener('DOMContentLoaded', () => {
   switchOrderType('delivery');
   updateMenuIndicators();
 
-  // Видео-карусель
-  const videos = ['vish1.mp4','vish2.mp4','vish3.mp4','vish4.mp4','vish5.mp4','vish6.mp4','vish7.mp4','vish8.mp4'];
+  // Видео-карусель — 5 видео, дублируем для бесшовной прокрутки
+  const videos = ['vish1.mp4','vish2.mp4','vish3.mp4','vish4.mp4','vish5.mp4'];
   const marquee = document.getElementById('foodMarquee');
   const allVideos = [...videos, ...videos];
   allVideos.forEach((src) => {
     const div = document.createElement('div');
     div.className = 'food-item';
-    div.innerHTML = `<video autoplay muted loop playsinline preload="auto"><source src="https://atarh.github.io/khachma/img/${src}" type="video/mp4"></video>`;
+    div.innerHTML = `<video muted playsinline preload="auto" loop><source src="https://atarh.github.io/khachma/img/${src}" type="video/mp4"></video>`;
     marquee.appendChild(div);
   });
+  // Автозапуск видео на десктопе, на мобилке по скроллу
+  if(window.innerWidth > 768){
+    marquee.querySelectorAll('video').forEach(v => v.play().catch(()=>{}));
+  } else {
+    const vObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if(e.isIntersecting) e.target.play().catch(()=>{});
+        else { e.target.pause(); e.target.currentTime = 0; }
+      });
+    }, {threshold:0.2});
+    marquee.querySelectorAll('video').forEach(v => vObs.observe(v));
+  }
 });
 </script>
 
