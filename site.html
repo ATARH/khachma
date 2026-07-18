@@ -1333,8 +1333,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Видео-карусель
   const videos = ['vish1.mp4','vish2.mp4','vish3.mp4','vish4.mp4','vish5.mp4'];
   const marquee = document.getElementById('foodMarquee');
-  const isMob = window.innerWidth <= 768;
-  const list = isMob ? videos : [...videos, ...videos];
+  // Всегда дублируем для бесшовной прокрутки
+  const list = [...videos, ...videos];
   list.forEach((src) => {
     const div = document.createElement('div');
     div.className = 'food-item';
@@ -1346,27 +1346,24 @@ document.addEventListener('DOMContentLoaded', () => {
   function playAll(){
     marquee.querySelectorAll('video').forEach(v => {
       v.play().catch(()=>{
-        // Fallback: повторяем попытку
         setTimeout(()=>v.play().catch(()=>{}), 500);
       });
     });
   }
   playAll();
 
-  // На мобилке — JS-прокрутка вместо CSS animation
-  if(isMob){
-    marquee.style.animation = 'none';
-    let pos = 0;
-    const speed = 0.5;
-    function scrollMarquee(){
-      pos -= speed;
-      const half = marquee.scrollWidth / 2;
-      if(Math.abs(pos) >= half) pos = 0;
-      marquee.style.transform = `translateX(${pos}px)`;
-      requestAnimationFrame(scrollMarquee);
-    }
-    scrollMarquee();
+  // JS-прокрутка для всех платформ (бесшовно)
+  marquee.style.animation = 'none';
+  let pos = 0;
+  const speed = 0.6;
+  function scrollMarquee(){
+    pos -= speed;
+    const half = marquee.scrollWidth / 2;
+    if(Math.abs(pos) >= half) pos = 0;
+    marquee.style.transform = `translateX(${pos}px)`;
+    requestAnimationFrame(scrollMarquee);
   }
+  scrollMarquee();
 });
 </script>
 
