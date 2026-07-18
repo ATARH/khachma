@@ -265,6 +265,7 @@ footer{background:var(--ink);padding:60px 48px 32px;border-top:1px solid rgba(25
 html,body{overflow-x:hidden;width:100%;}
 video{position:absolute;top:0;left:0;width:100vw;height:100vh;object-fit:cover;}
 @media(max-width:900px){
+  .mobile-phone{display:block!important;}
   header{padding:0 12px;height:56px;}
   header .logo img{height:40px;}
   nav{display:none;}
@@ -332,6 +333,7 @@ video{position:absolute;top:0;left:0;width:100vw;height:100vh;object-fit:cover;}
   <a class="logo" href="#home" style="display:flex;align-items:center;padding:4px 0;">
     <img src="https://atarh.github.io/khachma/img/logo.png" alt="Хачапури & Мангал" style="height:48px;width:auto;object-fit:contain;">
   </a>
+  <a href="tel:+79286677733" class="mobile-phone" style="display:none;color:var(--gold);font-size:14px;font-weight:700;text-decoration:none;letter-spacing:1px;">+7 (928) 66-777-33</a>
   <nav>
     <a href="tel:+79286677733" style="color:var(--gold);font-size:12px;font-weight:600;">📞 +7 (928) 66-777-33</a>
     <a href="#menu">Меню</a>
@@ -348,6 +350,7 @@ video{position:absolute;top:0;left:0;width:100vw;height:100vh;object-fit:cover;}
 
 <!-- MOBILE NAV -->
 <div class="mobile-nav" id="mobileNav">
+  <a href="tel:+79286677733" style="color:var(--gold);font-size:18px;margin-bottom:12px;">📞 +7 (928) 66-777-33</a>
   <a href="#menu" onclick="toggleMenu()">Меню</a>
   <a href="#order" onclick="toggleMenu()">Заказать</a>
   <a href="#promos" onclick="toggleMenu()">Акции</a>
