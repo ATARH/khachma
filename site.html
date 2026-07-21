@@ -787,82 +787,32 @@ html,body{overflow-x:hidden;width:100%;}
     <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:#E8E0D0;max-width:480px;line-height:1.5;margin:0 auto;">«Огонь — основа всего. Остальное — дополнение.»</div>
   </div>
 </section>
-<!-- ORDER -->
+<!-- ORDER — ФОРМА ВРЕМЕННО ОТКЛЮЧЕНА (заказы только по телефону) -->
 <section id="order">
   <div class="container">
     <div class="sec-tag">03 — Заказ</div>
     <h2 class="sec-h2">Оформить <em>заказ</em></h2>
     <div class="sec-div"></div>
 
+    <div style="text-align:center;padding:60px 40px;background:var(--graph);border:1px solid rgba(201,168,76,0.2);">
+      <div style="font-family:'DM Serif Display',serif;font-size:28px;color:var(--cream);margin-bottom:12px;">Заказывайте по телефону</div>
+      <div style="font-size:15px;color:var(--mist);font-weight:300;line-height:1.7;margin-bottom:32px;">
+        Выберите блюда в меню выше, после чего позвоните нам —<br>мы зафиксируем заказ и сообщим время готовки.
+      </div>
+      <a href="tel:+79286677733" style="display:inline-block;padding:18px 48px;background:var(--gold);color:var(--ink);font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:all .2s;">Позвонить: +7 (928) 66-777-33</a>
+      <div style="font-size:12px;color:var(--mist);margin-top:16px;font-weight:300;">Каждый день с 10:00 до 22:00</div>
+    </div>
+
+    <!-- ФОРМА ЗАКАЗА — СКРЫТА ВРЕМЕННО
     <div class="order-grid">
       <div>
-        <div class="order-type-tabs">
-          <div class="order-tab active" id="tabDelivery" onclick="switchOrderType('delivery')">
-            <div class="order-tab-label">Доставка</div>
-          </div>
-          <div class="order-tab" id="tabPickup" onclick="switchOrderType('pickup')">
-            <div class="order-tab-label">Самовывоз</div>
-          </div>
-          <div class="order-tab" id="tabPreorder" onclick="switchOrderType('preorder')">
-            <div class="order-tab-label">Предзаказ</div>
-          </div>
-        </div>
-        <div id="preorderBanner" style="display:none;margin-bottom:24px;padding:24px 28px;background:rgba(201,168,76,0.08);border-left:3px solid #E8832E;">
-          <div style="font-family:'DM Serif Display',serif;font-size:22px;color:#F09B4A;margin-bottom:8px;">Предзаказ: ваш заказ готовится к вашему приезду</div>
-          <div style="font-size:13px;color:#888;font-weight:300;line-height:1.7;">Позвоните или оформите заказ здесь — укажите время когда планируете приехать. Мы разожжём мангал заранее, и к вашему приезду всё будет горячим. Никакого ожидания.</div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label">Ваше имя</label>
-          <input class="form-input" id="fname" type="text" placeholder="Как вас зовут?">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Телефон</label>
-          <input class="form-input" id="fphone" type="tel" placeholder="+7 (___) ___-__-__">
-        </div>
-        <div id="deliveryFields">
-          <div class="form-group">
-            <label class="form-label">Адрес доставки</label>
-            <input class="form-input" id="faddress" type="text" placeholder="Улица, дом, квартира">
-          </div>
-        </div>
-        <div class="form-group" id="arrivalTimeGroup" style="display:none;">
-          <label class="form-label">Время приезда</label>
-          <input class="form-input" id="farrival" type="text" placeholder="Например: через 30 минут, в 18:00">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Комментарий к заказу</label>
-          <input class="form-input" id="fcomment" type="text" placeholder="Острее, без лука, позвоните за 10 минут...">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Способ оплаты</label>
-          <select class="form-input" id="fpay">
-            <option>Наличные при получении</option>
-            <option>Карта при получении</option>
-            <option>Перевод на карту</option>
-          </select>
-        </div>
-        <button class="btn-primary" style="width:100%;padding:18px;" onclick="submitOrder()">Отправить заказ</button>
-        <p style="font-size:11px;color:var(--mist);margin-top:12px;text-align:center;font-weight:300;">После отправки мы перезвоним для подтверждения</p>
+        ...вся форма...
       </div>
-
       <div class="order-cart" id="cartBlock">
-        <div class="cart-title">Ваш заказ</div>
-        <div class="cart-hint">Выбирайте блюда из меню — они появятся здесь. Нажмите на блюдо чтобы добавить.</div>
-        <div id="cartEmpty" class="cart-empty">
-          <div class="cart-empty-icon">Корзина</div>
-          <div class="cart-empty-text">Корзина пока пуста</div>
-        </div>
-        <div id="cartItems" class="cart-items" style="display:none;"></div>
-        <div id="cartTotal" style="display:none;">
-          <div class="cart-total">
-            <div class="cart-total-label">Итого</div>
-            <div class="cart-total-sum" id="cartSum">0 ₽</div>
-          </div>
-          <div class="delivery-note" id="deliveryNote">Стоимость доставки уточняйте по телефону +7 (928) 66-777-33</div>
-        </div>
+        ...корзина...
       </div>
     </div>
+    -->
   </div>
 </section>
 
@@ -1085,6 +1035,9 @@ function renderCart() {
   const total = document.getElementById('cartTotal');
   const sum = document.getElementById('cartSum');
 
+  // Форма временно скрыта — корзина не отображается
+  if (!empty) return;
+
   if (cart.length === 0) {
     empty.style.display = 'block';
     items.style.display = 'none';
@@ -1112,37 +1065,9 @@ function renderCart() {
   sum.textContent = totalSum.toLocaleString('ru') + ' ₽';
 }
 
-// ── ORDER TYPE ──
+// ── ORDER TYPE (временно не используется) ──
 function switchOrderType(type) {
-  const tabD = document.getElementById('tabDelivery');
-  const tabP = document.getElementById('tabPickup');
-  const tabPre = document.getElementById('tabPreorder');
-  const fields = document.getElementById('deliveryFields');
-  const note = document.getElementById('deliveryNote');
-  const banner = document.getElementById('preorderBanner');
-  const arrivalGroup = document.getElementById('arrivalTimeGroup');
-
-  tabD.classList.remove('active');
-  tabP.classList.remove('active');
-  tabPre.classList.remove('active');
-  banner.style.display = 'none';
-  arrivalGroup.style.display = 'none';
-
-  if (type === 'delivery') {
-    tabD.classList.add('active');
-    fields.style.display = 'block';
-    note.textContent = 'Стоимость доставки уточняйте по телефону +7 (928) 66-777-33';
-  } else if (type === 'pickup') {
-    tabP.classList.add('active');
-    fields.style.display = 'none';
-    note.textContent = 'Самовывоз: Волжская 37/к3 (Мамайка) · Каждый день с 10:00 до 22:00';
-  } else if (type === 'preorder') {
-    tabPre.classList.add('active');
-    fields.style.display = 'none';
-    banner.style.display = 'block';
-    arrivalGroup.style.display = 'block';
-    note.textContent = 'Мы начнём готовить заранее — к вашему приезду всё будет горячим';
-  }
+  // Форма отключена — заказы только по телефону
 }
 
 // ── ORDER HISTORY (localStorage) ──
@@ -1178,69 +1103,7 @@ async function sendToTelegram(text) {
 
 // ── SUBMIT (ИСПРАВЛЕНО) ──
 async function submitOrder() {
-  const name = document.getElementById('fname').value.trim();
-  const phone = document.getElementById('fphone').value.trim();
-  const address = document.getElementById('faddress') ? document.getElementById('faddress').value.trim() : '';
-  const comment = document.getElementById('fcomment').value.trim();
-  const arrival = document.getElementById('farrival') ? document.getElementById('farrival').value.trim() : '';
-  const pay = document.getElementById('fpay').value;
-
-  if (!name || !phone) {
-    alert('Пожалуйста, укажите имя и телефон');
-    return;
-  }
-  if (cart.length === 0) {
-    alert('Добавьте хотя бы одно блюдо в корзину');
-    return;
-  }
-
-  const isDelivery = document.getElementById('tabDelivery').classList.contains('active');
-  const isPickup = document.getElementById('tabPickup').classList.contains('active');
-  const isPreorder = document.getElementById('tabPreorder').classList.contains('active');
-
-  let orderType = isDelivery ? 'Доставка' : isPickup ? 'Самовывоз' : 'Предзаказ';
-
-  const items = cart.map(i => `• ${i.name}${i.qty > 1 ? ' ×' + i.qty : ''} — ${i.price * i.qty} ₽`);
-  const total = cart.reduce((a, i) => a + i.price * i.qty, 0);
-
-  // Формируем красивое сообщение для Telegram
-  let telegramMsg = `<b>НОВЫЙ ЗАКАЗ</b> — Хачапури &amp; Мангал\n\n`;
-  telegramMsg += `<b>Имя:</b> ${name}\n`;
-  telegramMsg += `<b>Телефон:</b> ${phone}\n`;
-  telegramMsg += `<b>Тип:</b> ${orderType}\n`;
-  if (address) telegramMsg += `<b>Адрес:</b> ${address}\n`;
-  if (arrival) telegramMsg += `<b>Время приезда:</b> ${arrival}\n`;
-  telegramMsg += `<b>Оплата:</b> ${pay}\n\n`;
-  telegramMsg += `<b>Состав заказа:</b>\n${items.join('\n')}\n\n`;
-  telegramMsg += `<b>Итого:</b> ${total.toLocaleString('ru')} ₽`;
-  if (comment) telegramMsg += `\n\n<b>Комментарий:</b> ${comment}`;
-
-  // Сохраняем в историю
-  saveOrderHistory({
-    name: name,
-    phone: phone,
-    address: address,
-    comment: comment,
-    arrival: arrival,
-    payment: pay,
-    type: orderType,
-    items: cart.map(i => ({name: i.name, qty: i.qty, price: i.price, unit: i.unit})),
-    total: total
-  });
-
-  // Отправляем в Telegram
-  const sent = await sendToTelegram(telegramMsg);
-
-  // Показываем модалку успеха
-  document.getElementById('modalOverlay').classList.add('show');
-  
-  // Очищаем корзину
-  cart = [];
-  saveCart();
-  renderCart();
-  
-  // Очищаем форму
-  document.getElementById('orderForm').reset();
+  alert('Форма заказа временно отключена. Пожалуйста, позвоните: +7 (928) 66-777-33');
 }
 
 function closeModal() {
