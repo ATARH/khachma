@@ -804,32 +804,45 @@ html,body{overflow-x:hidden;width:100%;}
     <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:#E8E0D0;max-width:480px;line-height:1.5;margin:0 auto;">«Огонь — основа всего. Остальное — дополнение.»</div>
   </div>
 </section>
-<!-- ORDER — ФОРМА ВРЕМЕННО ОТКЛЮЧЕНА (заказы только по телефону) -->
+<!-- ORDER -->
 <section id="order">
   <div class="container">
     <div class="sec-tag">03 — Заказ</div>
     <h2 class="sec-h2">Оформить <em>заказ</em></h2>
     <div class="sec-div"></div>
 
-    <div style="text-align:center;padding:60px 40px;background:var(--graph);border:1px solid rgba(201,168,76,0.2);">
-      <div style="font-family:'DM Serif Display',serif;font-size:28px;color:var(--cream);margin-bottom:12px;">Заказывайте по телефону</div>
-      <div style="font-size:15px;color:var(--mist);font-weight:300;line-height:1.7;margin-bottom:32px;">
-        Выберите блюда в меню выше, после чего позвоните нам —<br>мы зафиксируем заказ и сообщим время готовки.
-      </div>
-      <a href="tel:+79286677733" style="display:inline-block;padding:18px 48px;background:var(--gold);color:var(--ink);font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:all .2s;">Позвонить: +7 (928) 66-777-33</a>
-      <div style="font-size:12px;color:var(--mist);margin-top:16px;font-weight:300;">Каждый день с 10:00 до 22:00</div>
-    </div>
-
-    <!-- ФОРМА ЗАКАЗА — СКРЫТА ВРЕМЕННО
     <div class="order-grid">
       <div>
-        ...вся форма...
+        <div class="form-group">
+          <label class="form-label">Ваше имя</label>
+          <input type="text" class="form-input" id="orderName" placeholder="Как к вам обращаться">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Телефон</label>
+          <input type="tel" class="form-input" id="orderPhone" placeholder="+7 (___) ___-__-__">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Комментарий к заказу</label>
+          <textarea class="form-input" id="orderComment" rows="3" placeholder="Например: без лука, доставка к 19:00"></textarea>
+        </div>
+        <button class="btn-primary" style="width:100%;" onclick="submitOrder()">Отправить заказ</button>
+        <div class="delivery-note" style="margin-top:20px;">Мы свяжемся с вами по указанному телефону для подтверждения заказа и времени доставки.</div>
+        <div style="font-size:12px;color:var(--mist);text-align:center;">Или позвоните сами: <a href="tel:+79286677733" style="color:var(--gold);text-decoration:none;">+7 (928) 66-777-33</a></div>
       </div>
       <div class="order-cart" id="cartBlock">
-        ...корзина...
+        <div class="cart-title">Ваш заказ</div>
+        <div class="cart-hint">Добавляйте блюда из меню выше кнопкой «+ в корзину» — они появятся здесь.</div>
+        <div class="cart-empty" id="cartEmpty">
+          <div class="cart-empty-icon">🛒</div>
+          <div class="cart-empty-text">Корзина пуста</div>
+        </div>
+        <div class="cart-items" id="cartItems" style="display:none;"></div>
+        <div class="cart-total" id="cartTotal" style="display:none;">
+          <div class="cart-total-label">Итого</div>
+          <div class="cart-total-sum" id="cartSum">0 ₽</div>
+        </div>
       </div>
     </div>
-    -->
   </div>
 </section>
 
@@ -988,11 +1001,10 @@ html,body{overflow-x:hidden;width:100%;}
 
 <script>
 // ═══════════════════════════════════════════════════════
-// TELEGRAM BOT — замените на свои данные
-// Получите токен у @BotFather, chat_id через getUpdates
+// TELEGRAM — отправка через безопасный прокси (Cloudflare Worker).
+// Токен бота НЕ хранится в коде сайта — он лежит в секретах Worker'а.
 // ═══════════════════════════════════════════════════════
-const BOT_TOKEN = '8940221196:AAELm02kYo-9mA61C4p0TgiHaYsKZekaP2Y';
-const CHAT_ID = '5045502979';
+const ORDER_WORKER_URL = 'https://damp-water-0dfckhachma-order-bot.oscarkayan-j27.workers.dev';
 
 // ── CART (с localStorage) ──
 let cart = JSON.parse(localStorage.getItem('khachma_cart') || '[]');
@@ -1098,29 +1110,61 @@ function saveOrderHistory(orderData) {
   localStorage.setItem('khachma_orders', JSON.stringify(history));
 }
 
-// ── SEND TO TELEGRAM ──
-async function sendToTelegram(text) {
-  if (BOT_TOKEN === 'СЮДА_ВАШ_ТОКЕН_ОТ_BOTFATHER') {
-    console.log('Telegram bot не настроен. Текст заказа:', text);
-    return false;
-  }
+// ── SEND ORDER (через Worker, без токена на клиенте) ──
+async function sendOrderToWorker(orderData) {
   try {
-    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
-    const response = await fetch(url, {
+    const response = await fetch(ORDER_WORKER_URL, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({chat_id: CHAT_ID, text: text, parse_mode: 'HTML'})
+      body: JSON.stringify(orderData)
     });
-    return response.ok;
+    const result = await response.json();
+    return result.ok === true;
   } catch (e) {
-    console.error('Ошибка отправки в Telegram:', e);
+    console.error('Ошибка отправки заказа:', e);
     return false;
   }
 }
 
-// ── SUBMIT (ИСПРАВЛЕНО) ──
+// ── SUBMIT ──
 async function submitOrder() {
-  alert('Форма заказа временно отключена. Пожалуйста, позвоните: +7 (928) 66-777-33');
+  const name = document.getElementById('orderName').value.trim();
+  const phone = document.getElementById('orderPhone').value.trim();
+  const comment = document.getElementById('orderComment').value.trim();
+
+  if (!name) { alert('Пожалуйста, укажите ваше имя'); return; }
+  if (!phone) { alert('Пожалуйста, укажите номер телефона'); return; }
+  if (cart.length === 0) { alert('Добавьте хотя бы одно блюдо в корзину'); return; }
+
+  const totalSum = cart.reduce((a,i) => a + i.price*i.qty, 0);
+  const orderData = {
+    name,
+    phone,
+    comment,
+    items: cart.map(i => ({name: i.name, qty: i.qty, price: i.price})),
+    total: totalSum
+  };
+
+  const btn = event && event.target;
+  if (btn) { btn.disabled = true; btn.textContent = 'Отправляем…'; }
+
+  const ok = await sendOrderToWorker(orderData);
+
+  if (btn) { btn.disabled = false; btn.textContent = 'Отправить заказ'; }
+
+  if (ok) {
+    saveOrderHistory(orderData);
+    cart = [];
+    saveCart();
+    renderCart();
+    updateMenuIndicators();
+    document.getElementById('orderName').value = '';
+    document.getElementById('orderPhone').value = '';
+    document.getElementById('orderComment').value = '';
+    document.getElementById('modalOverlay').classList.add('show');
+  } else {
+    alert('Не получилось отправить заказ. Пожалуйста, позвоните: +7 (928) 66-777-33');
+  }
 }
 
 function closeModal() {
