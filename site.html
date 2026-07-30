@@ -419,6 +419,7 @@ html,body{overflow-x:hidden;width:100%;}
       <button class="tab-btn" onclick="showCat('coldstart',this)">Холодные закуски</button>
       <button class="tab-btn" onclick="showCat('street',this)">Стрит-фуд</button>
       <button class="tab-btn" onclick="showCat('friture',this)">Фритюр</button>
+      <button class="tab-btn" onclick="showCat('sauces',this)">Соусы</button>
       <button class="tab-btn" onclick="showCat('drinks',this)">Напитки</button>
       <button class="tab-btn" onclick="showCat('desserts',this)">Десерты</button>
     </div>
@@ -467,9 +468,9 @@ html,body{overflow-x:hidden;width:100%;}
           <div class="menu-card-left"><div class="menu-card-name">Люля классика</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
           <div class="menu-card-price">210 ₽</div>
         </div>
-        <div class="menu-card" onclick="addToCart('Люля баран', 310, '100 г')">
+        <div class="menu-card" onclick="addToCart('Люля баран', 340, '100 г')">
           <div class="menu-card-left"><div class="menu-card-name">Люля баран</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
-          <div class="menu-card-price">310 ₽</div>
+          <div class="menu-card-price">340 ₽</div>
         </div>
         <div class="menu-card" onclick="addToCart('Баран кебаб', 430, '100 г')">
           <div class="menu-card-left"><div class="menu-card-name">Баран кебаб</div><div class="menu-card-unit">за 100 г · + в корзину</div></div>
@@ -757,6 +758,22 @@ html,body{overflow-x:hidden;width:100%;}
         <div class="menu-card" onclick="addToCart('Кофе по восточному', 120, '1 шт')">
           <div class="menu-card-left"><div class="menu-card-name">Кофе по восточному</div><div class="menu-card-unit">· + в корзину</div></div>
           <div class="menu-card-price">120 ₽</div>
+        </div>
+      </div>
+
+      <!-- СОУСЫ -->
+      <div class="menu-cat-hidden" data-cat="sauces">
+        <div class="menu-card" onclick="addToCart('Сацебели / чесночный', 100, '60 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Сацебели / чесночный</div><div class="menu-card-unit">60 г · + в корзину</div></div>
+          <div class="menu-card-price">100 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Сырный / наршараб / кетчуп / арой-ди / барбекю / аджика', 100, '50 г')">
+          <div class="menu-card-left"><div class="menu-card-name">Сырный / наршараб / кетчуп / арой-ди / барбекю / аджика</div><div class="menu-card-unit">50 г · + в корзину</div></div>
+          <div class="menu-card-price">100 ₽</div>
+        </div>
+        <div class="menu-card" onclick="addToCart('Допы на шаурму (сыр, фри, халапеньо, аджика)', 70, '1 шт')">
+          <div class="menu-card-left"><div class="menu-card-name">Допы на шаурму (сыр, фри, халапеньо, аджика)</div><div class="menu-card-unit">· + в корзину</div></div>
+          <div class="menu-card-price">70 ₽</div>
         </div>
       </div>
 
