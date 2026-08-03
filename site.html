@@ -5,7 +5,7 @@
   <!-- Open Graph / превью в мессенджерах -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Хачапури & Мангал — Сочи">
-  <meta property="og:description" content="Хачапури на мангале, мясо и рыба. Доставка и самовывоз в Сочи. Волжская 37/к3 (Мамайка) · Каждый день с 10:00 до 22:00">
+  <meta property="og:description" content="Хачапури на мангале, мясо и рыба. Доставка и самовывоз в Сочи. Волжская 37/к3 (Мамайка) · Каждый день с 11:00 до 23:00">
   <meta property="og:image" content="https://atarh.github.io/khachma/img/logo.png">
   <meta property="og:url" content="https://atarh.github.io/khachma">
   <meta property="og:locale" content="ru_RU">
@@ -370,7 +370,7 @@ html,body{overflow-x:hidden;width:100%;}
     <!-- Левая часть — текст -->
     <div style="flex:1;">
       <p style="font-size:18px;color:#F09B4A;margin-bottom:12px;font-weight:400;" class="hero-reveal">Мясо и рыба на живом огне. Черноморские деликатесы и кавказская кухня.</p>
-      <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:rgba(240,230,220,0.7);font-weight:400;margin-bottom:20px;" class="hero-reveal">Сочи · Волжская 37/к3 (Мамайка) · Каждый день с 10:00 до 22:00</div>
+      <div style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:rgba(240,230,220,0.7);font-weight:400;margin-bottom:20px;" class="hero-reveal">Сочи · Волжская 37/к3 (Мамайка) · Каждый день с 11:00 до 23:00</div>
       <p style="font-family:'Cormorant Garamond',serif;font-size:32px;font-style:italic;color:#F09B4A;margin-bottom:40px;line-height:1.4;" class="hero-reveal">«Попробуй один раз —<br>вернёшься много раз!»</p>
       <div style="display:flex;gap:16px;flex-wrap:wrap;">
         <a href="#order" class="btn-primary">Заказать доставку</a>
@@ -927,7 +927,7 @@ html,body{overflow-x:hidden;width:100%;}
           <div class="contact-icon" style="color:#E8832E;">•</div>
           <div>
             <div class="contact-label">Часы работы</div>
-            <div class="contact-val">Каждый день с 10:00 до 22:00</div>
+            <div class="contact-val">Каждый день с 11:00 до 23:00</div>
             <div class="contact-note">Без выходных и праздников</div>
           </div>
         </div>
@@ -983,7 +983,7 @@ html,body{overflow-x:hidden;width:100%;}
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">© 2026 Хачапури & Мангал · Сочи</div>
-    <div class="footer-copy">Каждый день с 10:00 до 22:00</div>
+    <div class="footer-copy">Каждый день с 11:00 до 23:00</div>
   </div>
 </footer>
 
@@ -1428,7 +1428,7 @@ function updateWorkTimer() {
   var mins = now.getMinutes();
   var secs = now.getSeconds();
   
-  var isOpen = (hours >= 10 && hours < 22);
+  var isOpen = (hours >= 11 && hours < 23);
   var statusEl = document.getElementById('workStatus');
   var timerEl = document.getElementById('workTimer');
   
@@ -1442,7 +1442,7 @@ function updateWorkTimer() {
     if (labelEl) { labelEl.textContent = '\u0414\u043E \u0437\u0430\u043A\u0440\u044B\u0442\u0438\u044F: '; }
     
     var closeTime = new Date(now);
-    closeTime.setHours(22, 0, 0, 0);
+    closeTime.setHours(23, 0, 0, 0);
     var diff = closeTime - now;
     
     var h = Math.floor(diff / 3600000);
@@ -1457,10 +1457,10 @@ function updateWorkTimer() {
     if (labelEl) { labelEl.textContent = '\u0414\u043E \u043E\u0442\u043A\u0440\u044B\u0442\u0438\u044F: '; }
     
     var openTime = new Date(now);
-    if (hours >= 22) {
+    if (hours >= 23) {
       openTime.setDate(openTime.getDate() + 1);
     }
-    openTime.setHours(10, 0, 0, 0);
+    openTime.setHours(11, 0, 0, 0);
     var diff = openTime - now;
     
     var h = Math.floor(diff / 3600000);
